@@ -1,0 +1,225 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+html {
+  font-size: 16px;
+}
+
+// @font-face {
+//   font-family: "Hurme_HurmeGeometricSans1_SemiBold";
+//   src: url("../fonts/Hurme_HurmeGeometricSans1_SemiBold.otf") format("opentype");
+// }
+
+// @font-face {
+//   font-family: "Hurme - HurmeGeometricSans1 Regular";
+//   src: url("../fonts/Hurme - HurmeGeometricSans1 Regular.otf") format("opentype");
+// }
+
+// @font-face {
+//   font-family: "Hurme - HurmeGeometricSans1 Bold";
+//   src: url("../fonts/Hurme - HurmeGeometricSans1 Bold.otf") format("opentype");
+// }
+
+// @font-face {
+//   font-family: "Hurme - HurmeGeometricSans1 Light";
+//   src: url("../fonts/Hurme - HurmeGeometricSans1 Light.otf") format("opentype");
+// }
+
+@font-face {
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold";
+  src: url("../fonts/Hurme - HurmeGeometricSans2 SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Hurme - HurmeGeometricSans2 Regular";
+  src: url("../fonts/Hurme - HurmeGeometricSans2 Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Hurme - HurmeGeometricSans2 Light";
+  src: url("../fonts/Hurme - HurmeGeometricSans2 Light.otf") format("opentype");
+}
+
+// Typography
+body, p {
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+}
+
+.jumbotron.jumbotron-recuiting .lead,
+.jumbotron.jumbotron-innovation .lead {
+  font-size: 40px;
+  font-family: "Hurme_HurmeGeometricSans1_SemiBold", sans-serif;
+}
+
+.jumbotron h1,
+.jumbotron p.lead,
+.jumbotron small,
+.features h3,
+.price-cost,
+.price-title,
+.order-btn {
+  font-family: "Hurme_HurmeGeometricSans1_SemiBold", sans-serif;
+}
+
+.carousel-col h4 {
+  font-family: "Hurme - HurmeGeometricSans1 Bold", sans-serif;
+}
+
+.marketing-peer p {
+  font-size: 4rem;
+  font-family: "Hurme - HurmeGeometricSans1 Light", sans-serif;;
+}
+
+.price-cost {
+  font-size: 42px;
+  color: $black;
+}
+
+.features h3 {
+  font-size: 4rem;
+  color: $footer_bg;
+}
+
+.features {
+  padding: 140px 0 220px;
+}
+
+.business-item p {
+  font-size: 16px;
+}
+
+.business-item {
+  border-bottom: 1px solid #AEACB2;
+  padding-top: 60px;
+  &.last {
+    border-bottom: none;
+  }
+}
+
+.price-cost.custom {
+  font-size: 32px;
+}
+
+.blue-tier .blue-tier-regular {
+  font-size: 16px;
+}
+
+.pricing-main-title {
+  font-size: 60px;
+}
+
+.pricing-title {
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  font-size: 16px;
+}
+
+.pricing-value-number {
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.pricing-top-txt,
+.pricing-desc {
+  font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+  font-size: 16px;
+}
+
+.pricing-value-sign {
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+}
+
+.pricing-value-txt {
+  font-size: 18px;
+}
+
+.contact-team-mail,
+.team-name {
+  font-size: 18px;
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+}
+
+.white-tier-title {
+  font-size: 60px;
+}
+
+.white-tier-info {
+  font-size: 18px;
+}
+
+.feedback-info {
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+  font-size: 18px;
+}
+
+.dark-tier {
+    font-size: 42px;
+    font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+}
+
+.blue-tier {
+  p {
+    @include fontSize(36px);
+    margin-bottom: 25px;
+  }
+}
+
+.jumbotron small {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+}
+
+.jumbotron .jumbotron-title {
+  // font-size: 80px;
+  @include fontSize(80px);
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+}
+
+.jumbotron p.lead {
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+  font-size: 18px;
+}
+
+.press-features {
+  font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+  font-size: 16px;
+}
+
+.feedback-intro {
+  p {
+    font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+    font-size: 18px;
+  }
+}
+
+.contact-form {
+  label {
+    font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+    font-size: 16px;
+  }
+  button[type="submit"] {
+    text-transform: uppercase;
+  }
+}
+
+.confirm-bottom-info {
+  font-size: 18px;
+}
+
+.marketing-option-info-home-wrap h4 {
+  @include fontSize(24px);
+}
+
+.features-intro {
+  @include fontSize(18px);
+}
+// TYpography

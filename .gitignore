@@ -1,0 +1,10 @@
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+/app/images/059135285-creative-business-team-meeting_H264HD1080.mov
+/___gulpfile.js
+/allfileshas.txt
+/old_gulpfile.babel.js

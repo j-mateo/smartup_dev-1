@@ -1,0 +1,68 @@
+extends layouts/default
+block content
+    .container
+        .row
+            .col-xs-12
+                h2.text-center.feedback-title New business enquiries
+                p.text-center.feedback-info If you'd like to understand more about SmartUp and how it can shape how knowledge is shared and how microlearning can help your organization, here are some regional contacts who can help you..
+        .row.contact-team
+            .col-sm-4.text-center
+                .contact-team-img-wrap
+                    img.img-responsive(src='images/SmartUp_Photos/Frank Meehan, CEO.jpg', alt='Frank Meehan, CEO')
+                a.contact-team-mail(href="mailto:") Frank Meehan
+                p.contact-team-pale-txt CEO
+                a.cbtn.btn-bright(href="#" class="cbtn") frank@smartup.io
+            .col-sm-4.text-center
+                .contact-team-img-wrap
+                    img.img-responsive(src='images/SmartUp_Photos/David Beath, Head of Marketing.jpg', alt='David Beath, Head of Marketing')
+                a.contact-team-mail(href="mailto:") David Beath
+                p.contact-team-pale-txt Head of Marketing
+                a.cbtn.btn-bright(href="#" class="cbtn") david@smartup.io
+            .col-sm-4.text-center
+                .contact-team-img-wrap
+                    img.img-responsive(src='images/SmartUp_Photos/Laurence Smith, Head of Asia.jpg', alt='Laurence Smith, Head of Asia')
+                a.contact-team-mail(href="mailto:") Laurence Smith
+                p.contact-team-pale-txt Asia Specialist & Advisor
+                a.cbtn.btn-bright(href="#" class="cbtn") laurence@smartup.io
+    section.white-tier.text-center
+        .container
+            .row
+                .col-xs-12
+                    h3.white-tier-title For press enquiries
+                    p.white-tier-info
+                        | Create, share and exchange interactive content for a learning experience that’s function
+                        | and collaborative. Unlock your own real knowledge and see where it takes you.
+                    a.cbtn.btn-bright(href="#0") david@smartup.io
+    section.white-tier.text-center
+        .container
+            .row
+                .col-xs-12
+                    h3.white-tier-title For careers at SmartUp
+                    p.white-tier-info
+                        | Create, share and exchange interactive content for a learning experience that’s fun
+                        | and collaborative. Unlock your own real knowledge and see where it takes you.
+                    a.cbtn.btn-bright(href="https://smartupio.workable.com/") jobs page
+
+    .container
+        .row.contact-form-row
+            .col-xs-12
+                h3.contact-form-heading.text-center For all other enquiries, get in touch.
+        form#contact-form.contact-form(method='post', action='#', data-redirect='contact_confirm.html')
+            input#form-name(type='hidden', name='form-name', value='contact-form')
+            .row.feedback-row
+                .col-md-6
+                    .form-group
+                      label(for='contact-name') Your name*
+                      input#contact-name.form-control(type='text', name='contact-name', placeholder='John Doe', required)
+                .col-md-6
+                    .form-group
+                      label(for='contact-email') Your work email*
+                      input#contact-email.form-control(type='email', name='contact-email', placeholder='e.g. johndoe@acmeltd.com', required)
+            .row.feedback-row
+                .col-xs-12
+                    .form-group.contact-from-textarea
+                      label(for='contact-message') How can we help you?
+                      textarea#contact-message.form-control(rows='5', name='contact-message')
+            .row
+                .col-xs-12.text-center
+                    button#submitContact.cbtn.btn-dark(type='submit') get in touch

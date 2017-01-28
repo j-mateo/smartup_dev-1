@@ -1,0 +1,160 @@
+extends layouts/default
+block content
+    section.jumbotron
+      .jumbotron-inner
+        .container
+          .row-flex
+            .col-flex
+              h1.jumbotron-title show what you know
+              p.lead
+                | Shared knowledge is power multiplied. Create or join a community and let SmartUp help boost your know-how with fun, engaging content on the topics that matter the most to you. Connect with peers and influential founders to learn new skills,
+                | share insight, gain advice and much more.
+              a.cbtn.btn-blue(href='create_community.html') create a community
+              footer
+                small
+                  a.community-find-link(href='#0') Find your community
+                  |  or browse popular content below.
+    
+    section.dark-tier
+      .container
+        .row
+          .col-xs-12
+            p
+              | Connect with peers, influencers and thought leaders. Create, learn and share knowledge
+    section.marketing-options.marketing-options-home
+      .container
+        .row
+          .col-xs-12
+            #myCarousel.carousel.slide(data-ride='carousel', data-interval='false')
+              a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next
+              .carousel-inner(role='listbox')
+                .item.active
+                  .row.row-flex
+                    .col-flex
+                      img.img-responsive(src='./images/launch.png')
+                      .marketing-option-info.marketing-option-info-home
+                        .marketing-option-info-home-wrap
+                          h4 Launch
+                          p.text-justify
+                            | The startup community for entrepreneurs and innovators everywhere. Test and improve your startup knowledge with insights and qiuzzes from top founders, investors and journalists Founders is the original SmartUp community.
+                          a.marketing-option-link(href='#')
+                            i.fa.fa-arrow-circle-o-right
+                          |  Join
+                    .col-flex.col-flex-4
+                      .col-flex
+                        img.img-responsive(src='./images/home-1.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p Facebook controversy, the flying car, and VR Breakthrough
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                      .col-flex
+                        img.img-responsive(src='./images/home-2.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p Robocall strike force, nkorean V.O.D and Space-Starbucks?
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                      .col-flex
+                        img.img-responsive(src='./images/home-3.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p How wearable tech will track human emotion
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                      .col-flex
+                        img.img-responsive(src='./images/home-4.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p Snapchat&apos;s$1B+, PayPal app kills, tinder left-swipe rivals
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                .item
+                  .row.row-flex
+                    .col-flex
+                      img.img-responsive(src='./images/launch.png')
+                      .marketing-option-info.marketing-option-info-home
+                        .marketing-option-info-home-wrap
+                          h4 Launch
+                          p.text-justify
+                            | The startup community for entrepreneurs and innovators everywhere. Test and improve your startup knowledge with insights and qiuzzes from top founders, investors and journalists Founders is the original SmartUp community.
+                          a.marketing-option-link(href='#')
+                            i.fa.fa-arrow-circle-o-right
+                            |  Join
+                    .col-flex.col-flex-4
+                      .col-flex
+                        img.img-responsive(src='./images/home-1.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p Facebook controversy, the flying car, and VR Breakthrough
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                      .col-flex
+                        img.img-responsive(src='./images/home-2.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p Robocall strike force, nkorean V.O.D and Space-Starbucks?
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                      .col-flex
+                        img.img-responsive(src='./images/home-3.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p How wearable tech will track human emotion
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                      .col-flex
+                        img.img-responsive(src='./images/home-4.png')
+                        .marketing-option-info.marketing-option-info-home
+                          .marketing-option-info-home-wrap
+                            p Snapchat&apos;s$1B+, PayPal app kills, tinder left-swipe rivals
+                            a.marketing-option-link(href='#')
+                              i.fa.fa-arrow-circle-o-right
+                              |  Read
+                ol.carousel-indicators
+                  li.active(data-target='#myCarousel', data-slide-to='0')
+                  li(data-target='#myCarousel', data-slide-to='1')
+                  // li(data-target='#myCarousel', data-slide-to='2')    
+    section.features.container
+      h3.text-center
+        | Unlock your knowledge.
+        br
+        | Unleash your potential.
+      p.text-center.features-intro
+        | Create, share and exchange interactive content for a learning experience that&rsquo;s fun
+        br
+        |  and collaborative. Unlock your own real knowledge and see where it takes you.
+      .col-md-4.col-xs-12
+        .col-xs-4
+          img.img-responsive(src='./images/eye.svg', alt='eye')
+        .col-xs-8
+          p.feature-desc
+            | SmartUp reveals the passions, interests, skills and talents hidden by traditional organization structures, silos and hierarchies.
+      .col-md-4.col-xs-12
+        .col-xs-4
+          img.img-responsive(src='./images/peer.svg', alt='eye')
+        .col-xs-8
+          p.feature-desc
+            | Our peer-to-peer knowledge platform democratizes the creation and consumption of knowledge throughout your business.
+      .col-md-4.col-xs-12
+        .col-xs-4
+          img.img-responsive(src='./images/phone.svg', alt='phone')
+        .col-xs-8
+          p.feature-desc
+            | SmartUp was created for the mobile generation&mdash;entrepreneurs, millennials and innovators. Inspired by microlearning, we&rsquo;ve evolved for the enterprise.
+    section.blue-tier
+      .container
+        p How can SmartUp inspire success in your life and business?
+        a.cbtn.btn-dark(href='#0') find out

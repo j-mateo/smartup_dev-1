@@ -1,0 +1,71 @@
+mixin teamMember(img)
+    - var name = img.split(',', 1)
+    - var titlePosition = img.split(',')[1]
+    - var titleRegion = img.split(',')[2]
+        
+    .col-sm-3.text-center.team-col
+        .contact-team-img-wrap
+            img.img-responsive(src="images/SmartUp_Photos/#{img}.jpg", alt='team member')
+        p.team-name= name
+        if titleRegion
+            p.team-title #{titlePosition + ', ' + titleRegion}
+        else
+            p.team-title= titlePosition
+
+extends layouts/default
+block content
+    section.jumbotron.jumbotron-team
+      .jumbotron-inner
+        .container
+          .row-flex
+            .col-flex
+              h1.jumbotron-title go foxes!
+              p.lead here’s a <a href="https://medium.com/@frank_meehan/building-a-winning-team-the-leicester-startup-lesson-learning-from-the-5000-1-premier-league-9b0098bf42fb#.yi3w31wdv" target="_bnalk">story</a> behind this, we assure you. 
+                  
+    section.dark-tier
+      .container
+        .row
+          .col-xs-12
+            p
+              | we’re a on a mission to change how knowledge is created, absorbed 
+              | and retained by people, supported by technology.
+    
+    .container
+        .row
+            .col-xs-12.team-intro
+                h2.text-center.feedback-title meet the team behind smartup
+                p.text-center.feedback-info
+                    | Our team is truly global, we run most of our development out of <strong>Cluj</strong> Romania; our HQ is in <strong>London</strong>, UK;
+                    | We have folks in <strong>New York</strong> and <strong>Singapore</strong> and a Marketing and Content hub in <strong>Richmond</strong> Virginia.
+    .container-fluid.team-members-container
+        .row.contact-team
+            +teamMember('Adam Sutton, Head of Design')
+            +teamMember('Adrian Ambrus, Junior Backend Developer')
+            +teamMember('Alan Murphy, Backend Developer')
+            +teamMember('Alex Derecichei, Frontend Developer')
+            +teamMember('Andrei Petri, Frontend Developer')
+            +teamMember('Anthony Onesto, GM, Americas')
+            +teamMember('Arnold Tempfli, Backend Developer')
+            +teamMember('Corey Dixon, Visual Designer')
+            +teamMember('David Beath, Head of Marketing')
+            +teamMember('Deborah Tan, Head of Content, Asia')
+            +teamMember('Franck Tchouambou, Growth')
+            +teamMember('Frank Meehan, CEO')
+            +teamMember('Iulia Oltean, HR _ Recruitment Manager')
+            +teamMember('Krisztina Kovacs, QA Engineer')
+            +teamMember('Laura Suarasan, Content Editor')
+            +teamMember('Laurence Smith, Head of Asia')
+            +teamMember('Manuela Savianu, HR _ Office Responsible')
+            +teamMember('Mate Lang, CTO')
+            +teamMember('Maura Mazurowski, Content Lead')
+            +teamMember('Miranda Kerner, Head of Legal _ Business Affairs')
+            +teamMember('Monique Lunt, Head of People _ Operations')
+            +teamMember('Nicolai Hartvig, Head of Content')
+            +teamMember('Oana Sabau, Backend Developer')
+            +teamMember('Radu Lazar, iOS Lead')
+            +teamMember('Robbie Howshall, CPO')
+            +teamMember('Roland Kozma, Backend Developer')
+            +teamMember('Teodor Druta, Frontend Developer')
+            +teamMember('Vasile Pop, QA Lead')
+            .last-team-col
+                +teamMember('Alvise Martini, Data Analyst')
