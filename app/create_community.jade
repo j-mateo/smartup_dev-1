@@ -5,7 +5,8 @@ block content
             .col-xs-12
                 h2.text-center.feedback-title Hi, we're looking forward to getting your team up and running on SmartUp.
                 p.text-center.feedback-info To create your community, please tell us a little more about you and your company.
-            form.contact-form(method='post', action='#', data-redirect='create_confirm.html')
+        form.contact-form(method='post', action='#', data-redirect='create_confirm.html')
+            .row.feedback-row
                 .col-md-6
                     .form-group
                         label(for='request-username') Your name*
@@ -14,6 +15,7 @@ block content
                     .form-group
                         label(for='request-organization-name') Your organization's name
                         input#request-organization-name.form-control(type='text', name='request-organization-name', placeholder='SmartUp', required)
+            .row.feedback-row
                 .col-md-4
                     .form-group
                       label(for='request-email') Your work email*
@@ -34,17 +36,19 @@ block content
                     .form-group
                       label(for='request-phone') Your telephone number
                       input#request-phone.form-control(type='tel', name='request-phone', placeholder='e.g. +1 555 123 4567')
+            .row.feedback-row
                 .col-md-4
                     .form-group
                       label(for='request-people-amount') How many people would you like to start in your community?*
                       input#request-people-amount.form-control(type='text', name='request-people-amount', placeholder='e.g. 200', required)
                 .col-md-4
                     .form-group
-                      label(for='request-community-name') What would you like to call your community?
+                      label(for='request-community-name') <br>What would you like to call your community?
                       input#request-community-name.form-control(type='text', name='request-community-name', placeholder='e.g. acmeinnovators')
                 .col-md-4
                     .form-group
                       label(for='request-community-domain') What web domain would you like for your community?
                       input#request-community-domain.form-control(type='text', name='request-community-domain', placeholder='e.g. communityname.smartup.io')
+            .row
                 .col-xs-12.text-center
                     button.cbtn.btn-dark(type='submit') REQUEST COMMUNITY

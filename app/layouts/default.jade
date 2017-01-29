@@ -1,3 +1,4 @@
+include vars
 doctype html.web-page.no-js(lang='')
 head
     meta(charset='utf-8')
@@ -76,16 +77,16 @@ head
           .col-md-4.col-sm-3.col-xs-12.social-col
             ul.social
               li
-                a(href='https://www.facebook.com/smartupHQ')
+                a(href="#{facebook}")
                   i.fa.fa-facebook
               li
-                a(href='https://twitter.com/smartupHQ')
+                a(href="#{twitter}")
                   i.fa.fa-twitter
               li
-                a(href='https://www.instagram.com/smartupHQ')
+                a(href="#{instagram}")
                   i.fa.fa-instagram
               li
-                a(href='https://www.linkedin.com/company/smartup-io')
+                a(href="#{linkedin}")
                   i.fa.fa-linkedin
     
     script#_agile_min_js(async src='<a href=" https://smartupio.agilecrm.com/stats/min/agile-min.js ">https://smartupio.agilecrm.com/stats/min/agile-min.js</a>')
@@ -115,27 +116,16 @@ head
     // endbuild
     // build:js scripts/plugins.js
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
-    |   
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
     // endbuild
     script(src='https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js')
