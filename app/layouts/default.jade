@@ -90,9 +90,11 @@ head
                 a(href="#{linkedin}")
                   i.fa.fa-linkedin
     
-    script#_agile_min_js(async src='<a href=" https://smartupio.agilecrm.com/stats/min/agile-min.js ">https://smartupio.agilecrm.com/stats/min/agile-min.js</a>')
-    script.
-      var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){_agile.set_account(&apos;d6uteq54emjm9ft918k912hpct&apos;, &apos;smartupio&apos;_agile.track_page_view();};
+    | <script id="_agile_min_js" async type="text/javascript" src="<a href="https://smartupio.agilecrm.com/stats/min/agile-min.js">https://smartupio.agilecrm.com/stats/min/agile-min.js</a>"> </script><script type="text/javascript" >var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){_agile.set_account(&apos;d6uteq54emjm9ft918k912hpct&apos;, &apos;smartupio&apos;_agile.track_page_view();};</script>
+    // include forms_script.html
+    // script#_agile_min_js(async src='<a href="https://smartupio.agilecrm.com/stats/min/agile-min.js">https://smartupio.agilecrm.com/stats/min/agile-min.js</a>')
+    // script.
+    //   var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){_agile.set_account(&apos;d6uteq54emjm9ft918k912hpct&apos;, &apos;smartupio&apos;_agile.track_page_view();};
     
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

@@ -1,11 +1,3 @@
-console.log(`%c ________________________________________
-< SmartUp >
- ----------------------------------------
-        \\   ^__^
-         \\  (oo)\\_______
-            (__)\\       )\\/\\
-                ||----w |
-                ||     ||`, "font-family:monospace")
 // var form_email = "m8r-4nb0641@mailinator.com";
 var form_email = "franck@smartup.io"; // replace this with email where forms should be sent
 //=======================================================
