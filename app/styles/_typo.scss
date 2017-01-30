@@ -52,14 +52,12 @@ body, p {
   font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
 }
 
-.jumbotron.jumbotron-recuiting .lead,
-.jumbotron.jumbotron-innovation .lead {
-  font-size: 40px;
-  font-family: "Hurme_HurmeGeometricSans1_SemiBold", sans-serif;
+.jumbotron p.lead {
+  @include fontSize(53px);
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
 }
 
 .jumbotron h1,
-.jumbotron p.lead,
 .jumbotron small,
 .features h3,
 .price-cost,
@@ -82,25 +80,8 @@ body, p {
   color: $black;
 }
 
-.features h3 {
-  font-size: 4rem;
-  color: $footer_bg;
-}
-
-.features {
-  padding: 140px 0 220px;
-}
-
 .business-item p {
   font-size: 16px;
-}
-
-.business-item {
-  border-bottom: 1px solid #AEACB2;
-  padding-top: 60px;
-  &.last {
-    border-bottom: none;
-  }
 }
 
 .price-cost.custom {
@@ -161,7 +142,7 @@ body, p {
 }
 
 .dark-tier {
-    font-size: 42px;
+    @include fontSize(36px);
     font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
 }
 
@@ -180,13 +161,13 @@ body, p {
 
 .jumbotron .jumbotron-title {
   // font-size: 80px;
-  @include fontSize(80px);
+  @include fontSize(76px);
   font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
 }
 
-.jumbotron p.lead {
+.jumbotron.jumbotron-home p.lead {
   font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
-  font-size: 18px;
+  @include fontSize(18px)
 }
 
 .press-features {
@@ -221,5 +202,123 @@ body, p {
 
 .features-intro {
   @include fontSize(18px);
+}
+
+@media screen and (max-width: $screen-sm) {
+  .copy-txt {
+    color: $white;
+    @include fontSize(20px);
+  }
+  .footer .copy span {
+    @include fontSize(16px); 
+  }
+}
+
+.coming-soon {
+  @include fontSize(48px);
+}
+
+.nav > li > a {
+  @include fontSize(12px);
+}
+
+.media-asset-title {
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  @include fontSize(18px);
+}
+
+.featured-press-text {
+  text-align: justify;
+  h5 {
+    @include fontSize(18px);
+    color: $black;
+  }
+  p {
+    font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+    @include fontSize(16px);
+  }
+}
+
+.features h3 {
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+  color: $footer_bg;
+}
+
+@media screen and (max-width: 500px) {
+  // @include fontSize(48px);
+  html {
+    font-size: 12px;
+  }
+}
+
+.blue-tier-title {
+  @include fontSize(36px);
+}
+
+.blue-tier p.blue-tier-text {
+  @include fontSize(18px);
+}
+
+.business-item-title {
+  @include fontSize(42px);
+}
+
+.get-in-touch p {
+  @include fontSize(24px);
+}
+
+.innovation-quote {
+  @include fontSize(42px);
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+}
+
+.innovation-quote-author {
+  @include fontSize(24px);
+}
+
+.dark-tier-bottom-text {
+  @include fontSize(15px);
+}
+
+.blue-tier-number {
+  @include fontSize(80px);
+  + p {
+    @include fontSize(18px);
+  }
+}
+
+.features-home-title {
+  @include fontSize(60px);
+}
+
+@media screen and (max-width: $screen-sm) {
+  .blue-tier-text,
+  .feature-desc,
+  .nav > li > a,
+  .footer .copy span,
+  .blue-tier p.blue-tier-text {
+    @include fontSize(24px);
+  }
+  .blue-tier-title {
+    @include fontSize(42px);
+  }
+  .footer {
+    padding-top: 15px;
+  }
+}
+
+.pricing-section strong {
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+}
+
+.pricing-value-txt {
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  @include fontSize(24px);
+}
+
+.pricing-info,
+.pricing-features,
+.pricing-desc {
+  @include fontSize(15px);
 }
 // TYpography

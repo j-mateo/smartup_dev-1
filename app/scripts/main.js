@@ -14,10 +14,11 @@ var form_email = "franck@smartup.io"; // replace this with email where forms sho
 $(document).ready(function() {
 
     // Animation druing scroll
-    window.sr = ScrollReveal();
-    sr.reveal('.reveal', {
-        duration: 700
-    });
+    new WOW().init();
+    // window.sr = ScrollReveal();
+    // sr.reveal('.reveal', {
+    //     duration: 700
+    // });
 
     var vid1 = document.getElementById("myVideo1");
     if (vid1) {

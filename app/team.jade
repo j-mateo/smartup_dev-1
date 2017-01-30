@@ -1,11 +1,21 @@
-mixin teamMember(img)
+mixin teamMember(img, offset)
     - var name = img.split(',', 1)
-    - var titlePosition = img.split(',')[1]
+    - var titlePosition = img.split(',')[1].replace('_', '&')
     - var titleRegion = img.split(',')[2]
         
-    .col-sm-3.text-center.team-col
+    if offset
+      .col-sm-3.col-sm-offset-3.text-center.team-col
         .contact-team-img-wrap
-            img.img-responsive(src="images/SmartUp_Photos/#{img}.jpg", alt='team member')
+          img.img-responsive(src="images/SmartUp_Photos/#{img}.jpg", alt="#{img}")
+        p.team-name= name
+        if titleRegion
+            p.team-title #{titlePosition + ', ' + titleRegion}
+        else
+            p.team-title= titlePosition
+    else
+      .col-sm-3.text-center.team-col
+        .contact-team-img-wrap
+            img.img-responsive(src="images/SmartUp_Photos/#{img}.jpg", alt="#{img}")
         p.team-name= name
         if titleRegion
             p.team-title #{titlePosition + ', ' + titleRegion}
@@ -20,14 +30,14 @@ block content
           .row-flex
             .col-flex
               h1.jumbotron-title go foxes!
-              p.lead here’s a <a href="https://medium.com/@frank_meehan/building-a-winning-team-the-leicester-startup-lesson-learning-from-the-5000-1-premier-league-9b0098bf42fb#.yi3w31wdv" target="_bnalk">story</a> behind this, we assure you. 
+              p.lead There’s a <a href="https://medium.com/@frank_meehan/building-a-winning-team-the-leicester-startup-lesson-learning-from-the-5000-1-premier-league-9b0098bf42fb#.yi3w31wdv" target="_bnalk">story</a> behind this, we assure you. 
                   
     section.dark-tier
       .container
         .row
           .col-xs-12
             p
-              | we’re a on a mission to change how knowledge is created, absorbed 
+              | we’re on a mission to change how knowledge is created, absorbed 
               | and retained by people, supported by technology.
     
     .container
@@ -36,7 +46,7 @@ block content
                 h2.text-center.feedback-title meet the team behind smartup
                 p.text-center.feedback-info
                     | Our team is truly global, we run most of our development out of <strong>Cluj</strong> Romania; our HQ is in <strong>London</strong>, UK;
-                    | We have folks in <strong>New York</strong> and <strong>Singapore</strong> and a Marketing and Content hub in <strong>Richmond</strong> Virginia.
+                    | We have folks in <strong>New York</strong> and <strong>Singapore</strong> and a Marketing and Content hub in <strong>Richmond</strong>, Virginia.
     .container-fluid.team-members-container
         .row.contact-team
             +teamMember('Adam Sutton, Head of Design')
@@ -58,7 +68,7 @@ block content
             +teamMember('Manuela Savianu, HR _ Office Responsible')
             +teamMember('Mate Lang, CTO')
             +teamMember('Maura Mazurowski, Content Lead')
-            +teamMember('Miranda Kerner, Head of Legal _ Business Affairs')
+            +teamMember('Miranda Lerner, Head of Legal _ Business Affairs')
             +teamMember('Monique Lunt, Head of People _ Operations')
             +teamMember('Nicolai Hartvig, Head of Content')
             +teamMember('Oana Sabau, Backend Developer')
@@ -67,5 +77,10 @@ block content
             +teamMember('Roland Kozma, Backend Developer')
             +teamMember('Teodor Druta, Frontend Developer')
             +teamMember('Vasile Pop, QA Lead')
-            .last-team-col
-                +teamMember('Alvise Martini, Data Analyst')
+            +teamMember('Alvise Martini, Data Analyst', 'offset')
+            .col-sm-3.text-center.team-col
+              .contact-team-img-wrap
+                  a(href="jobs.html")
+                    img.img-responsive(src="images/SmartUp_Photos/you_jobs.png", alt='Jobs')
+              p.team-name You
+              p.team-title <a href="jobs.html" class="team-jobs-link">Jobs</a>

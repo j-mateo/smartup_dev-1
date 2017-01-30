@@ -1,21 +1,21 @@
 extends layouts/default
 block content
-    .container-fluid.pricing-container
+    .container.pricing-container
       .row.text-center
         .col-xs-12
           h2.pricing-main-title Pricing guide
           
       .row.pricing-row
-        section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
+        section.pricing-section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
           h3.pricing-title INDIVIDUAL
-          .pricing-box
+          .pricing-box.pricing-min-height
             header.pricing-header.text-center
               p.pricing-top-txt Join a Community
               .pricing-value <span class="pricing-value-sign">$</span><span class="pricing-value-number">0</span> / mo
               p.pricing-desc
                 Joining a public open community is easy and free, forever
             .text-center
-              a.cbtn.btn-dark.pricing-btn(href="#0") BROWSE COMMUNITIES
+              a.cbtn.btn-dark.pricing-btn(href="find_community.html") BROWSE COMMUNITIES
               p.pricing-info
                 | Joining a community as an <strong>Individual</strong> gives 
                 | you access to all these awesome features
@@ -26,7 +26,7 @@ block content
               li Unlimited access to all SmartDoc formats to get you started creating content
               li Digital guides to creating content using our SmartDoc format
               
-        section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
+        section.pricing-section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
           h3.pricing-title.pricing-middle-margin BUSINESS
           .pricing-box.highlighted
             header.pricing-header.text-center
@@ -51,27 +51,27 @@ block content
                 li Email support with the SmartUp Helpdesk for technical issues
                 li Moderator and admin content controls
                 li Basic Analytics and data on your communities
-            footer.text-center
-              p.pricing-footer-desc
-                SmartUp provides packages for universities, schools and colleges to set up private communities.
-              a.cbtn.btn-bright.pricing-btn(href="get_in_touch.html") GET IN TOUCH
-              p.pricing-footer-desc
-                Additional content services are available through smart.
-              a.cbtn.btn-bright.pricing-btn(href="contact.html") CONTACT US
+            // footer.text-center
+            //   p.pricing-footer-desc
+            //     SmartUp provides packages for universities, schools and colleges to set up private communities.
+            //   a.cbtn.btn-bright.pricing-btn(href="get_in_touch.html") GET IN TOUCH
+            //   p.pricing-footer-desc
+            //     Additional content services are available through smart.
+            //   a.cbtn.btn-bright.pricing-btn(href="contact.html") CONTACT US
             
-        section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
-          .pricing-box.pricing-top-margin
+        section.pricing-section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
+          .pricing-box.pricing-top-margin.pricing-min-height
             header.pricing-header.text-center
               p.pricing-top-txt Internal Private <strong>Enterprise</strong> Communities
               .pricing-value 
-                a(href="contact.html").pricing-value-txt Contact us for pricing
+                a(href="contact.html").pricing-value-txt Custom
               p.pricing-desc
                 | A customizable, affordable and scaleable knowledge 
                 | platform that's simple for large companies to implement
             .text-center
               a.cbtn.btn-dark.pricing-btn(href="get_in_touch.html") GET IN TOUCH
               p.pricing-info
-                | Enterprise includes everything in Private, and:
+                | <strong>Enterprise</strong> includes everything in <strong>Private</strong>, and:
             ul.pricing-features
                 li
                   | An private community for your more than 
@@ -84,13 +84,13 @@ block content
                 li Customizable Analytics via our web-based analytics package
                 li Data feed for your internal analytics and/or LMS systems
             
-        section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
-          .pricing-box.pricing-top-margin
+        section.pricing-section.col-md-3.col-sm-6.col-sm-offset-3.col-xs-12.col-md-offset-0
+          .pricing-box.pricing-top-margin.pricing-min-height
             header.pricing-header.text-center
               p.pricing-top-txt
-                External Interactive Learning and Marketing Communities
+                External <strong>External</strong> Interactive Learning and Marketing Communities
               .pricing-value
-                a(href="contact.html").pricing-value-txt Contact us for pricing
+                a(href="contact.html").pricing-value-txt Custom
               p.pricing-desc
                 | Great for companies with large groups of 
                 | customers or partners looking to provide 
@@ -106,121 +106,27 @@ block content
                 | people outside of your organization.
     
     
+    .container.pricing-container
+      .row
+        .col-sm-8.col-sm-offset-2
+          p.text-center
+            | SmartUp provides packages for universities, schools and colleges to set up private communities. <a href="get_in_touch.html">Get in Touch </a><br><br>
+            | Additional content services are available through smartup. <a href="contact.html">Contact Us</a>
     
-    
-    
-    // section.pricing
-    //   .container.reveal
-    //     .row.row-flex
-    //       .col-flex
-    //         .price-inner
-    //           .price-header-wrap
-    //             .price-header
-    //               .price-value
-    //                 span.price-cost $0
-    //                 br
-    //                 |  Per Month
-    //             p.price-title Open
-    //           ul.price-list
-    //             li For anyone looking to set up an open, accessible to all community, free forever.
-    //             li Create Community
-    //             li
-    //               strong Free includes
-    //               |  all of these great features:
-    //             li A public community accessible to anyone on the SmartUp platform
-    //             li A community URL (e.g. startups.smartup.io)
-    //             li Native apps for iOS and Android
-    //             li Accessible via web URL
-    //             li Leaderboards for your communities and channels
-    //             li Unlimited access to all SmartDoc formats to get you started creating content
-    //             li Unlimited access to all public content on the SmartUp platform
-    //             li Invite anyone to create content in your community
-    //             li Digital guides to creating content using our SmartDoc format
-    //             li Email support with the SmartUp Helpdesk for technical issues
-    //           .price-footer
-    //             a.order-btn(href='#0')
-    //               i.fa.fa-angle-right
-    //               |  Order
-    //       .col-flex.accent
-    //         .price-wrap
-    //           .price-inner
-    //             .price-header-wrap
-    //               .price-header
-    //                 .price-value
-    //                   span.price-cost $5
-    //                   br
-    //                   |  Per Month
-    //               p.price-title Private
-    //             ul.price-list
-    //               li per user, per month, billed annually.
-    //               li
-    //                 | For teams and small to medium-sized businesses and enterprises looking to pilot smartup
-    //               li Create Community
-    //               li
-    //                 strong Private
-    //                 |  includes everything in 
-    //                 strong Free
-    //                 | , and:
-    //               li
-    //                 | A private community for your team or company, accessible only to people that you invite
-    //               li Invite anyone from your team or company ot create content
-    //               li
-    //                 | Choose from customizable content packs and templates covering a broad range of topics
-    //               li Telephone access to our content experts
-    //               li Analytics and data on your communities
-    //             .price-footer
-    //               a.order-btn(href='#0')
-    //                 i.fa.fa-angle-right
-    //                 |  Order
-    //       .col-flex
-    //         .price-inner
-    //           .price-header-wrap
-    //             .price-header
-    //               .price-value
-    //                 span.price-cost.custom Custom
-    //             p.price-title Enterprise
-    //           ul.price-list
-    //             li
-    //               | A customizable, affordable scaleable knowledge platform that&apos;s simple to implement
-    //             li Get in touch
-    //             li
-    //               strong Enterprise
-    //               |  includes everything in 
-    //               strong Private
-    //               | , and:
-    //             li Enterprise grade cloud security
-    //             li Dedicated tech support backed by service level agreements00
-    //             li SSO for authentication
-    //             li
-    //               | API integrations to manage users and integrate with your learning management system
-    //             li Customizable Analytics via our web-based analytics package
-    //           .price-footer
-    //             a.order-btn(href='#0')
-    //               i.fa.fa-angle-right
-    //               |  Order
-    //       .col-flex
-    //         .price-inner
-    //           .price-header-wrap
-    //             .price-header
-    //               .price-value
-    //                 span.price-cost.custom Custom
-    //             p.price-title Enterprise
-    //           ul.price-list
-    //             li
-    //               | A customizable, affordable scaleable knowledge platform that&apos;s simple to implement
-    //             li Get in touch
-    //             li
-    //               strong Enterprise
-    //               |  includes everything in 
-    //               strong Private
-    //               | , and:
-    //             li Enterprise grade cloud security
-    //             li Dedicated tech support backed by service level agreements00
-    //             li SSO for authentication
-    //             li
-    //               | API integrations to manage users and integrate with your learning management system
-    //             li Customizable Analytics via our web-based analytics package
-    //           .price-footer
-    //             a.order-btn(href='#0')
-    //               i.fa.fa-angle-right
-    //               |  Order
+    section.get-in-touch
+        .container
+          .get-in-touch-partners.row-flex
+            .col-flex
+              img.img-responsive(src='images/hong.png', alt='hong leong bank')
+            |             
+            .col-flex
+              img.img-responsive(src='images/jil.png', alt='jil')
+            |             
+            .col-flex
+              img.img-responsive(src='images/linde.png', alt='linde')
+            |             
+            .col-flex
+              img.img-responsive(src='images/maxis.png', alt='maxis')
+            |             
+            .col-flex
+              img.img-responsive(src='images/dbs.png', alt='dbs bank')

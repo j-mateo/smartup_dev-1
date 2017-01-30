@@ -3,72 +3,89 @@ block content
     .video-wrap
       video#myVideo1(loop='', muted='')
         source(type='video/mp4', src='./images/video_bg.mp4')
-    section.marketing.marketing-peer
+    section.dark-tier
       .container.reveal
-        p
-          | The new peer-to-peer knowledge
-          br
-          | creation and sharing platform.
-    section.marketing.marketing-business
+        .row
+          .col-xs-12.col-sm-8.col-sm-offset-2
+            p
+              | The new peer-to-peer knowledge creation and sharing platform.
+    section.blue-tier
       .container.reveal
-        h3 SmartUp can improve your business.
+        .row
+          .col-xs-12
+            p.no-bottom-margin SmartUp can improve your business.
     section.business-item
-      .container.reveal
+      .container
         .row-flex
           .col-flex
-            img.img-responsive(src='./images/innovation.png', alt='innovation')
+            img.img-responsive(src='./images/features_innovation_small.png', alt='innovation')
           .col-flex.col-flex-content
             .business-item-content
-              h4 innovation
+              h4.business-item-title innovation
               p
                 | SmartUp helps scale your organization&rsquo;s innovation and transformation strategy by making it super easy to create, share and learn what your teams really need to know. Kick-off with inspiration from global innovators and dive into our human-centered design and lean startup modules.
-              a.cbtn.btn-dark(href='innovation.html') learn more
-              a.cbtn.btn-bright(href='#0') get in touch
+              .row
+                .col-xs-6
+                  a.cbtn.btn-dark(href='innovation.html') learn more
+                .col-xs-6
+                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
     section.business-item
-      .container.reveal
+      .container
         .row-flex
           .col-flex.col-flex-content
             .business-item-content
-              h4 training+learning
+              h4.business-item-title training+learning
               p
                 | We&rsquo;re leading a revolution in learning, literally.  We&apos;re flipping training on it&apos;s head. Discover how our peer to peer knowledge sharing and micro-learning platform is democratizing knowledge sharing and learning.
-              a.cbtn.btn-dark(href='learning.html') learn more
-              a.cbtn.btn-bright(href='#0') get in touch
+              .row
+                .col-xs-6
+                  a.cbtn.btn-dark(href='learning.html') learn more
+                .col-xs-6
+                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
           .col-flex
-            img.img-responsive(src='./images/training.png', alt='training')
+            img.img-responsive(src='./images/features_training_small.png', alt='training')
     section.business-item
-      .container.reveal
+      .container
         .row-flex
           .col-flex
-            img.img-responsive(src='./images/emloyes.png', alt='employees')
+            img.img-responsive(src='./images/features_recruitment_small.png', alt='recruitment')
           .col-flex.col-flex-content
             .business-item-content
-              h4 onboarding new employees
-              p
-                | Make the best first impression with an onboarding experience unlike any other. Tailor  content related to your teams and allow new hires to access that knowledge and test their skills through quizzes and polls to build excitement and engagement from day one.
-              a.cbtn.btn-dark(href='#0') learn more
-              a.cbtn.btn-bright(href='#0') get in touch
-    section.business-item.last.reveal
-      .container.reveal
-        .row-flex
-          .col-flex.col-flex-content
-            .business-item-content
-              h4 recruitment
+              h4.business-item-title recruitment
               p
                 | Proactively create a private community of passionate, potential hires around a specific topic and fill it with custom content that enables the sharing of smarts. Use the leaderboard and create quizzes to identify future hires and reveal their real knowledge.
-              a.cbtn.btn-dark(href='recruiting.html') learn more
-              a.cbtn.btn-bright(href='#0') get in touch
+              .row
+                .col-xs-6
+                  a.cbtn.btn-dark(href='recruiting.html') learn more
+                .col-xs-6
+                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
+    
+    
+    section.business-item.last
+      .container
+        .row-flex
+          .col-flex.col-flex-content
+            .business-item-content
+              h4.business-item-title onboarding new employees
+              p
+                | Make the best first impression with an onboarding experience unlike any other. Tailor  content related to your teams and allow new hires to access that knowledge and test their skills through quizzes and polls to build excitement and engagement from day one.
+              .row
+                .col-xs-6.col-xs-offset-3
+                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
           .col-flex
-            img.img-responsive(src='./images/recruitment.png', alt='recruitment')
-    section.marketing.marketing-bottom
-      .reveal
-        h3 Everywhere you go.
-        p
-          | With fully native apps for iOS and Android, you can keep engaged
-          br
-          |  with your community whereever you are, whenever you want.
-        footer.app-btns
-          a.abtn.abtn-apple-store(href='#0')
-            img.img-reponsive(src='./images/apple.png', alt='apple store')
-          a.abtn.abtn-google-play(href='#0')
-            img.img-reponsive(src='./images/android.png', alt='google play')
+            img.img-responsive(src='./images/features_employees_small.png', alt='employees')
+
+    
+    section.blue-tier
+      .container.reveal
+        .row
+          .col-xs-12.col-sm-8.col-sm-offset-2
+            h3.blue-tier-title Everywhere you go.
+            p.blue-tier-text
+              | With fully native apps for iOS and Android, you can keep engaged
+              | with your community whereever you are, whenever you want.
+            footer.app-btns
+              a.abtn.abtn-apple-store(href="#{appleStore}")
+                img.img-reponsive(src='./images/apple.png', alt='apple store')
+              a.abtn.abtn-google-play(href="#{googlePlay}")
+                img.img-reponsive(src='./images/android.png', alt='google play')

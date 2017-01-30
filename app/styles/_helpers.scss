@@ -24,4 +24,20 @@
     border-bottom: 0;
   }
 }
+
+.blue-tier .no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+.white-tier.no-top-border {
+  border-top: none;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px; 
+}
 // Helpers

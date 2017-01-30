@@ -7,6 +7,7 @@ $icon-font-path: '../fonts/';
 @import "vars";
 @import "typo";
 @import "helpers";
+@import "ionicons";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -48,7 +49,7 @@ p {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $separator_color;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -77,32 +78,6 @@ p {
   margin: 30px 0;
 }
 
-.sub-hero {
-  background: url(../images/community.jpg) no-repeat;
-  background-size: cover;
-  padding-top: 250px;
-  padding-bottom: 50px;
-  position: relative;
-  color: $white;
-  &:after {
-    content: " ";
-    position: absolute;
-    top: 0; bottom: 0;
-    right: 0; left: 0;
-    background: rgba(48, 60, 73, .6);
-  }
-  h2 {
-    font-size: 30px;
-  }
-  h3 {
-    font-size: 14px;
-  }
-  .container {
-    position: relative;
-    z-index: 5;
-  }
-}
-
 /* Supporting marketing content */
 .marketing {
   p + h4 {
@@ -114,6 +89,9 @@ p {
 @media screen and (min-width: 768px) {
   .container, .jumbotron .container {
     max-width: 1400px;
+  }
+  .container.carousel-container {
+    max-width: 1520px;
   }
 
   /* Remove the padding we set earlier */
@@ -165,13 +143,17 @@ p {
   color: $white;
 }
 
+.features {
+  padding: 60px 0 180px 0;
+}
+
 .features .glyphicon,
 .features .fa {
   font-size: 100px;
 }
 
 .features-intro {
-  padding: 40px 0 140px 0;
+  padding: 40px 0 100px 0;
 }
 
 .features p {
@@ -357,6 +339,9 @@ p {
   }
   ul {
     padding-right: 35px;
+    @media screen and (max-width: $screen-sm) {
+      padding-right: 0;
+    }
   }
   ul, li {
     height: $header_height;
@@ -430,10 +415,13 @@ h1.text-muted {
 }
 
 .video-wrap {
-  height: 100%;
   overflow: hidden;
   position: relative;
   width: 100%;
+  height: 100%;
+  @media screen and (max-width: 1600px) {
+    height: auto;
+  }
   video {
     display: block;
   }
@@ -497,6 +485,18 @@ h1.text-muted {
       background: $bright_gray;
       border-top: 1px solid $white;
     }
+  }
+}
+
+.business-item-content {
+  color: $dark_text;
+  width: 100%;
+  p {
+    margin-bottom: 40px;
+  }
+  .cbtn {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -639,6 +639,12 @@ body {
 
 .marketing-options .col-flex {
   position: relative;
+  &.no-bottom-margin {
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: $screen-sm) {
+    margin-bottom: 30px;
+  }
 }
 
 .col-flex-4 {
@@ -673,7 +679,18 @@ body {
   }
   .marketing-option-info-home-wrap {
     padding: 10px 20px;
-    border: 1px solid rgba(#979797, .4);
+    border: 1px solid $separator_color;
+    h4 {
+      color: $dark_text;
+      a {
+          &, &:focus, &:hover {
+            color: $dark_text;
+          }
+          &:focus, &:hover {
+            text-decoration: underline;
+          }
+      }
+    }
   }
 }
 
@@ -706,8 +723,8 @@ body {
   position: relative;
   margin-bottom: 0;
   text-align: left;
-  padding-top: 300px;
-  padding-bottom: 300px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   &.jumbotron-learning {
     background-image: url(../images/hero_bg/hero-learning.png);
   }
@@ -725,9 +742,12 @@ body {
         text-decoration: underline;
       }
     }
+    p {
+      @include fontSize(18px);
+    }
   }
   &.jumbotron-press {
-    background-image: url(../images/hero_bg/hero-press.png);
+    background-image: url(../images/hero_bg/hero-press-small.png);
     padding-top: 300px;
     padding-bottom: 300px;
   }
@@ -794,25 +814,57 @@ body {
 
 // Tiers
 .blue-tier {
-  padding: 80px 0;
+  padding: $tier_color_padding 0;
   .cbtn {
     padding: 10px 70px;
     text-transform: uppercase;
   }
 }
 
+.blue-tier-number {
+  color: #302C2C;
+  position: relative;
+  .blue-tier-step-line {
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: -25%;
+    display: block;
+    background: $white;
+    .blue-tier-step-line-wrap {
+      position: relative;
+    }
+    .blue-tier-step-line-dot,
+    .blue-tier-step-line-dot-front {
+      position: absolute;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: $white;
+      top: 50%;
+      margin-top: -2px;
+      border-radius: 50%;
+    }
+    .blue-tier-step-line-dot-front {
+      right: 0;
+    }
+  }
+}
+
 .dark-tier {
   color: $white;
   background: $footer_bg;
-  padding: 120px 0;
+  padding: $tier_color_padding 0;
   text-align: center;
 }
 
 .white-tier {
   color: #49515D;
   background: $white;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid $separator_color;
+  border-bottom: 1px solid $separator_color;
   padding: 90px 0 100px 0;
 }
 
@@ -828,14 +880,22 @@ body {
   padding-top: 0;
   border-bottom: none;
 }
+
+.white-tier.white-tier-press.no-bottom-padding {
+  padding-bottom: 0;
+}
 // Tiers
 
 // Carousel
+.carousel {
+  padding: 0 60px;
+}
+
 .marketing-options {
   background: #f3f3f3;
   color: $white;
-  padding: 100px 0;
-  border-bottom: 1px solid rgb(229, 229, 229);
+  padding: 80px 0;
+  // border-bottom: 1px solid $separator_color;
 }
 
 .carousel-col {
@@ -880,21 +940,28 @@ body {
 }
 
 .left.carousel-control {
-  left: -60px;
+  // left: -60px;
   background-image: none;
   width: 30px;
 }
 
 .right.carousel-control {
-  right: -60px;
+  // right: -60px;
   background-image: none;
   width: 30px;
 }
 // Carousel
 
 // Pricing
-.pricing-container {
-  max-width: 1600px;
+@media (min-width: 1400px) {
+  .container.pricing-container {
+    max-width: 1400px;
+    width: 100%;
+  }
+}
+
+section.pricing-section {
+  padding: 0 3px;
 }
 
 .pricing-row {
@@ -909,7 +976,8 @@ body {
 
 .pricing-box {
   padding: 40px 20px;
-  border: 1px solid #9B9B9B;
+  // border: 1px solid #9B9B9B;
+  border: 1px solid $separator_color;
   .cbtn {
     min-width: 85%;
     padding-top: 10px;
@@ -918,7 +986,7 @@ body {
 }
 
 .pricing-header {
-  min-height: 300px;
+  min-height: 322px;
 }
 
 .pricing-title {
@@ -952,7 +1020,7 @@ body {
   padding-top: 65px;
   display: inline-block;
   &, &:focus, &:hover {
-    color: #ABABAB;
+    color: $black;
   }
 }
 
@@ -968,15 +1036,15 @@ body {
     padding-bottom: 25px;
     &:before {
       content: " ";
-      width: 5px;
-      height: 5px;
+      width: 3px;
+      height: 3px;
       position: absolute;
       background: $white;
       border-radius: 50%;
-      top: 9px;
+      top: 8px;
       left: -13px;
       // border: 5px solid #9B9B9B;
-      box-shadow: 0 0 0 3px #9B9B9B;
+      box-shadow: 0 0 0 4px #9B9B9B;
     }
   }
 }
@@ -1055,6 +1123,11 @@ body {
   padding: 15px 0;
 }
 
+.contact-team-phone {
+  padding-bottom: 30px;
+  color: $dark_text;
+}
+
 .contact-form-row {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -1084,6 +1157,15 @@ body {
   max-width: 1200px;
   .contact-team {
     padding-bottom: 50px;
+  }
+}
+
+.team-jobs-link {
+  &, &:focus, &:hover {
+    color: #A9A9A9;
+  }
+  &:focus, &:hover {
+    text-decoration: underline;
   }
 }
 // Team
@@ -1170,14 +1252,12 @@ body {
 
 .innovation-quote {
   color: $footer_bg;
-  font-size: 24px;
-  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
   padding-top: 65px;
   display: block;
 }
 
 .innovation-quote-author {
-  color: $bright_gray;
+  color: #9B9B9B;
 }
 
 // Contact
@@ -1185,3 +1265,441 @@ body {
   border-radius: 50%;
 }
 // Contact
+
+
+// .container {
+//   border: 1px solid red;
+// }
+
+// .container-fluid {
+//   border: 1px solid green;
+// }
+
+.coming-soon {
+  color: #BCBCBC;
+}
+
+.media-asset-wrap {
+  border: 1px solid $separator_color;
+}
+
+.media-asset-footer {
+  text-align: left;
+  padding: 20px;
+  // border-top: 1px solid #9b9b9b;
+  border-top: 1px solid $separator_color;
+}
+
+.media-asset-title {
+  color: $dark_text;
+}
+
+.media-asset-bottom {
+  color: #AEAEAE;
+}
+
+.media-asset-bottom a {
+  &, &:focus, &:hover {
+    color: #AEAEAE;
+  }
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+}
+
+.marketing-options-white {
+  background: $white;
+}
+
+.btn-images {
+  background: $white;
+  color: $dark_text;
+  border: 2px solid $dark_text;
+  &:focus, &:hover {
+    border-color: $bright_blue;
+  }
+}
+
+.btn-bio {
+  margin-right: 10px;
+}
+
+.key-people {
+  border-top: 1px solid $separator_color;
+  .feedback-title {
+    padding-bottom: 60px;
+    margin-bottom: 10px;
+  }
+}
+
+.col-flex-15 {
+  width: 15%;
+}
+
+.col-flex-60 {
+  width: 60%;
+}
+
+.col-flex-25 {
+  width: 25%;
+}
+
+.featured-press {
+  .cbtn.btn-dark {
+    width: 100%;
+  }
+  .row-flex {
+    min-height: auto;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+}
+
+.media-assets {
+  padding-bottom: 120px;
+}
+
+.find-community .col-flex-4 {
+  align-content: stretch;
+  .col-flex.margin-bottom {
+    margin-bottom: 30px;
+  }
+}
+
+.marketing-options.confirm {
+  background: transparent;
+}
+
+.blue-tier p.blue-tier-text {
+  margin: 50px auto;
+}
+
+.app-btns a {
+  display: inline-block;
+  &:first-child {
+    margin-right: 30px;
+  }
+}
+
+.business-item-title {
+  margin-bottom: 40px;
+}
+
+.marketing-options-innovation a {
+  display: block;
+  transition: .3s;
+  &, &:focus, &:hover {
+    color: $white;
+  }
+  &:focus, &:hover {
+    box-shadow: 0 0 20px 0 rgba($black, .4);
+  }
+}
+
+.get-in-touch p {
+  color: $dark_text;
+}
+
+.business-item .container-fluid {
+  padding: 0 0;
+}
+
+.business-item {
+  overflow: hidden;
+  border-bottom: 1px solid $separator_color;
+  padding-top: 100px;
+  &.last {
+    border-bottom: none;
+  }
+}
+
+.separator-bottom {
+  border-bottom: 1px solid $separator_color;
+}
+
+.features.feature-page {
+  padding: 150px 0;
+}
+
+.dark-tier-bottom-text {
+  display: block;
+  margin-top: 35px;
+}
+
+.asterisk {
+  display: inline-block;
+  position: relative;
+  i {
+    display: inline-block;
+    position: absolute;
+    color: #00B7E1;
+  }
+  &.asterisk-anyone {
+    padding-right: 15px;
+    i {
+      @include fontSize(18px);
+      top: 5px;
+    }
+  }
+  &.asterisk-smartup {
+    margin-left: 18px;
+    i {
+      @include fontSize(16px);
+      left: -18px;
+      top: 50%;
+      margin-top: -9px;
+    } 
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .carousel-control.right, .carousel-control.left {
+    display: none;
+  }
+  .carousel {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .container, .carousel-container {
+    width: 100%;
+  }
+  .nav-wrap.navbar {
+    margin-right: 0;
+  }
+  .header {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .features .features-cols {
+    text-align: center;
+    img {
+      display: inline;
+    }
+  }
+  
+  .features-cols {
+    max-width: 520px;
+    margin: auto;
+  }
+  
+  .feature-desc {
+    margin-bottom: 80px;
+    padding-top: 20px;
+    &.feature-desc-last {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  
+  .marketing-options .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .footer .copy span {
+    display: block;
+    margin-right: 0;
+  }
+  
+  .social {
+    padding-left: 0;
+  }
+  
+  .copy-txt {
+    color: $white;
+  }
+  
+  .carousel-indicators {
+    margin-top: 0;
+  }
+  
+  .features h3 br {
+    display: none;
+  }
+  
+  .footer {
+    position: static;
+  }
+  
+  .main-wrap {
+    padding-bottom: 0;
+  }
+  
+  body {
+    margin-bottom: 0;
+  }
+  
+  .main-nav ul {
+    height: auto;
+  }
+  
+  .login-box > p {
+    border-bottom: none;
+  }
+  
+}
+
+.marketing-options-innovation .row-flex .marketing-option-info {
+  bottom: auto;
+  p {
+    margin-bottom: 0;
+  }
+  
+  @media screen and (max-width: $screen-sm) {
+    background: $footer-bg;
+    .marketing-options-innovation .col-flex {
+      flex: 1 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .marketing-options .container {
+    width: 100%;
+    margin: auto;
+  }
+  .marketing-option-info {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .text-muted .img-responsive {
+    margin: 0 0;
+  }
+  .app-btns a {
+    display: block;
+    &:first-child {
+      margin: 0 auto 30px auto;
+      max-width: 200px;
+    }
+  }
+}
+
+
+@media screen and (max-width: $screen-sm) {
+  .jumbotron {
+    padding: 50px 0;
+  }
+  .features {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .features-intro {
+    padding-bottom: 70px;
+  }
+  .marketing-options {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .dark-tier {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .video-wrap {
+    height: auto;
+  }
+  .marketing-options.marketing-options-innovation {
+    
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .carousel .col-flex-4 {
+    .col-flex {
+      padding: 5px;
+    }
+    .marketing-option-info-home-wrap {
+      min-height: 150px;
+    }
+  }
+}
+
+.col-flex-4 .marketing-option-info {
+  position: static;
+}
+
+
+// DL buttons
+.dl-btn-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.dl-btn {
+    padding: 9px 22px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 140px;
+    display: inline-block;
+    border: 2px solid #fff;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.dl-btn.btn-1 {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    right: 1px;
+}
+
+.dl-btn.btn-2 {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    left: -6px;
+    border-left: none;
+}
+
+.dl-btn i {
+    font-size: 19px;
+    vertical-align: -1px;
+    margin-right: 6px;
+}
+
+.dl-btn:focus,
+.dl-btn:active,
+.dl-btn:hover {
+    color: #48afcb;
+    text-decoration: none;
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.dl-btn i {
+    font-size: 19px;
+    vertical-align: -1px;
+    margin-right: 6px;
+}
+
+.dl-btn:focus,
+.dl-btn:active,
+.dl-btn:hover {
+    color: #48afcb;
+    text-decoration: none;
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.pricing-min-height {
+  min-height: 1085px;
+  @media screen and (max-width: 1400px) {
+    min-height: 1273px;
+  }
+  @media screen and (max-width: 991px) {
+    min-height: auto;
+  }
+}

@@ -13,6 +13,7 @@ head
     // endbuild
     // build:css styles/main.css
     link(rel='stylesheet', href='styles/main.css')
+    link(ref='stylesheet', href='bower_components/wow/css/libs/animate.css')
     // endbuild
     link(rel='stylesheet', href='https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css')
     // build:js scripts/vendor/modernizr.js
@@ -42,7 +43,7 @@ head
                 p YOUR COMMUNITY
                 .login-btns
                   a.cbtn.btn-dark(href='create_community.html') create
-                  a.cbtn.btn-bright.borderless(href='#0') sign in / find
+                  a.cbtn.btn-bright.borderless(href='find_community.html') sign in / find
               nav.main-nav
                 ul.nav.pull-right
                   li.active
@@ -50,7 +51,7 @@ head
                   li
                     a(href='pricing.html') Pricing
                   li
-                    a(href='#') Blog
+                    a(href='https://medium.com/@smartup_io') Blog
     
     .main-wrap
       block content
@@ -61,13 +62,13 @@ head
         .row
           .col-md-8.col-sm-9.col-xs-12.copy-col
             small.copy
-              span SmartUp.io, LTD &copy; 2017
+              span.copy-txt SmartUp.io, ltd &copy; 2017
               span
-                a(href='privacy.html') Privacy
+                a(href='privacy.html', target='_blank') Privacy
               span
-                a(href='_copyright.html') Copyright
+                a(href='copyright.html', target='_blank') Copyright
               span
-                a(href='terms_and_services.html') Terms of Service
+                a(href='terms_and_services.html', target='_blank') Terms of Service
               span
                 a(href='team.html') Team
               span
@@ -111,7 +112,9 @@ head
       ga('send', 'pageview');
     // build:js scripts/vendor.js
     // bower:js
-    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    // script(src='/bower_components/scrollreveal/dist/scrollreveal.min.js')
+    script(src='/bower_components/wow/dist/wow.min.js')
     // endbower
     // endbuild
     // build:js scripts/plugins.js
@@ -128,7 +131,7 @@ head
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
     // endbuild
-    script(src='https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js')
+    
     // build:js scripts/main.js
     script(src='scripts/main.js')
     // endbuild

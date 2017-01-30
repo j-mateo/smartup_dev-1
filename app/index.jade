@@ -1,28 +1,37 @@
 extends layouts/default
 block content
-    section.jumbotron
+    section.jumbotron.jumbotron-home
       .jumbotron-inner
         .container
           .row-flex
             .col-flex
               h1.jumbotron-title show what you know
               p.lead
-                | Shared knowledge is power multiplied. Create or join a community and let SmartUp help boost your know-how with fun, engaging content on the topics that matter the most to you. Connect with peers and influential founders to learn new skills,
-                | share insight, gain advice and much more.
+                | Create or join a community and let SmartUp help boost your know-how with fun, 
+                | engaging content on the topics that matter the most to you. Connect with peers and influential
+                | founders to learn new skills, share insight, gain advice and much more.
               a.cbtn.btn-blue(href='create_community.html') create a community
               footer
                 small
-                  a.community-find-link(href='#0') Find your community
-                  |  or browse popular content below.
+                  | Have you been invited to a SmartUp community already? If so, 
+                  a.community-find-link(href='find_community.html') find your community
+              // .jumbotron-app-btns
+              //   .dl-btn-wrapper
+              //     a.dl-btn.btn-1(href="#0")
+              //       i.ion-android-playstore
+              //       | Android
+              //     a.dl-btn.btn-2(href="#0")
+              //       i.ion-social-apple
+              //       | Iphone
     
     section.dark-tier
       .container
         .row
           .col-xs-12
             p
-              | Connect with peers, influencers and thought leaders. Create, learn and share knowledge
+              | Join one of our featured communities below to connect with peers, influencers and thought leaders.
     section.marketing-options.marketing-options-home
-      .container
+      .container.carousel-container
         .row
           .col-xs-12
             #myCarousel.carousel.slide(data-ride='carousel', data-interval='false')
@@ -36,10 +45,11 @@ block content
                 .item.active
                   .row.row-flex
                     .col-flex
-                      img.img-responsive(src='./images/imgpsh_fullsize (5).png')
+                      a(href="#0")
+                        img.img-responsive(src='./images/imgpsh_fullsize (5).png')
                       .marketing-option-info.marketing-option-info-home
                         .marketing-option-info-home-wrap
-                          h4 Launch
+                          h4 <a href="#0">Launch</a>
                           p.text-justify
                             | The startup community for entrepreneurs and innovators everywhere. 
                             | Test and improve your startup knowledge with insights and qiuzzes from top founders, 
@@ -48,117 +58,129 @@ block content
                           //   i.fa.fa-arrow-circle-o-right
                           // |  Join
                     .col-flex.col-flex-4
-                      .col-flex
-                        img.img-responsive(src='./images/imgpsh_fullsize (1).png')
+                      .col-flex.margin-bottom-30
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (1).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p Facebook controversy, the flying car, and VR Breakthrough
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
-                      .col-flex
-                        img.img-responsive(src='./images/imgpsh_fullsize (2).png')
+                      .col-flex.margin-bottom-30
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (2).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p Robocall strike force, nkorean V.O.D and Space-Starbucks?
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
-                      .col-flex
-                        img.img-responsive(src='./images/imgpsh_fullsize (3).png')
+                      .col-flex.no-bottom-margin
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (3).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p How wearable tech will track human emotion
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
-                      .col-flex
-                        img.img-responsive(src='./images/imgpsh_fullsize (4).png')
+                      .col-flex.no-bottom-margin
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (4).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p Snapchat&apos;s$1B+, PayPal app kills, tinder left-swipe rivals
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
+                            
                 .item
                   .row.row-flex
                     .col-flex
-                      img.img-responsive(src='./images/launch.png')
+                      a(href="#0")
+                        img.img-responsive(src='./images/imgpsh_fullsize (5).png')
                       .marketing-option-info.marketing-option-info-home
                         .marketing-option-info-home-wrap
-                          h4 Launch
+                          h4 <a href="#0">Launch</a>
                           p.text-justify
                             | The startup community for entrepreneurs and innovators everywhere. 
                             | Test and improve your startup knowledge with insights and qiuzzes from top founders, 
                             | investors and journalists Founders is the original SmartUp community.
                           // a.marketing-option-link(href='#')
                           //   i.fa.fa-arrow-circle-o-right
-                          //   |  Join
+                          // |  Join
                     .col-flex.col-flex-4
-                      .col-flex
-                        img.img-responsive(src='./images/home-1.png')
+                      .col-flex.margin-bottom-30
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (1).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p Facebook controversy, the flying car, and VR Breakthrough
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
-                      .col-flex
-                        img.img-responsive(src='./images/home-2.png')
+                      .col-flex.margin-bottom-30
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (2).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p Robocall strike force, nkorean V.O.D and Space-Starbucks?
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
-                      .col-flex
-                        img.img-responsive(src='./images/home-3.png')
+                      .col-flex.no-bottom-margin
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (3).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p How wearable tech will track human emotion
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
-                      .col-flex
-                        img.img-responsive(src='./images/home-4.png')
+                      .col-flex.no-bottom-margin
+                        a(href="#0")
+                          img.img-responsive(src='./images/imgpsh_fullsize (4).png')
                         .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
                             p Snapchat&apos;s$1B+, PayPal app kills, tinder left-swipe rivals
                             // a.marketing-option-link(href='#')
                             //   i.fa.fa-arrow-circle-o-right
                             //   |  Read
+
                 ol.carousel-indicators
                   li.active(data-target='#myCarousel', data-slide-to='0')
                   li(data-target='#myCarousel', data-slide-to='1')
-                  // li(data-target='#myCarousel', data-slide-to='2')    
+
     section.features.container
-      h3.text-center
-        | Unlock your knowledge.
-        br
-        | Unleash your potential.
-      p.text-center.features-intro
-        | Create, share and exchange interactive content for a learning experience that&rsquo;s fun
-        br
-        |  and collaborative. Unlock your own real knowledge and see where it takes you.
-      .col-md-4.col-xs-12
-        .col-xs-4
-          img.img-responsive(src='./images/eye.svg', alt='eye')
-        .col-xs-8
-          p.feature-desc
-            | SmartUp reveals the passions, interests, skills and talents hidden by traditional organization structures, silos and hierarchies.
-      .col-md-4.col-xs-12
-        .col-xs-4
-          img.img-responsive(src='./images/peer.svg', alt='eye')
-        .col-xs-8
-          p.feature-desc
-            | Our peer-to-peer knowledge platform democratizes the creation and consumption of knowledge throughout your business.
-      .col-md-4.col-xs-12
-        .col-xs-4
-          img.img-responsive(src='./images/phone.svg', alt='phone')
-        .col-xs-8
-          p.feature-desc
-            | SmartUp was created for the mobile generation&mdash;entrepreneurs, millennials and innovators. Inspired by microlearning, we&rsquo;ve evolved for the enterprise.
+      .col-sm-8.col-sm-offset-2
+        h3.text-center.features-home-title
+          | Unlock your knowledge.
+          | Unleash your potential.
+          p.text-center.features-intro
+            | Create, share and exchange interactive content for a learning experience that&rsquo;s fun
+            | and collaborative. Unlock your own real knowledge and see where it takes you.
+      .features-cols.clearfix
+        .col-md-4.col-xs-12
+          .col-sm-12.col-md-3
+            img.img-responsive(src='./images/eye_thin.svg', alt='eye')
+          .col-sm-12.col-md-9
+            p.feature-desc
+              | SmartUp reveals the passions, interests, skills and talents hidden by traditional organization structures, silos and hierarchies.
+        .col-md-4.col-xs-12
+          .col-sm-12.col-md-3
+            img.img-responsive(src='./images/peers_thin.svg', alt='peers')
+          .col-sm-12.col-md-9
+            p.feature-desc
+              | Our peer-to-peer knowledge platform democratizes the creation and consumption of knowledge throughout your business.
+        .col-md-4.col-xs-12
+          .col-sm-12.col-md-3
+            img.img-responsive(src='./images/phone.svg', alt='phone')
+          .col-sm-12.col-md-9
+            p.feature-desc.feature-desc-last
+              | SmartUp was created for the mobile generation&mdash;entrepreneurs, millennials and innovators. Inspired by microlearning, we&rsquo;ve evolved for the enterprise.
+
     section.blue-tier
       .container
         p How can SmartUp inspire success in your life and business?
-        a.cbtn.btn-dark(href='#0') find out
+        a.cbtn.btn-dark(href='features.html') find out
