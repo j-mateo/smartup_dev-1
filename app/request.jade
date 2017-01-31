@@ -5,23 +5,23 @@ block content
             .col-xs-12
                 h2.text-center.feedback-title Hi, we're looking forward to getting your team up and running on SmartUp.
                 p.text-center.feedback-info To make your request for a community, please tell us a little more about you and your company.
-                
+
         form.contact-form(method='post', action='#', data-redirect='request_confirm.html')
             input(type='hidden', name='form-name', value='request-community')
             .row.feedback-row
                 .col-md-6
                     .form-group
                         label(for='reques-username') Your name*
-                        input#request-username.form-control(type='text', name='request-username', placeholder='John Doe', required)
+                        input#request-username.form-control(type='text', name='name', placeholder='John Doe', required)
                 .col-md-6
                     .form-group
                         label(for='request-organization-name') Your organization's name
-                        input#request-organization-name.form-control(type='text', name='request-organization-name', placeholder='SmartUp', required)
+                        input#request-organization-name.form-control(type='text', name='company', placeholder='SmartUp', required)
             .row.feedback-row
                 .col-md-4
                     .form-group
                       label(for='request-email') Your work email*
-                      input#request-email.form-control(type='email', name='request-email', placeholder='e.g. johndoe@acmeltd.com', required)
+                      input#request-email.form-control(type='email', name='email', placeholder='e.g. johndoe@acmeltd.com', required)
                 .col-md-4
                     .form-group
                       label(for='request-organization-size') Your organization's size?*
@@ -37,7 +37,7 @@ block content
                 .col-md-4
                     .form-group
                       label(for='request-phone') Your telephone number
-                      input#request-phone.form-control(type='tel', name='request-phone', placeholder='e.g. +1 555 123 4567')
+                      input#request-phone.form-control(type='tel', name='phone', placeholder='e.g. +1 555 123 4567')
             .row.feedback-row
                 .col-md-4
                     .form-group

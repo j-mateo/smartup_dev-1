@@ -1,5 +1,5 @@
 extends layouts/default
-block content 
+block content
     .container
         .row
             .col-xs-12
@@ -10,20 +10,20 @@ block content
                 .col-md-6
                     .form-group
                         label(for='create-username') Your name*
-                        input#create-username.form-control(type='text', name='create-username', placeholder='John Doe', required)
+                        input#create-username.form-control(type='text', name='name', placeholder='John Doe', required)
                 .col-md-6
                     .form-group
                         label(for='create-organization-name') Your organization's name
-                        input#create-organization-name.form-control(type='text', name='create-organization-name', placeholder='SmartUp', required)
+                        input#create-organization-name.form-control(type='text', name='company', placeholder='SmartUp', required)
             .row.feedback-row
                 .col-md-4
                     .form-group
                       label(for='create-email') Your work email*
-                      input#create-email.form-control(type='email', name='create-email', placeholder='e.g. johndoe@acmeltd.com', required)
+                      input#create-email.form-control(type='email', name='email', placeholder='e.g. johndoe@acmeltd.com', required)
                 .col-md-4
                     .form-group
                       label(for='create-organization-size') Your organization's size?*
-                      select#create-organization-size.form-control(name='create-organization-size', required)
+                      select#create-organization-size.form-control(name='organization-size', required)
                         option 1-25
                         option 26-50
                         option 51-200
@@ -35,7 +35,7 @@ block content
                 .col-md-4
                     .form-group
                       label(for='create-phone') Your telephone number
-                      input#create-phone.form-control(type='tel', name='create-phone', placeholder='e.g. +1 555 123 4567')
+                      input#create-phone.form-control(type='tel', name='phone', placeholder='e.g. +1 555 123 4567')
             .row.feedback-row
                 .col-md-4
                     .form-group
