@@ -45,6 +45,32 @@ $(document).ready(function() {
 
     }
     $(document).ready(function() {
+
+      var postToCrm = function(data, cb) {
+        if (data.name !== undefined) {
+          var name = data.name;
+          delete data.name;
+          var parts = name.split(' ');
+
+          var lastName = '';
+          for (var i = 1; i < parts.length; i++) {
+            lastName += parts[i] + " ";
+          }
+
+          data.first_name = parts[0];
+          data.last_name = lastName;
+        }
+        _agile.create_contact(data, {
+          success: function(data) {
+            console.log("Success crm")
+            cb.success(data)
+          },
+          error: function(data) {
+            console.error("Failed crm")
+            cb.success(data)
+          }
+        })
+      }
       var postToFormSpree = function(data, cb) {
         $.ajax({
           url: "https://formspree.io/" + form_email,
@@ -87,19 +113,28 @@ $(document).ready(function() {
         if (errors) {
           return;
         }
-
-        postToFormSpree(values, {
-          success: function() {
-            $submitButton.html(buttonLabel)
-            $submitButton.removeAttr('disabled')
-            location.href = $form.data('redirect') || '/'
+        postToCrm(values, {
+          success: function(data) {
+            postToFormSpree(values, {
+              success: function() {
+                $submitButton.html(buttonLabel)
+                $submitButton.removeAttr('disabled')
+                location.href = $form.data('redirect') || '/'
+              },
+              error: function() {
+                $submitButton.html(buttonLabel)
+                $submitButton.removeAttr('disabled')
+                location.href = $form.data('redirect') || '/'
+              }
+            });
           },
-          error: function() {
+          error: function(data) {
             $submitButton.html(buttonLabel)
             $submitButton.removeAttr('disabled')
             alert("Error submitting form. Please try again")
           }
-        });
+        })
+
       })
     });
 
