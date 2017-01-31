@@ -1294,6 +1294,14 @@ section.pricing-section {
   color: $dark_text;
 }
 
+.media-asset-title a {
+  color: $dark_text;
+  &:focus, &:hover {
+    text-decoration: none;
+    color: $bright_blue;
+  }
+}
+
 .media-asset-bottom {
   color: #AEAEAE;
 }
@@ -1702,4 +1710,20 @@ section.pricing-section {
   @media screen and (max-width: 991px) {
     min-height: auto;
   }
+}
+
+.pricing-bottom-text {
+  padding-bottom: 50px;
+}
+
+.social-col {
+  text-align: right;
+  .social {
+    display: inline;
+    line-height: 60px;
+  }
+}
+
+.business-item-title {
+  text-transform: lowercase;
 }
