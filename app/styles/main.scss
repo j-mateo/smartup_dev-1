@@ -7,7 +7,8 @@ $icon-font-path: '../fonts/';
 @import "vars";
 @import "typo";
 @import "helpers";
-@import "ionicons";
+// @import "ionicons";
+@import "buttons";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -231,13 +232,6 @@ p {
   }
 }
 
-.cbtn {
-  border-radius: 15px;
-  display: inline-block;
-  padding: 7px 25px;
-  transition: .3s;
-}
-
 .btn-dark {
   background: $footer_bg;
   color: $white;
@@ -302,9 +296,6 @@ p {
 .login-box {
   height: $header_height;
   text-align: center;
-  .cbtn {
-    padding: 5px 15px;
-  }
   p {
     line-height: 30px;
   }
@@ -498,10 +489,6 @@ h1.text-muted {
   width: 100%;
   p {
     margin-bottom: 40px;
-  }
-  .cbtn {
-    width: 100%;
-    text-align: center;
   }
 }
 
@@ -771,10 +758,6 @@ body {
     font-size: 21px;
     padding: 14px 24px;
   }
-  .cbtn {
-    padding: 13px 35px;
-    text-transform: uppercase;
-  }
   .row-flex {
     align-items: center;
   }
@@ -821,7 +804,7 @@ body {
 .blue-tier {
   padding: $tier_color_padding 0;
   .cbtn {
-    padding: 10px 70px;
+    // padding: 10px 70px;
     text-transform: uppercase;
   }
 }
@@ -1231,10 +1214,6 @@ section.pricing-section {
   background: #e4e4e4;
   padding: 60px 0;
   text-align: center;
-  .cbtn {
-    padding: 10px 70px;
-    text-transform: uppercase;
-  }
 }
 
 .get-in-touch-partners {
@@ -1484,19 +1463,6 @@ section.pricing-section {
   }
   .carousel {
     padding: 0;
-  }
-}
-
-@media screen and (max-width: $screen-lg) {
-  .container, .carousel-container {
-    width: 100%;
-  }
-  .nav-wrap.navbar {
-    margin-right: 0;
-  }
-  .header {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
@@ -1758,5 +1724,18 @@ section.pricing-section {
 
 .form-group label {
   padding: 15px 0;
+}
+
+@media screen and (max-width: $screen-lg) {
+  .container, .carousel-container {
+    width: 100%;
+  }
+  .nav-wrap.navbar {
+    margin-right: 0;
+  }
+  .header {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 

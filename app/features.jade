@@ -1,4 +1,11 @@
 extends layouts/default
+
+block metaVar
+  - var meta = true
+block metaContent
+  meta(name='description', content="Learn how our new peer-to-peer knowledge creation and sharing platform can improve your business.")
+  title SmartUp - For Business
+
 block content
     .video-wrap
       video#myVideo1(loop='', muted='')

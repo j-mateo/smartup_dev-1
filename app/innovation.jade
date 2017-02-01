@@ -1,4 +1,12 @@
 extends layouts/default
+
+block metaVar
+  - var meta = true
+
+block metaContent
+  meta(name='description', content="Scale your company's innovation capability and digital transformation strategy. Start here with our human centered design and lean startup learning streams.")
+  title SmartUp + Innovation
+
 block content
     section.jumbotron.jumbotron-innovation
       .jumbotron-inner

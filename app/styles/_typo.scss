@@ -12,26 +12,6 @@ html {
   font-size: 16px;
 }
 
-// @font-face {
-//   font-family: "Hurme_HurmeGeometricSans1_SemiBold";
-//   src: url("../fonts/Hurme_HurmeGeometricSans1_SemiBold.otf") format("opentype");
-// }
-
-// @font-face {
-//   font-family: "Hurme - HurmeGeometricSans1 Regular";
-//   src: url("../fonts/Hurme - HurmeGeometricSans1 Regular.otf") format("opentype");
-// }
-
-// @font-face {
-//   font-family: "Hurme - HurmeGeometricSans1 Bold";
-//   src: url("../fonts/Hurme - HurmeGeometricSans1 Bold.otf") format("opentype");
-// }
-
-// @font-face {
-//   font-family: "Hurme - HurmeGeometricSans1 Light";
-//   src: url("../fonts/Hurme - HurmeGeometricSans1 Light.otf") format("opentype");
-// }
-
 @font-face {
   font-family: "Hurme - HurmeGeometricSans2 SemiBold";
   src: url("../fonts/Hurme - HurmeGeometricSans2 SemiBold.otf") format("opentype");
@@ -47,32 +27,25 @@ html {
   src: url("../fonts/Hurme - HurmeGeometricSans2 Light.otf") format("opentype");
 }
 
-// Typography
+%regular {
+  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+}
+
+%semi-bold {
+  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+}
+
+%light {
+  font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+}
+
 body, p {
   font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
 }
 
 .jumbotron p.lead {
   @include fontSize(53px);
-  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
-}
-
-.jumbotron h1,
-.jumbotron small,
-.features h3,
-.price-cost,
-.price-title,
-.order-btn {
-  font-family: "Hurme_HurmeGeometricSans1_SemiBold", sans-serif;
-}
-
-.carousel-col h4 {
-  font-family: "Hurme - HurmeGeometricSans1 Bold", sans-serif;
-}
-
-.marketing-peer p {
-  font-size: 4rem;
-  font-family: "Hurme - HurmeGeometricSans1 Light", sans-serif;;
+  @extend %regular;
 }
 
 .price-cost {
@@ -321,4 +294,3 @@ body, p {
 .pricing-desc {
   @include fontSize(15px);
 }
-// TYpography

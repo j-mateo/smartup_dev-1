@@ -1,4 +1,11 @@
 extends layouts/default
+
+block metaVar
+  - var meta = true
+block metaContent
+  meta(name='description', content="Discover how our peer to peer knowledge sharing and micro-learning platform is democratizing knowledge sharing and learning.")
+  title Smartup - Training + Learning
+
 block content 
     section.jumbotron.jumbotron-learning
       .jumbotron-inner
