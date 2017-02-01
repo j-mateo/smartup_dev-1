@@ -139,4 +139,3 @@ $(document).ready(function() {
     });
 
 });
-var k = '♥ kems  ♥ 11:36 ♥';
