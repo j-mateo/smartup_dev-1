@@ -26,7 +26,7 @@ block content
       section.features.feature-page.container
         .col-md-4.col-xs-12
           .col-xs-3
-            img.img-responsive(src='./images/folder_thin.svg', alt='eye')
+            img.img-responsive(src='/images/folder_thin.svg', alt='eye')
           .col-xs-9
             p.feature-desc
               | Paper and digital resumes are personal branding tools. 
@@ -34,7 +34,7 @@ block content
               | knowledge in your branded knowledge sharing community.
         .col-md-4.col-xs-12
           .col-xs-3
-            img.img-responsive(src='./images/people_thin.svg', alt='eye')
+            img.img-responsive(src='/images/people_thin.svg', alt='eye')
           .col-xs-9
             p.feature-desc
               | Build communities that keep future hires engaged with knowledge 
@@ -42,7 +42,7 @@ block content
               | really knows, accelerate future hires.
         .col-md-4.col-xs-12
           .col-xs-3
-            img.img-responsive(src='./images/arrows_thin.svg', alt='phone')
+            img.img-responsive(src='/images/arrows_thin.svg', alt='phone')
           |       
           .col-xs-9
             p.feature-desc
@@ -53,9 +53,10 @@ block content
       .container-fluid
         .row.row-flex
           .col-flex
-            img.img-responsive(src='./images/recruitment_recruitment.png', alt='Community driven recruitment')
+            .business-item-img-wrap.left.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/recruitment_recruitment.png', alt='Community driven recruitment')
           .col-flex.col-flex-content
-            .business-item-content
+            .business-item-content.wow.slideInRight(data-wow-duration="1s")
               .col-md-10
                 h4.business-item-title Community driven recruitment
                 p
@@ -66,24 +67,26 @@ block content
     section.business-item
       .container-fluid
         .row-flex.row
-          .col-flex.col-flex-content
+          .col-flex.col-flex-content.order-1
             .col-md-10.col-md-offset-1
-              .business-item-content.text-right
+              .business-item-content.text-right.wow.slideInLeft(data-wow-duration="1s")
                 h4.business-item-title Shared knowledge unlocks talent
                 p
                   | Create learning mandatory, recommended or inspirational 
                   | learning streams. Allow the people in your teams to curate and 
                   | share their own learning playlists with others.
           .col-flex
-            img.img-responsive(src='./images/recruitment_knowladge.png', alt='Shared knowledge unlocks talent')
+            .business-item-img-wrap.right.wow.slideInRight(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/recruitment_knowladge.png', alt='Shared knowledge unlocks talent')
     section.business-item
       .container-fluid
         .row-flex.row
           .col-flex
-            img.img-responsive(src='./images/recruitment_inspiration.png', alt='Inspiring competition')
+            .business-item-img-wrap.left.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/recruitment_inspiration.png', alt='Inspiring competition')
           .col-flex.col-flex-content
             .col-md-10
-              .business-item-content
+              .business-item-content.wow.slideInRight(data-wow-duration="1s")
                   h4.business-item-title Inspiring competition
                   p 
                   | Bring gamiﬁcation to the hiring process. Our 
@@ -94,7 +97,7 @@ block content
         .row-flex.row
           .col-flex.col-flex-content
             .col-md-10.col-md-offset-1
-              .business-item-content.text-right
+              .business-item-content.text-right.wow.slideInLeft(data-wow-duration="1s")
                 h4.business-item-title Evidence based recruitment
                 p
                   | Remove the ambiguity around future hires. Reviewing individual 
@@ -102,7 +105,8 @@ block content
                   | dashboards reveal what the community really knows. For both, 
                   | the ability to identify and ﬁll knowledge gaps is simple.
           .col-flex
-            img.img-responsive(src='./images/recruitment_evidence.png', alt='Evidence based recruitment')
+            .business-item-img-wrap.right.wow.slideInRight(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/recruitment_evidence.png', alt='Evidence based recruitment')
 
     section.blue-tier
       .container
@@ -127,21 +131,21 @@ block content
       .container
         .get-in-touch-partners.row-flex
           .col-flex
-            img.img-responsive(src='images/hong.png', alt='hong leong bank')
+            img.img-responsive(src='/images/hong.png', alt='hong leong bank')
           |             
           .col-flex
-            img.img-responsive(src='images/jil.png', alt='jil')
+            img.img-responsive(src='/images/jil.png', alt='jil')
           |             
           .col-flex
-            img.img-responsive(src='images/linde.png', alt='linde')
+            img.img-responsive(src='/images/linde.png', alt='linde')
           |             
           .col-flex
-            img.img-responsive(src='images/maxis.png', alt='maxis')
+            img.img-responsive(src='/images/maxis.png', alt='maxis')
           |             
           .col-flex
-            img.img-responsive(src='images/dbs.png', alt='dbs bank')
+            img.img-responsive(src='/images/dbs.png', alt='dbs bank')
       |       
       .container
         .row
           .col-xs-12
-            a.cbtn.btn-dark(href='get_in_touch.html') get in touch
+            a.cbtn.btn-dark(href='/get_in_touch/') get in touch

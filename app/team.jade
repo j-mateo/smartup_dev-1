@@ -6,7 +6,7 @@ mixin teamMember(img, offset)
     if offset
       .col-sm-3.col-sm-offset-3.text-center.team-col
         .contact-team-img-wrap
-          img.img-responsive(src="images/SmartUp_Photos/#{img}.jpg", alt="#{img}")
+          img.img-responsive(src="/images/SmartUp_Photos/#{img}.jpg", alt="#{img}")
         p.team-name= name
         if titleRegion
             p.team-title #{titlePosition + ', ' + titleRegion}
@@ -15,7 +15,7 @@ mixin teamMember(img, offset)
     else
       .col-sm-3.text-center.team-col
         .contact-team-img-wrap
-            img.img-responsive(src="images/SmartUp_Photos/#{img}.jpg", alt="#{img}")
+            img.img-responsive(src="/images/SmartUp_Photos/#{img}.jpg", alt="#{img}")
         p.team-name= name
         if titleRegion
             p.team-title #{titlePosition + ', ' + titleRegion}
@@ -80,7 +80,7 @@ block content
             +teamMember('Alvise Martini, Data Analyst', 'offset')
             .col-sm-3.text-center.team-col
               .contact-team-img-wrap
-                  a(href="jobs.html")
-                    img.img-responsive(src="images/SmartUp_Photos/you_jobs.png", alt='Jobs')
+                  a(href="/jobs/")
+                    img.img-responsive(src="/images/SmartUp_Photos/you_jobs.png", alt='Jobs')
               p.team-name You
-              p.team-title <a href="jobs.html" class="team-jobs-link">Jobs</a>
+              p.team-title <a href="/jobs/" class="team-jobs-link">Jobs</a>

@@ -32,7 +32,7 @@ block content
       section.features.feature-page.container
         .col-md-4.col-xs-12
           .col-xs-3
-            img.img-responsive(src='./images/eye_thin.svg', alt='eye')
+            img.img-responsive(src='/images/eye_thin.svg', alt='eye')
           .col-xs-9
             p.feature-desc
               | In today&rsquo;s fast changing world, learning teams are it &filig;nding increasingly 
@@ -40,14 +40,14 @@ block content
               | tools and methods for the teams that need them
         .col-md-4.col-xs-12
           .col-xs-3
-            img.img-responsive(src='./images/peers_thin.svg', alt='eye')
+            img.img-responsive(src='/images/peers_thin.svg', alt='eye')
           .col-xs-9
             p.feature-desc
               | Our peer to peer knowledge sharing puts learning in the hands of those who
               | know and those who need to know - your teams.
         .col-md-4.col-xs-12
           .col-xs-3
-            img.img-responsive(src='./images/phone_thin.svg', alt='phone')
+            img.img-responsive(src='/images/phone_thin.svg', alt='phone')
           .col-xs-9
             p.feature-desc
               | Today&apos;s workforce is demanding a more flexibile and mobile learning experience. 
@@ -55,12 +55,13 @@ block content
     
     
     section.business-item
-      .container-fluid.reveal
+      .container-fluid
         .row.row-flex
           .col-flex
-            img.img-responsive(src='./images/learning_knowladge.png', alt='Unlock your knowledge. Unleash your potential.')
+            .business-item-img-wrap.left.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/learning_knowladge.png', alt='Unlock your knowledge. Unleash your potential.')
           .col-flex.col-flex-content
-            .business-item-content
+            .business-item-content.wow.slideInRight(data-wow-duration="1s")
               .col-md-10
                 h4.business-item-title Unlock your knowledge. Unleash your potential.
                 p
@@ -70,42 +71,45 @@ block content
     section.business-item
       .container-fluid.reveal
         .row-flex.row
-          .col-flex.col-flex-content
+          .col-flex.col-flex-content.order-1
             .col-md-10.col-md-offset-1
-              .business-item-content.text-right
+              .business-item-content.text-right.wow.slideInLeft(data-wow-duration="1s")
                 h4.business-item-title Guide with learning streams
                 p
                   | Create learning mandatory, recommended or inspirational 
                   | learning streams. Allow the people in your teams to curate and 
                   | share their own learning playlists with others.
           .col-flex
-            img.img-responsive(src='./images/learning_guide.png', alt='Guide with learning streams')
+            .business-item-img-wrap.right.wow.slideInRight(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/learning_guide.png', alt='Guide with learning streams')
     section.business-item
       .container-fluid.reveal
         .row-flex.row
           .col-flex
-            img.img-responsive(src='./images/learning_inspiration.png', alt='Inspiring competition')
+            .business-item-img-wrap.left.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/learning_inspiration.png', alt='Inspiring competition')
           .col-flex.col-flex-content
             .col-md-10
-              .business-item-content
+              .business-item-content.wow.slideInRight(data-wow-duration="1s")
                 h4.business-item-title Inspiring competition
                 p 
                   | Make learning and training a game. Our leaderboards 
                   | drive competition, across your company and within 
                   | speciﬁc channel topics.
     section.business-item.last.reveal
-      .container-fluid.reveal
+      .container-fluid
         .row-flex.row
-          .col-flex.col-flex-content
+          .col-flex.col-flex-content.order-1
             .col-md-10.col-md-offset-1
-              .business-item-content.text-right
+              .business-item-content.text-right.wow.slideInLeft(data-wow-duration="1s")
                 h4.business-item-title Revealing insights
                 p
                   | Individual member proﬁles show what they ‘really’ know. Admin 
                   | level dashboards reveal what the organization really knows. For 
                   | both, the ability to identify and ﬁll knowledge gaps is simple.
           .col-flex
-            img.img-responsive(src='./images/learning_guide.png', alt='Revealing insights')
+            .business-item-img-wrap.right.wow.slideInRight(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/learning_guide.png', alt='Revealing insights')
 
     section.blue-tier
       .container
@@ -129,21 +133,21 @@ block content
       .container
         .get-in-touch-partners.row-flex
           .col-flex
-            img.img-responsive(src='images/hong.png', alt='hong leong bank')
+            img.img-responsive(src='/images/hong.png', alt='hong leong bank')
           |             
           .col-flex
-            img.img-responsive(src='images/jil.png', alt='jil')
+            img.img-responsive(src='/images/jil.png', alt='jil')
           |             
           .col-flex
-            img.img-responsive(src='images/linde.png', alt='linde')
+            img.img-responsive(src='/images/linde.png', alt='linde')
           |             
           .col-flex
-            img.img-responsive(src='images/maxis.png', alt='maxis')
+            img.img-responsive(src='/images/maxis.png', alt='maxis')
           |             
           .col-flex
-            img.img-responsive(src='images/dbs.png', alt='dbs bank')
+            img.img-responsive(src='/images/dbs.png', alt='dbs bank')
       |       
       .container
         .row
           .col-xs-12
-            a.cbtn.btn-dark(href='get_in_touch.html') get in touch
+            a.cbtn.btn-dark(href='/get_in_touch/') get in touch

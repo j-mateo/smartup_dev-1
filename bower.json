@@ -5,7 +5,9 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
     "scrollreveal": "^3.3.2",
-    "wow": "^1.1.2"
+    "wow": "^1.1.2",
+    "jquery-touchswipe": "^1.6.18",
+    "jquery-mobile": "^1.4.5"
   },
   "overrides": {
     "bootstrap-sass": {

@@ -14,17 +14,17 @@ html {
 
 @font-face {
   font-family: "Hurme - HurmeGeometricSans2 SemiBold";
-  src: url("../fonts/Hurme - HurmeGeometricSans2 SemiBold.otf") format("opentype");
+  src: url("/fonts/Hurme - HurmeGeometricSans2 SemiBold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Hurme - HurmeGeometricSans2 Regular";
-  src: url("../fonts/Hurme - HurmeGeometricSans2 Regular.otf") format("opentype");
+  src: url("/fonts/Hurme - HurmeGeometricSans2 Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Hurme - HurmeGeometricSans2 Light";
-  src: url("../fonts/Hurme - HurmeGeometricSans2 Light.otf") format("opentype");
+  src: url("/fonts/Hurme - HurmeGeometricSans2 Light.otf") format("opentype");
 }
 
 %regular {
@@ -183,7 +183,7 @@ body, p {
     @include fontSize(20px);
   }
   .footer .copy span {
-    @include fontSize(16px); 
+    @include fontSize(18px); 
   }
 }
 
@@ -268,7 +268,6 @@ body, p {
   .blue-tier-text,
   .feature-desc,
   .nav > li > a,
-  .footer .copy span,
   .blue-tier p.blue-tier-text {
     @include fontSize(24px);
   }

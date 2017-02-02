@@ -12,16 +12,15 @@ head
     
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     // Place favicon.ico in the root directory
-    // build:css styles/vendor.css
+    // build:css /styles/vendor.css
     // bower:css
     // endbower
     // endbuild
-    // build:css styles/main.css
-    link(rel='stylesheet', href='styles/main.css')
-    link(ref='stylesheet', href='bower_components/wow/css/libs/animate.css')
+    // build:css /styles/main.css
+    link(rel='stylesheet', href='/styles/main.css')
     // endbuild
     link(rel='stylesheet', href='https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css')
-    // build:js scripts/vendor/modernizr.js
+    // build:js /scripts/vendor/modernizr.js
     script(src='/bower_components/modernizr/modernizr.js')
     // endbuild
   body
@@ -37,7 +36,7 @@ head
         .row
           h1.text-muted
             a(href='/')
-              img.img-responsive(src='./images/SmartUp_Brand.svg', alt='smartup')
+              img.img-responsive(src='/images/SmartUp_Brand.svg', alt='smartup')
               span.sr-only smartup
           .nav-wrap.navbar
             button.navbar-toggle.collapsed.navbar-trigger(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
@@ -47,16 +46,16 @@ head
               .login-box
                 p YOUR COMMUNITY
                 .login-btns
-                  a.cbtn.btn-dark(href='create_community.html') create
-                  a.cbtn.btn-bright.borderless(href='find_community.html') sign in / find
+                  a.cbtn.btn-dark(href='/create_community/') create
+                  a.cbtn.btn-bright.borderless(href='/find_community/') sign in / find
               nav.main-nav
                 ul.nav.pull-right
                   li.active
-                    a(href='features.html') Features
+                    a(href='/features/') Features
                   li
-                    a(href='pricing.html') Pricing
+                    a(href='/pricing/') Pricing
                   li
-                    a(href='https://medium.com/@smartup_io') Blog
+                    a(href='https://medium.com/smartup-io-the-ultimate-founder-guide') Blog
 
     .main-wrap
       block content
@@ -69,31 +68,35 @@ head
             small.copy
               span.copy-txt SmartUp.io, ltd &copy; 2017
               span
-                a(href='privacy.html', target='_blank') Privacy
+                a(href='/privacy/', target='_blank') Privacy
               span
-                a(href='copyright.html', target='_blank') Copyright
+                a(href='/copyright/', target='_blank') Copyright
               span
-                a(href='terms_and_services.html', target='_blank') Terms of Service
+                a(href='/terms_and_services/', target='_blank') Terms of Service
               span
-                a(href='team.html') Team
+                a(href='/team/') Team
               span
-                a(href='contact.html') Contact
+                a(href='/contact/') Contact
               span
-                a(href='press.html') Press
+                a(href='/press/') Press
           .col-md-4.col-sm-3.col-xs-12.social-col
             ul.social
               li
                 a(href="#{facebook}")
                   i.fa.fa-facebook
+                  | &nbsp;
               li
                 a(href="#{twitter}")
                   i.fa.fa-twitter
+                  | &nbsp;
               li
                 a(href="#{instagram}")
                   i.fa.fa-instagram
+                  | &nbsp;
               li
                 a(href="#{linkedin}")
                   i.fa.fa-linkedin
+                  | &nbsp;
 
     | <script id="_agile_min_js" async type="text/javascript" src="https://smartupio.agilecrm.com/stats/min/agile-min.js"></script><script type="text/javascript" >var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){_agile.set_account("d6uteq54emjm9ft918k912hpct", "smartupio"); _agile.track_page_view();};</script>
 
@@ -111,16 +114,16 @@ head
       e.src = 'https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e, r)
       }(window, document, 'script', 'ga'));
-      ga('create', 'UA-XXXXX-X');
+      ga('create', 'UA-59647801-1');
       ga('send', 'pageview');
-    // build:js scripts/vendor.js
+    // build:js /scripts/vendor.js
     // bower:js
     script(src='/bower_components/jquery/dist/jquery.min.js')
-    // script(src='/bower_components/scrollreveal/dist/scrollreveal.min.js')
+    // script(src='/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js')
     script(src='/bower_components/wow/dist/wow.min.js')
     // endbower
     // endbuild
-    // build:js scripts/plugins.js
+    // build:js /scripts/plugins.js
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
@@ -135,6 +138,6 @@ head
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
     // endbuild
 
-    // build:js scripts/main.js
-    script(src='scripts/main.js')
+    // build:js /scripts/main.js
+    script(src='/scripts/main.js')
     // endbuild

@@ -4,7 +4,7 @@ var form_email = "david@smartup.io"; // replace this with email where forms shou
 // Video Section
 //=======================================================
 $(document).ready(function() {
-
+    
     // Animation druing scroll
     new WOW().init();
     // window.sr = ScrollReveal();

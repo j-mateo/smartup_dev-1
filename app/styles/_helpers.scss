@@ -40,4 +40,21 @@
 .margin-bottom-30 {
   margin-bottom: 30px; 
 }
+
+@media screen and (max-width: $screen-sm) {
+
+  .order-1.col-flex {
+    order: 1;
+  }
+  
+  .business-item-img-wrap {
+    &.right {
+      float: right;
+    }
+    &.left {
+      float: left;
+    }
+  }
+
+}
 // Helpers

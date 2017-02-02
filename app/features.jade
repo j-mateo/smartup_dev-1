@@ -9,7 +9,7 @@ block metaContent
 block content
     .video-wrap
       video#myVideo1(loop='', muted='')
-        source(type='video/mp4', src='./images/video_bg.mp4')
+        source(type='video/mp4', src='/images/video_bg.mp4')
     section.dark-tier
       .container.reveal
         .row
@@ -24,63 +24,67 @@ block content
     section.business-item
       .container
         .row-flex
-          .col-flex
-            img.img-responsive(src='./images/features_innovation_small.png', alt='innovation')
+          .col-flex.no-right-15
+            .business-item-img-wrap.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/features_innovation_small.png', alt='innovation')
           .col-flex.col-flex-content
-            .business-item-content
+            .business-item-content.wow.slideInRight(data-wow-duration="1s")
               h4.business-item-title innovation
               p
                 | SmartUp helps scale your organization&rsquo;s innovation and transformation strategy by making it super easy to create, share and learn what your teams really need to know. Kick-off with inspiration from global innovators and dive into our human-centered design and lean startup learning streams.
               .row
-                .col-xs-6
-                  a.cbtn.btn-dark(href='innovation.html') learn more
-                .col-xs-6
-                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
+                .col-sm-6.col-xs-12
+                  a.cbtn.btn-dark(href='/innovation/') learn more
+                .col-sm-6.col-xs-12
+                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
     section.business-item
       .container
         .row-flex
-          .col-flex.col-flex-content
-            .business-item-content
+          .col-flex.col-flex-content.order-1
+            .business-item-content.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
               h4.business-item-title training+learning
               p
                 | We&rsquo;re leading a revolution in learning, literally.  We&apos;re flipping training on it&apos;s head. Discover how our peer to peer knowledge sharing and micro-learning platform is democratizing knowledge sharing and learning.
               .row
-                .col-xs-6
-                  a.cbtn.btn-dark(href='learning.html') learn more
-                .col-xs-6
-                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
-          .col-flex
-            img.img-responsive(src='./images/features_training_small.png', alt='training')
+                .col-sm-6.col-xs-12
+                  a.cbtn.btn-dark(href='/learning/') learn more
+                .col-sm-6.col-xs-12
+                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
+          .col-flex.no-left-15
+            .business-item-img-wrap.wow.slideInRight(data-wow-duration="1s")
+              img.img-responsive(src='/images/features_training_small.png', alt='training')
     section.business-item
       .container
         .row-flex
-          .col-flex
-            img.img-responsive(src='./images/features_recruitment_small.png', alt='recruitment')
+          .col-flex.no-right-15
+            .business-item-img-wrap.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
+              img.img-responsive(src='/images/features_recruitment_small.png', alt='recruitment')
           .col-flex.col-flex-content
-            .business-item-content
+            .business-item-content.wow.slideInRight(data-wow-duration="1s")
               h4.business-item-title recruitment
               p
                 | Proactively create a private community of passionate, potential hires around a specific topic and fill it with custom content that enables the sharing of smarts. Use the leaderboard and create quizzes to identify future hires and reveal their real knowledge.
               .row
-                .col-xs-6
-                  a.cbtn.btn-dark(href='recruiting.html') learn more
-                .col-xs-6
-                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
+                .col-sm-6.col-xs-12
+                  a.cbtn.btn-dark(href='/recruitment/') learn more
+                .col-sm-6.col-xs-12
+                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
     
     
     section.business-item.last
       .container
         .row-flex
-          .col-flex.col-flex-content
-            .business-item-content
+          .col-flex.col-flex-content.order-1
+            .business-item-content.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
               h4.business-item-title onboarding new employees
               p
                 | Make the best first impression with an onboarding experience unlike any other. Tailor  content related to your teams and allow new hires to access that knowledge and test their skills through quizzes and polls to build excitement and engagement from day one.
               .row
-                .col-xs-6.col-xs-offset-3
-                  a.cbtn.btn-bright(href='get_in_touch.html') get in touch
-          .col-flex
-            img.img-responsive(src='./images/features_employees_small.png', alt='employees')
+                .col-sm-6.col-sm-offset-3.col-xs-12
+                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
+          .col-flex.no-left-15
+            .business-item-img-wrap.wow.slideInRight(data-wow-duration="1s")
+              img.img-responsive(src='/images/features_employees_small.png', alt='employees')
 
     
     section.blue-tier
@@ -93,6 +97,6 @@ block content
               | with your community whereever you are, whenever you want.
             footer.app-btns
               a.abtn.abtn-apple-store(href="#{appleStore}")
-                img.img-reponsive(src='./images/apple.png', alt='apple store')
+                img.img-reponsive(src='/images/apple.png', alt='apple store')
               a.abtn.abtn-google-play(href="#{googlePlay}")
-                img.img-reponsive(src='./images/android.png', alt='google play')
+                img.img-reponsive(src='/images/android.png', alt='google play')

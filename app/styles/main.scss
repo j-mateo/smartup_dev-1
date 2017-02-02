@@ -9,6 +9,7 @@ $icon-font-path: '../fonts/';
 @import "helpers";
 // @import "ionicons";
 @import "buttons";
+@import "../../bower_components/wow/css/libs/animate.scss";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -200,27 +201,6 @@ p {
 .social-col {
   text-align: right;
   line-height: 60px;
-}
-
-@media screen and (max-width: $screen-sm) {
-  .copy-col, .social-col {
-    text-align: center;
-  }
-  .social-col {
-    background: $footer_bg;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .copy, .social {
-    display: inline-block;
-  }
-  .footer {
-    position: static;
-    height: auto;
-  }
-  .main-wrap {
-    padding-bottom: 60px;
-  }
 }
 
 .footer {
@@ -1536,6 +1516,10 @@ section.pricing-section {
     border-bottom: none;
   }
   
+  // .footer a {
+  //   padding: 0 5px;
+  // }
+  
 }
 
 .marketing-options-innovation .row-flex .marketing-option-info {
@@ -1556,9 +1540,6 @@ section.pricing-section {
   .marketing-options .container {
     width: 100%;
     margin: auto;
-  }
-  .marketing-option-info {
-    position: static;
   }
 }
 
@@ -1739,3 +1720,100 @@ section.pricing-section {
   }
 }
 
+.business-item-content {
+  margin-bottom: 20px;
+}
+
+.business-item .col-flex {
+  position: relative;
+}
+
+@media screen and (max-width: 930px) {
+  .business-item-img-wrap {
+    bottom: 0;
+    position: absolute;
+  } 
+}
+
+@media screen and (max-width: $screen-sm) {
+  .copy-col, .social-col {
+    text-align: center;
+  }
+  .social-col {
+    background: $footer_bg;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .copy, .social {
+    display: inline-block;
+  }
+  .footer {
+    position: static;
+    height: auto;
+  }
+  .main-wrap {
+    padding-bottom: 0px;
+  }
+  .get-in-touch-partners.row-flex {
+    flex-direction: column;
+    margin: auto;
+  }
+  .get-in-touch .col-flex {
+    width: 50%;
+    margin: auto;
+  }
+  .col-flex-content {
+    background: #f3f3f3;
+    p {
+      text-align: center;
+    }
+  }
+  
+  .business-item-title {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .business-item .row-flex {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  .col-flex.no-right-15 {
+    padding-right: 0;
+  }
+  
+  .col-flex.no-left-15 {
+    padding-left: 0;
+  }
+  
+  .col-flex.no-right-15 {
+    margin-right: 0;
+  }
+  
+  .business-item-content a {
+    margin-bottom: 20px;
+  }
+  
+  .business-item {
+    padding-top: 50px;
+  }
+  
+  .business-item-img-wrap {
+    position: static;
+    max-width: 420px;
+    margin: auto;
+  }
+  
+}
+
+.find-community-options .marketing-option-info.marketing-option-info-home {
+  position: absolute;
+  @media screen and (max-width: $screen-sm) {
+    position: static;
+  }
+}
+
+.key-people .col-xs-3 {
+  padding: 0 5px;
+}
