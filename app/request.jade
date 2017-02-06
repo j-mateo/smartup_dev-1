@@ -9,30 +9,29 @@ block content
         form.contact-form(method='post', action='#', data-redirect='/request_confirm/')
             input(type='hidden', name='form-name', value='request-community')
             .row.feedback-row
+                .col-xs-12
+                    p.contact-top-note ABOUT YOU
                 .col-md-4
                     .form-group
-                        p.contact-top-note ABOUT YOU
                         label(for='reques-username') Your name*
                         input#request-username.form-control(type='text', name='name', placeholder='John Doe', required)
                 .col-md-4
                     .form-group
-                        p.contact-note.empty &nbsp;
                         label(for='request-email') Your work email*
                         input#request-email.form-control(type='email', name='email', placeholder='e.g. johndoe@acmeltd.com', required)
                 .col-md-4
                     .form-group
-                        p.contact-note.empty &nbsp;
                         label(for='request-phone') Your telephone number
                         input#request-phone.form-control(type='tel', name='phone', placeholder='e.g. +1 555 123 4567')
             .row.feedback-row
+                .col-xs-12
+                    p.contact-top-note ABOUT YOUR ORGANIZATION
                 .col-md-4
                     .form-group
-                        p.contact-top-note ABOUT YOUR ORGANIZATION
                         label(for='request-organization-name') Your organization's name
                         input#request-organization-name.form-control(type='text', name='company', placeholder='SmartUp', required)
                 .col-md-4
                     .form-group
-                        p.contact-note.emtpy &nbsp;
                         label(for='request-organization-size') Your organization's size?*
                         select#request-organization-size.form-control(name='request-organization-size', required)
                             option 1-25
@@ -44,18 +43,19 @@ block content
                             option 5001-10,000
                             option 10,000+
             .row.feedback-row
+                .col-xs-12
+                    p.contact-top-note ABOUT YOUR COMMUNITY
                 .col-md-4
                     .form-group
-                      p.contact-top-note ABOUT YOUR COMMUNITY
-                      label(for='request-community-name') What would you like to call your community?
+                      label.label-double-row(for='request-community-name') What would you like to call your community?
                       input#request-community-name.form-control(type='text', name='request-community-name', placeholder='e.g. acmeinnovators')
                 .col-md-4
                     .form-group
-                      label(for='request-people-amount') How many people would you like to start in your community?*
+                      label.label-double-row(for='request-people-amount') How many people would you like to start in your community?*
                       input#request-people-amount.form-control(type='text', name='request-people-amount', placeholder='e.g. 200', required)
                 .col-md-4
                     .form-group
-                      label(for='request-community-domain') What web domain would you like for your community?
+                      label.label-double-row(for='request-community-domain') What web domain would you like for your community?
                       input#request-community-domain.form-control(type='text', name='request-community-domain', placeholder='e.g. communityname.smartup.io')
             .row
                 .col-xs-12.text-center

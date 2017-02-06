@@ -1,121 +1,158 @@
+mixin communityItem(img, url, available, ...status)
+  .col-flex.community-col(class="#{addCommunity}")
+    .community-item-img-wrap
+      .community-itme-img-inner
+        a(href="#{url}")
+          img.img-responsive(src="/images/find_community/community_#{img}.png", alt="#{img}")
+        .community-item-info
+          .community-item-info-inner
+            if img != 'circle'
+              h3.community-item-title
+                a(href="#{url}")= img
+            if img != 'circle'
+              if available == 'private'
+                a(href="#0", class="cbtn btn-bright community-btn community-btn-private") Private
+              else
+                a(href="#0", class="cbtn btn-bright community-btn community-btn-pbulic") Public
+            if img != 'circle'
+              .community-info-status
+                each circle in status
+                  if circle == 'blue'
+                    .status.blue-status
+                  if circle == 'dark'
+                    .status.dark-status
+                  if circle == 'green'
+                    .status.green-status
+                  if circle == 'orange'
+                    .status.orange-status
+                  if circle == 'transparent'
+                    .status.transparent-status
+    if img == 'circle'
+      .community-item-desc.borderless
+        block
+    else
+      .community-item-desc
+        block
+
 extends layouts/default
 block content
     section.white-tier.text-center.white-tier-press.no-bottom-border.no-top-border
         .container
             .row
                 .col-xs-12
-                    h3.white-tier-title Join one of our featured public communities for free, forever.
-  
-        section.marketing-options.text-left.marketing-options-white
-          .container
-            .row
-              .col-xs-12
-                  .row.row-flex
-                    .col-flex
-                      a(href="#0")
-                        img.img-responsive(src='/images/launch_bright.png')
-                      .marketing-option-info.marketing-option-info-home
-                        .marketing-option-info-home-wrap
-                            h4 <a href="#0">Launch</a>
-                            p
-                              | The startup community for entrepreneurs and innovators everywhere. 
-                              | Test and improve your startup knowledge with insights and qiuzzes from top founders, 
-                              | investors and journalists Founders is the original SmartUp community.
-                        // a.marketing-option-link(href='#')
-                        //   i.fa.fa-arrow-circle-o-right
-                        //   |  Join
-                    .col-flex
-                      a(href="#0")
-                        img.img-responsive(src='/images/elevate_bright.png')
-                      .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            h4 <a href="#">Elevate</a>
-                            p
-                              | The innovation community for visionaries and mavericks 
-                              | in mature businesses. Find the tools and insights that 
-                              | will help you innovate regardless of where you work 
-                              | and what you do.
-                        // a.marketing-option-link(href='#')
-                        //   i.fa.fa-arrow-circle-o-right
-                        //   |  Join
+                    h3.white-tier-title.find-community-title Join one of our featured public communities for free, forever.
+        
+        
+    section.community-list
+      .container
+        .community-list-wrap
+        .row.row-flex.community-row
+          +communityItem('Launch', 'url', 'public', 'blue', 'dark', 'orange')
+            p The startup community for entrepreneurs and innovators everywhere.
+          +communityItem('Elevate', 'url', 'public', 'blue', 'dark', 'green')
+            p The innovation community for visionaries and mavericks in mature businesses.
+          +communityItem('AkzoNobel', 'url', 'private', 'blue', 'dark')
+            p The SmartUp community for Akzobobel team members. Connect, Learn, Compete. #showwhatyouknow
+          +communityItem('Asian Insights', 'url', 'private', 'blue', 'dark', 'green', 'orange')
+            p Welcome to DBS Research Asian Insights. Connect and learn today with DBS Research.
+          +communityItem('Aviva', 'url', 'private', 'blue', 'dark', 'orange')
+            p Welcome to the Aviva community on SmartUp!
+          +communityItem('DBS Joiners', 'url', 'private', 'blue', 'dark', 'green')
+            p Welcome to DBS Joiners. Connect and learn today with DBS.
+          +communityItem('DBS SEED', 'url', 'private', 'blue', 'dark')
+            p Welcome to DBS Joiners. Connect and learn today with DBS SEED.
+          +communityItem('IESE', 'url', 'private', 'blue', 'dark', 'green', 'orange')
+            p Welcome to IESE. Connect and learn today with IESE.
+          +communityItem('JLL', 'url', 'private', 'blue', 'dark', 'orange')
+            p The SmartUp community for JLL team members. Connect, Learn, Compete. #showwhatyouknow
+          +communityItem('Linde', 'url', 'private', 'blue', 'dark', 'green')
+            p The SmartUp community for JLL team members. Connect, Learn, Compete. #showwhatyouknow
+          +communityItem('Mahsing', 'url', 'private', 'blue', 'dark')
+            p Welcome to Mahsing community on SmartUp.
+          +communityItem('Manulife', 'url', 'private', 'blue', 'dark', 'green', 'orange')
+            p The SmartUp community for Manulife team members. Connect, Learn, Compete. #showwhatyouknow
+          +communityItem('Maxis', 'url', 'private', 'blue', 'dark', 'green')
+            p The SmartUp community for Maxis team members. Connect, Learn, Compete. #showwhatyouknow
+          +communityItem('R3', 'url', 'private', 'blue', 'dark', 'green')
+            p The SmartUp community for R3 team members.
+          +communityItem('SMU Singapore', 'url', 'private', 'green', 'transparent')
+            p Welcome to Singapore management community on SmartUp.
+          +communityItem('circle', '/create_community/')
+            p.add-community-text
+              a(href="/create_community/") Create Community
+          // .col-flex.community-col.col-add-community
+          //   a(href="#")
+          //     .community-item-img-wrap
+          //       img.img-responsive(src="/images/find_community/community_circle.png", alt="Create community")
+          //     .community-item-desc
+          //       p.add-community-text Create Community
+          
+        
+        
+        // +launchElevate
                         
-    section.white-tier.text-center.white-tier-press.no-bottom-border.no-bottom-padding.find-community
-        .container
-            .row
-                .col-xs-12
-                    h3.white-tier-title Browse our invitation only private communities. Join if you've received your invite.
+    // section.white-tier.text-center.white-tier-press.no-bottom-border.no-bottom-padding.find-community
+    //     .container
+    //         .row
+    //             .col-xs-12
+    //                 h3.white-tier-title Browse our invitation only private communities. Join if you've received your invite.
   
-        section.marketing-options.text-left.marketing-options-white
-          .container.find-community-options
-            .row
-              .col-xs-12
-                  .row.row-flex
-                    .col-flex
-                      a(href="#")
-                        img.img-responsive(src='/images/tower.png')
-                      .marketing-option-info.marketing-option-info-home
-                        .marketing-option-info-home-wrap
-                            h4 <a href="#0">Maxis</a>
-                            p
-                              | Maxis is an invitation only community for employees of Maxis 
-                              | Berhad. Connect and Learn with Malaysia's best data network. 
-                        // a.marketing-option-link(href='#')
-                        //   i.fa.fa-arrow-circle-o-right
-                        //   |  Join
-                    .col-flex.col-flex-4
-                      .col-flex.margin-bottom
-                        a(href="#0")
-                          img.img-responsive(src='/images/dbs_open.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            h4 <a href="#0">DBS Open</a>
-                            p
-                                | We're an invitation only community 
-                                | where people can connect with one 
-                                | of the top ﬁnancial institutions 
-                                | in Asia.
-                            // a.marketing-option-link(href='#')
-                            //   i.fa.fa-arrow-circle-o-right
-                            //   |  Read
-                      .col-flex.margin-bottom
-                        a(href="#0")
-                          img.img-responsive(src='/images/great.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            h4 <a href="#0">Great</a>
-                            p
-                                | We’re Powered by SmartUp. 
-                                | Connect with those who can help 
-                                | you with your exporting 
-                                | challenges.
-                            // a.marketing-option-link(href='#')
-                            //   i.fa.fa-arrow-circle-o-right
-                            //   |  Read
-                      .col-flex.no-bottom-margin
-                        a(href="#0")
-                          img.img-responsive(src='/images/jil_thumb.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            h4 <a href="#0">JLL</a>
-                            p
-                                | JLL is an invitation only community 
-                                | for employees of Jones Lang 
-                                | LaSalle. Connect, share and learn 
-                                | with us.
-                            // a.marketing-option-link(href='#')
-                            //   i.fa.fa-arrow-circle-o-right
-                            //   |  Read
-                      .col-flex.no-bottom-margin
-                        a(href="#0")
-                          img.img-responsive(src='/images/ibf.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            h4 <a href="#0">IBF</a>
-                            p
-                                | Welcome to the invitation only, 
-                                | IBF community. We're creating a 
-                                | ﬁntech center of excellence in 
-                                | ﬁntech center of excellence in 
-                            // a.marketing-option-link(href='#')
-                            //   i.fa.fa-arrow-circle-o-right
-                            //   |  Read
+    //     section.marketing-options.text-left.marketing-options-white
+    //       .container.find-community-options
+    //         .row
+    //           .col-xs-12
+    //               .row.row-flex
+    //                 .col-flex
+    //                   a(href="https://maxis.smartup.io/")
+    //                     img.img-responsive(src='/images/tower.png')
+    //                   .marketing-option-info.marketing-option-info-home
+    //                     .marketing-option-info-home-wrap
+    //                         h4 <a href="https://maxis.smartup.io/">Maxis</a>
+    //                         p
+    //                           | Maxis is an invitation only community for employees of Maxis 
+    //                           | Berhad. Connect and Learn with Malaysia's best data network. 
+    //                 .col-flex.col-flex-4
+    //                   .col-flex.margin-bottom
+    //                     a(href="https://dbs-learn.smartup.io/")
+    //                       img.img-responsive(src='/images/dbs_open.png')
+    //                     .marketing-option-info.marketing-option-info-home
+    //                       .marketing-option-info-home-wrap
+    //                         h4 <a href="https://dbs-learn.smartup.io/">DBS Open</a>
+    //                         p
+    //                             | We're an invitation only community 
+    //                             | where people can connect with one 
+    //                             | of the top ﬁnancial institutions 
+    //                             | in Asia.
+    //                   .col-flex.margin-bottom
+    //                     a(href="http://great.smartup.io/")
+    //                       img.img-responsive(src='/images/great.png')
+    //                     .marketing-option-info.marketing-option-info-home
+    //                       .marketing-option-info-home-wrap
+    //                         h4 <a href="http://great.smartup.io/">Great</a>
+    //                         p
+    //                             | We’re Powered by SmartUp. 
+    //                             | Connect with those who can help 
+    //                             | you with your exporting 
+    //                             | challenges.
+    //                   .col-flex.no-bottom-margin
+    //                     a(href="#0")
+    //                       img.img-responsive(src='/images/jil_thumb.png')
+    //                     .marketing-option-info.marketing-option-info-home
+    //                       .marketing-option-info-home-wrap
+    //                         h4 <a href="https://jll.smartup.io/identity/sign-in">JLL</a>
+    //                         p
+    //                             | JLL is an invitation only community 
+    //                             | for employees of Jones Lang 
+    //                             | LaSalle. Connect, share and learn 
+    //                             | with us.
+    //                   .col-flex.no-bottom-margin
+    //                     a(href="https://ibf.smartup.io/")
+    //                       img.img-responsive(src='/images/ibf.png')
+    //                     .marketing-option-info.marketing-option-info-home
+    //                       .marketing-option-info-home-wrap
+    //                         h4 <a href="https://ibf.smartup.io/">IBF</a>
+    //                         p
+    //                             | Welcome to the invitation only, 
+    //                             | IBF community. We're creating a 
+    //                             | ﬁntech center of excellence in 
+    //                             | ﬁntech center of excellence in 

@@ -7,30 +7,29 @@ block content
                 p.text-center.feedback-info To create your community, please tell us a little more about you and your company.
         form.contact-form(method='post', action='#', data-redirect='/create_confirm/')
             .row.feedback-row
+                .col-xs-12
+                    p.contact-top-note ABOUT YOU
                 .col-md-4
                     .form-group
-                        p.contact-top-note ABOUT YOU
                         label(for='create-username') Your name*
                         input#create-username.form-control(type='text', name='name', placeholder='John Doe', required)
                 .col-md-4
                     .form-group
-                        p.contact-note.empty &nbsp;
                         label(for='create-email') Your work email*
                         input#create-email.form-control(type='email', name='email', placeholder='e.g. johndoe@acmeltd.com', required)
                 .col-md-4
                     .form-group
-                        p.contact-note.empty &nbsp;
                         label(for='create-phone') Your telephone number
                         input#create-phone.form-control(type='tel', name='phone', placeholder='e.g. +1 555 123 4567')
             .row.feedback-row
+                .col-xs-12
+                    p.contact-top-note ABOUT YOUR ORGANIZATION
                 .col-md-4
                     .form-group
-                        p.contact-top-note ABOUT YOUR ORGANIZATION
                         label(for='create-organization-name') Your organization's name
                         input#create-organization-name.form-control(type='text', name='company', placeholder='SmartUp', required)
                 .col-md-4
                     .form-group
-                      p.contact-note.emtpy &nbsp;
                       label(for='create-organization-size') Your organization's size?*
                       select#create-organization-size.form-control(name='organization-size', required)
                         option 1-25
@@ -42,18 +41,19 @@ block content
                         option 5001-10,000
                         option 10,000+
             .row.feedback-row
+                .col-xs-12
+                    p.contact-top-note ABOUT YOUR COMMUNITY
                 .col-md-4
                     .form-group
-                        p.contact-top-note ABOUT YOUR COMMUNITY
-                        label(for='create-community-name') What would you like to call your community?
+                        label.label-double-row(for='create-community-name') What would you like to call your community?
                         input#create-community-name.form-control(type='text', name='create-community-name', placeholder='e.g. acmeinnovators')
                 .col-md-4
                     .form-group
-                      label(for='create-people-amount') How many people would you like to start in your community?*
+                      label.label-double-row(for='create-people-amount') How many people would you like to start in your community?*
                       input#create-people-amount.form-control(type='text', name='create-people-amount', placeholder='e.g. 200', required)
                 .col-md-4
                     .form-group
-                      label(for='create-community-domain') What web domain would you like for your community?
+                      label.label-double-row(for='create-community-domain') What web domain would you like for your community?
                       input#create-community-domain.form-control(type='text', name='create-community-domain', placeholder='e.g. communityname.smartup.io')
             .row
                 .col-xs-12.text-center

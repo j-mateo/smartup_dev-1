@@ -1,4 +1,5 @@
 include vars
+include mixins
 doctype html.web-page.no-js(lang='en')
 head
     meta(charset='utf-8')
@@ -10,8 +11,12 @@ head
       meta(name='description', content='Show what you know with SmartUp, The knowledge sharing platform for startups, innovators, teams and enterprises everywhere.')
       title SmartUp - The Peer to Peer Knowledge Sharing Platform for Teams
     
-    link(rel='apple-touch-icon', href='apple-touch-icon.png')
-    // Place favicon.ico in the root directory
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+    link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='/favicon-16x16.png', sizes='16x16')
+    link(rel='manifest', href='/manifest.json')
+    link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='theme-color', content='#ffffff')
     // build:css /styles/vendor.css
     // bower:css
     // endbower
@@ -24,13 +29,7 @@ head
     script(src='/bower_components/modernizr/modernizr.js')
     // endbuild
   body
-    //if lt IE 10
-      p.browserupgrade
-        | You are using an
-        strong outdated
-        |  browser. Please
-        a(href='http://browsehappy.com/') upgrade your browser
-        |  to improve your experience.
+    include browserHappy.html
     header.header
       .container-fluid
         .row
@@ -118,24 +117,24 @@ head
       ga('send', 'pageview');
     // build:js /scripts/vendor.js
     // bower:js
-    script(src='/bower_components/jquery/dist/jquery.min.js')
-    // script(src='/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js')
+    script(src='/bower_components/jquery/jquery.min.js')
+    script(src='/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js')
     script(src='/bower_components/wow/dist/wow.min.js')
     // endbower
     // endbuild
     // build:js /scripts/plugins.js
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
     // endbuild
 
     // build:js /scripts/main.js

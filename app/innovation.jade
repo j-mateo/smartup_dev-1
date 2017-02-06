@@ -26,29 +26,52 @@ block content
     section.marketing-options.marketing-options-innovation
       .container
         .row
-          .col-xs-12
-            .row.row-flex
-              .col-flex(data-wow-duration="1s")
-                // git_in_touch
-                a(href="https://elevate.smartup.io/channel/238")
-                  img.img-responsive(src='/images/quick_intro.png')
-                  .marketing-option-info
-                    p I need a quick introduction to innovation methods
-              .col-flex(data-wow-duration="1s")
-                a(href="https://elevate.smartup.io/channel/282")
-                  img.img-responsive(src='/images/ask_more_questions.png')
-                  .marketing-option-info
-                    p I need to generate new ideas
-              .col-flex(data-wow-duration="1s")
-                a(href="https://elevate.smartup.io/stream/483")
-                  img.img-responsive(src='/images/existing_idea.png')
-                  .marketing-option-info
-                    p I need to test an existing idea
-              .col-flex(data-wow-duration="1s")
-                a(href="https://elevate.smartup.io/stream/484")
-                  img.img-responsive(src='/images/innovation_process.png')
-                  .marketing-option-info
-                    p I need an end to end innovation process
+          .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
+            a(href="https://elevate.smartup.io/channel/238")
+              img.img-responsive(src='/images/quick_intro.png')
+              .marketing-option-info.marketing-option-info-innovation
+                p I need a quick introduction to innovation methods
+          .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
+            a(href="https://elevate.smartup.io/channel/282")
+              img.img-responsive(src='/images/ask_more_questions.png')
+              .marketing-option-info.marketing-option-info-innovation
+                p I need to generate new ideas
+        .row
+          .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
+            a(href="https://elevate.smartup.io/stream/483")
+              img.img-responsive(src='/images/existing_idea.png')
+              .marketing-option-info.marketing-option-info-innovation
+                p I need to test an existing idea
+          .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
+            a(href="https://elevate.smartup.io/stream/484")
+              img.img-responsive(src='/images/innovation_process.png')
+              .marketing-option-info.marketing-option-info-innovation
+                p I need an end to end innovation process
+                    
+                    
+                    
+          // .col-xs-12
+          //   .row.row-flex
+          //     .col-flex
+          //       a(href="https://elevate.smartup.io/channel/238")
+          //         img.img-responsive(src='/images/quick_intro.png')
+          //         .marketing-option-info.marketing-option-info-innovation
+          //           p I need a quick introduction to innovation methods
+          //     .col-flex
+          //       a(href="https://elevate.smartup.io/channel/282")
+          //         img.img-responsive(src='/images/ask_more_questions.png')
+          //         .marketing-option-info.marketing-option-info-innovation
+          //           p I need to generate new ideas
+          //     .col-flex
+          //       a(href="https://elevate.smartup.io/stream/483")
+          //         img.img-responsive(src='/images/existing_idea.png')
+          //         .marketing-option-info.marketing-option-info-innovation
+          //           p I need to test an existing idea
+          //     .col-flex
+          //       a(href="https://elevate.smartup.io/stream/484")
+          //         img.img-responsive(src='/images/innovation_process.png')
+          //         .marketing-option-info.marketing-option-info-innovation
+          //           p I need an end to end innovation process
  
       .container
         .row
@@ -85,18 +108,19 @@ block content
           .col-flex
             .business-item-img-wrap.right.wow.slideInRight(data-wow-duration="1s", data-wow-dealy="3s")
               img.img-responsive(src='/images/innovation_discover.png', alt='discover')
+    
     section.business-item
       .container-fluid
-        .row-flex.row
+        .row.row-flex
           .col-flex
             .business-item-img-wrap.left.wow.slideInLeft(data-wow-duration="1s", data-wow-dealy="3s")
               img.img-responsive(src='/images/innovation_customize.png', alt='customize')
           .col-flex.col-flex-content
-            .col-md-10
-              .business-item-content.wow.slideInRight(data-wow-duration="1s")
-                  h4.business-item-title Customizable templates
-                  p Cut down on expensive training that isn&apos;t relevant to your company.
-                  p Use our templates and get your teams creating content speci&filig;c to their needs.
+            .business-item-content.wow.slideInRight(data-wow-duration="1s")
+              .col-md-10
+                h4.business-item-title Customizable templates
+                p Cut down on expensive training that isn&apos;t relevant to your company.
+                p Use our templates and get your teams creating content speci&filig;c to their needs.
     section.business-item.last
       .container-fluid
         .row-flex.row
@@ -116,29 +140,30 @@ block content
       .container
         p Getting started is simple
         .row
-          .col-md-4
+          .col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
             .blue-tier-step
               .blue-tier-number
-                .blue-tier-step-line
-                  .blue-tier-step-line-wrap
-                    .blue-tier-step-line-dot
-                    .blue-tier-step-line-dot-front
                 | 01
-              p
+                .blue-tier-line-right
+                  .blue-tier-line-inner
+              p.blue-tier-step-text
                 | Get in touch. Secure your community, complete with our entire library of SmartUp&apos;s innovation content
-          .col-md-4
+                .blue-tier-line-bottom
+                  .blue-tier-line-inner
+          .col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
             .blue-tier-step
               .blue-tier-number 
-                .blue-tier-step-line
-                  .blue-tier-step-line-wrap
-                    .blue-tier-step-line-dot
-                    .blue-tier-step-line-dot-front
                 | 02
-              p Invite your teams
-          .col-md-4
+                .blue-tier-line-right
+                  .blue-tier-line-inner
+              p.blue-tier-step-text
+                | Invite your teams
+                .blue-tier-line-bottom
+                  .blue-tier-line-inner
+          .col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
             .blue-tier-step
               .blue-tier-number 03
-              p
+              p.blue-tier-step-text.last
                 | Once you&apos;ve started. Then create custom content from our templates or with our content team.
 
     section.get-in-touch

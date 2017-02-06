@@ -293,3 +293,23 @@ body, p {
 .pricing-desc {
   @include fontSize(15px);
 }
+
+.marketing-option-info.marketing-option-info-innovation p {
+  @include fontSize(18px);
+}
+
+.community-item-title {
+  @include fontSize(18px);
+}
+
+.cbtn.community-btn {
+  @include fontSize(12px);
+  text-transform: capitalize;
+  margin-left: 5px;
+  @extend %semi-bold;
+}
+
+.add-community-text {
+  @include fontSize(16px);
+  @extend %semi-bold;
+}

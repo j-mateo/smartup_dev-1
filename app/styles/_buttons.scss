@@ -5,6 +5,7 @@
     display: inline-block;
     transition: .3s;
     text-transform: uppercase;
+    border-radius: 30px;
 }
 
 .cbtn.btn-dark {
@@ -67,4 +68,26 @@
         margin-left: auto;
         margin-bottom: 20px;
     }
+}
+
+.carousel-flex-inner {
+    overflow: hidden;
+}
+
+.cbtn.community-btn {
+    padding: 5px;
+    border-radius: 6px 6px 6px 6px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+}
+
+a.cbtn.community-btn-pbulic {
+    color: #87BC3F;
+    border: none;
+}
+
+a.cbtn.community-btn-private {
+    color: #F3702D;
+    border: none;
 }

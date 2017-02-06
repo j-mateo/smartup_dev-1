@@ -12,7 +12,7 @@ block content
             .col-xs-12
                 h2.text-center.feedback-title Press contacts
                 
-        .row.contact-team
+        .row.contact-team.press-contact
             .col-sm-4.text-center
                 .contact-team-img-wrap
                     img.img-responsive(src='/images/SmartUp_Photos/Frank Meehan, CEO.jpg', alt='Frank Meehan, CEO')
@@ -57,25 +57,27 @@ block content
             .row
                 .col-xs-12
                     h2.text-center.feedback-title Key people
-            .row.contact-team
+            .row.contact-team.key-people-content
                 .col-sm-4.col-sm-offset-2.text-center
                     .contact-team-img-wrap
                         img.img-responsive(src='/images/SmartUp_Photos/Frank Meehan, CEO.jpg', alt='Frank Meehan, CEO')
                     a.contact-team-mail(href="mailto:") Frank Meehan
                     p.contact-team-pale-txt Co-Founder & CEO
-                    .col-xs-3.col-xs-offset-3
-                        a.cbtn.btn-dark.btn-bio(href="https://uk.linkedin.com/in/frankmeehan" class="cbtn") BIO
-                    .col-xs-3                     
-                        a.cbtn.btn-dark.btn-images(href="https://www.dropbox.com/sh/j4ezy3y38clzhhh/AAAuk6UoTQPaQcurwUcfNHuBa/Frank%20Meehan%20-%20Images%20%2B%20Bio?dl=0" class="cbtn") IMAGES
+                    .contact-footer-btns-wrap
+                        .bio-col.col-sm-5.col-sm-offset-1.col-xs-4.col-xs-offset-4
+                            a.cbtn.btn-dark.btn-bio(href="https://uk.linkedin.com/in/frankmeehan" class="cbtn") BIO
+                        .images-col.col-sm-5.col-sm-offset-0.col-xs-4.col-xs-offset-4
+                            a.cbtn.btn-dark.btn-images(href="https://www.dropbox.com/sh/j4ezy3y38clzhhh/AAAuk6UoTQPaQcurwUcfNHuBa/Frank%20Meehan%20-%20Images%20%2B%20Bio?dl=0" class="cbtn") IMAGES
                 .col-sm-4.text-center
                     .contact-team-img-wrap
                         img.img-responsive(src='/images/SmartUp_Photos/Brent, Co-Founder & Chairman.jpg', alt='Brent Co-Founder & Chairman')
                     a.contact-team-mail(href="mailto:") Brent
                     p.contact-team-pale-txt Co-Founder & Chairman
-                    .col-xs-3.col-xs-offset-3
-                        a.cbtn.btn-dark.btn-bio(href="https://uk.linkedin.com/in/brenthoberman" class="cbtn") BIO
-                    .col-xs-3
-                        a.cbtn.btn-dark.btn-images(href="https://www.dropbox.com/sh/j4ezy3y38clzhhh/AABf2r3vJwXJyGTG_osIFgY1a/Brent%20Hoberman%20-%20Images%20%2B%20Bio?dl=0" class="cbtn") IMAGES
+                    .contact-footer-btns-wrap
+                        .bio-col.col-sm-5.col-sm-offset-1.col-xs-4.col-xs-offset-4
+                            a.cbtn.btn-dark.btn-bio(href="https://uk.linkedin.com/in/brenthoberman" class="cbtn") BIO
+                        .images-col.col-sm-5.col-sm-offset-0.col-xs-4.col-xs-offset-4.last
+                            a.cbtn.btn-dark.btn-images(href="https://www.dropbox.com/sh/j4ezy3y38clzhhh/AABf2r3vJwXJyGTG_osIFgY1a/Brent%20Hoberman%20-%20Images%20%2B%20Bio?dl=0" class="cbtn") IMAGES
                 
     
     section.white-tier.text-center.no-bottom-border
@@ -92,7 +94,7 @@ block content
                 .col-xs-12
                     h3.white-tier-title Media assets
             .row
-                .col-sm-4
+                .col-sm-4.col-xs-2.col-xs-10.col-xs-offset-1.col-sm-offset-0
                     .media-asset-wrap
                         img(src='/images/media_asset_3.png', class="img-responsive", alt='Logo')
                         .media-asset-footer
@@ -100,7 +102,7 @@ block content
                                 a(href="https://www.dropbox.com/sh/fjjam05wwzbycj7/AABo5uTAVplguis5ZvSsZ89Ra?dl=0") Logo
                             p.media-asset-bottom
                                 | SVG, PDF</a>, PNG
-                .col-sm-4
+                .col-sm-4.col-xs-2.col-xs-10.col-xs-offset-1.col-sm-offset-0
                     .media-asset-wrap
                         img(src='/images/media_asset_1.png', class="img-responsive", alt='Web Screenshots')
                         .media-asset-footer
@@ -108,8 +110,8 @@ block content
                                 a(href="https://www.dropbox.com/sh/cl8f52zzkf788ss/AAAmO1O9xWUYjm_uRXYBVbvya?dl=0") Mobile Screenshots
                             p.media-asset-bottom
                                 | PNG 1440x900 @2x
-                .col-sm-4
-                    .media-asset-wrap
+                .col-sm-4.col-xs-2.col-xs-10.col-xs-offset-1.col-sm-offset-0
+                    .media-asset-wrap.last
                         img(src='/images/media_asset_2.png', class="img-responsive", alt='Mobile Screenshots')
                         .media-asset-footer
                             p.media-asset-title
@@ -189,29 +191,23 @@ block content
               .col-xs-12
                   .row.row-flex
                     .col-flex
-                      a(href="#")
+                      a(href="https://launch.smartup.io/discover")
                         img.img-responsive(src='/images/launch_bright.png')
                       .marketing-option-info.marketing-option-info-home
                         .marketing-option-info-home-wrap
-                            h4 <a href="#0">Launch</a>
+                            h4 <a href="https://launch.smartup.io/discover">Launch</a>
                             p
                               | The startup community for entrepreneurs and innovators everywhere. 
                               | Test and improve your startup knowledge with insights and qiuzzes from top founders, 
                               | investors and journalists Founders is the original SmartUp community.
-                        // a.marketing-option-link(href='#')
-                        //   i.fa.fa-arrow-circle-o-right
-                        //   |  Join
                     .col-flex
-                      a(href="#0")
+                      a(href="http://smartup.site/press/#")
                         img.img-responsive(src='/images/elevate_bright.png')
                       .marketing-option-info.marketing-option-info-home
                           .marketing-option-info-home-wrap
-                            h4 <a href="#">Elevate</a>
+                            h4 <a href="https://elevate.smartup.io/community">Elevate</a>
                             p
                               | The innovation community for visionaries and mavericks 
                               | in mature businesses. Find the tools and insights that 
                               | will help you innovate regardless of where you work 
                               | and what you do.
-                        // a.marketing-option-link(href='#')
-                        //   i.fa.fa-arrow-circle-o-right
-                        //   |  Join

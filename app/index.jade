@@ -24,94 +24,21 @@ block content
               | Join one of our featured communities below to connect with peers, influencers and thought leaders.
     section.marketing-options.marketing-options-home
       .container.carousel-container
-        .row
-          .col-xs-12
-            #myCarousel.carousel.slide(data-ride='carousel', data-interval='false')
-              a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
-                span.glyphicon.fa.fa-angle-left(aria-hidden='true')
-                span.sr-only Previous
-              a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
-                span.glyphicon.fa.fa-angle-right(aria-hidden='true')
-                span.sr-only Next
-              .carousel-inner(role='listbox')
-                .item.active
-                  .row.row-flex
-                    .col-flex
-                      a(href="https://launch.smartup.io/discover")
-                        img.img-responsive(src='/images/imgpsh_fullsize (6)_l.png')
-                      .marketing-option-info.marketing-option-info-home
-                        .marketing-option-info-home-wrap
-                          h4 <a href="https://launch.smartup.io/discover">Launch</a>
-                          p.text-justify
-                            | The startup community for entrepreneurs and innovators everywhere. 
-                            | Test and improve your startup knowledge with insights and qiuzzes from top founders, 
-                            | investors and journalists Founders is the original SmartUp community.
-                    .col-flex.col-flex-4
-                      .col-flex.margin-bottom-30
-                        a(href="https://launch.smartup.io/content/867")
-                          img.img-responsive(src='/images/imgpsh_fullsize (7)_l.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p Facebook controversy, the flying car, and VR Breakthrough
-                      .col-flex.margin-bottom-30
-                        a(href="https://launch.smartup.io/content/668")
-                          img.img-responsive(src='/images/imgpsh_fullsize (1)_l.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p Robocall strike force, nkorean V.O.D and Space-Starbucks?
-                      .col-flex.no-bottom-margin
-                        a(href="https://launch.smartup.io/content/382")
-                          img.img-responsive(src='/images/imgpsh_fullsize (9)_l.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p How wearable tech will track human emotion
-                      .col-flex.no-bottom-margin
-                        a(href="https://launch.smartup.io/content/327")
-                          img.img-responsive(src='/images/imgpsh_fullsize (10)_l.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p Snapchat&apos;s$1B+, PayPal app kills, tinder left-swipe rivals
-                            
-                .item
-                  .row.row-flex
-                    .col-flex
-                      a(href="https://elevate.smartup.io/community")
-                        img.img-responsive(src='/images/elevate_bright.png')
-                      .marketing-option-info.marketing-option-info-home
-                        .marketing-option-info-home-wrap
-                          h4 <a href="https://elevate.smartup.io/community">Elevate</a>
-                          p.text-justify
-                            | The innovation community for visionaries and mavericks in mature businesses.
-                            | Find the tools and insights that will help you innovate regardless of where you work and what you do.
-                    .col-flex.col-flex-4
-                      .col-flex.margin-bottom-30
-                        a(href="https://elevate.smartup.io/content/1635")
-                          img.img-responsive(src='/images/imgpsh_fullsize.png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p Facebook controversy, the flying car, and VR Breakthrough
-                      .col-flex.margin-bottom-30
-                        a(href="https://elevate.smartup.io/content/2035")
-                          img.img-responsive(src='/images/imgpsh_fullsize_e (1).png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p Robocall strike force, nkorean V.O.D and Space-Starbucks?
-                      .col-flex.no-bottom-margin
-                        a(href="https://elevate.smartup.io/content/2202")
-                          img.img-responsive(src='/images/imgpsh_fullsize_e (2).png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p How wearable tech will track human emotion
-                      .col-flex.no-bottom-margin
-                        a(href="https://elevate.smartup.io/content/2236")
-                          img.img-responsive(src='/images/imgpsh_fullsize_e (3).png')
-                        .marketing-option-info.marketing-option-info-home
-                          .marketing-option-info-home-wrap
-                            p Snapchat&apos;s$1B+, PayPal app kills, tinder left-swipe rivals
-
-                ol.carousel-indicators
-                  li.active(data-target='#myCarousel', data-slide-to='0')
-                  li(data-target='#myCarousel', data-slide-to='1')
+        #myCarousel.carousel.slide.carousel-fade(data-ride='carousel', data-interval='false')
+          a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+            span.glyphicon.fa.fa-angle-left(aria-hidden='true')
+            span.sr-only Previous
+          a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+            span.glyphicon.fa.fa-angle-right(aria-hidden='true')
+            span.sr-only Next
+              
+          .carousel-inner(role='listbox')
+            +carouselItem-1
+            +carouselItem-2
+                        
+          ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
 
     section.features.container
       .col-sm-8.col-sm-offset-2
