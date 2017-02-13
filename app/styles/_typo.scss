@@ -49,74 +49,74 @@ body, p {
 }
 
 .price-cost {
-  font-size: 42px;
+  @include fontSize(42px);
   color: $black;
 }
 
 .business-item p {
-  font-size: 16px;
+  @include fontSize(16px);
 }
 
 .price-cost.custom {
-  font-size: 32px;
+  @include fontSize(32px);
 }
 
 .blue-tier .blue-tier-regular {
-  font-size: 16px;
+  @include fontSize(16px);
 }
 
 .pricing-main-title {
-  font-size: 60px;
+  @include fontSize(60px);
 }
 
 .pricing-title {
-  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
-  font-size: 16px;
+  @extend %semi-bold;
+  @include fontSize(16px);
 }
 
 .pricing-value-number {
-  font-size: 100px;
+  @include fontSize(100px);
   line-height: 100px;
 }
 
 .pricing-top-txt,
 .pricing-desc {
-  font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
-  font-size: 16px;
+  @extend %light;
+  @include fontSize(16px);
 }
 
 .pricing-value-sign {
-  font-size: 40px;
+  @include fontSize(40px);
   line-height: 40px;
-  font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+  @extend %light;
 }
 
 .pricing-value-txt {
-  font-size: 18px;
+  @include fontSize(18px);
 }
 
 .contact-team-mail,
 .team-name {
-  font-size: 18px;
-  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  @include fontSize(18px);
+  @extend %semi-bold;
 }
 
 .white-tier-title {
-  font-size: 60px;
+  @include fontSize(60px);
 }
 
 .white-tier-info {
-  font-size: 18px;
+  @include fontSize(18px);
 }
 
 .feedback-info {
-  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
-  font-size: 18px;
+  @extend %regular;
+  @include fontSize(18px);
 }
 
 .dark-tier {
-    @include fontSize(36px);
-    font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+  @include fontSize(36px);
+  @extend %light;
 }
 
 .blue-tier {
@@ -127,38 +127,38 @@ body, p {
 }
 
 .jumbotron small {
-  font-size: 14px;
+  @include fontSize(14px);
   letter-spacing: 1px;
-  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+  @extend %regular;
 }
 
 .jumbotron .jumbotron-title {
   // font-size: 80px;
   @include fontSize(76px);
-  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+  @extend %regular;
 }
 
 .jumbotron.jumbotron-home p.lead {
-  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+  @extend %regular;
   @include fontSize(18px)
 }
 
 .press-features {
-  font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
-  font-size: 16px;
+  @extend %light;
+  @include fontSize(16px)
 }
 
 .feedback-intro {
   p {
-    font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
-    font-size: 18px;
+    @extend %regular;
+    @include fontSize(18px);
   }
 }
 
 .contact-form {
   label {
-    font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
-    font-size: 16px;
+    @extend %semi-bold;
+    @include fontSize(16px);
   }
   button[type="submit"] {
     text-transform: uppercase;
@@ -166,10 +166,11 @@ body, p {
 }
 
 .confirm-bottom-info {
-  font-size: 18px;
+  @include fontSize(18px);
 }
 
-.marketing-option-info-home-wrap h4 {
+.marketing-option-info-home-wrap h4,
+.confrim-col-title {
   @include fontSize(24px);
 }
 
@@ -196,7 +197,7 @@ body, p {
 }
 
 .media-asset-title {
-  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  @extend %semi-bold;
   @include fontSize(18px);
 }
 
@@ -207,13 +208,13 @@ body, p {
     color: $black;
   }
   p {
-    font-family: "Hurme - HurmeGeometricSans2 Light", sans-serif;
+    @extend %light;
     @include fontSize(16px);
   }
 }
 
 .features h3 {
-  font-family: "Hurme - HurmeGeometricSans2 Regular", sans-serif;
+  @extend %regular;
   color: $footer_bg;
 }
 
@@ -242,7 +243,7 @@ body, p {
 
 .innovation-quote {
   @include fontSize(42px);
-  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  @extend %semi-bold;
 }
 
 .innovation-quote-author {
@@ -280,11 +281,11 @@ body, p {
 }
 
 .pricing-section strong {
-  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  @extend %semi-bold;
 }
 
 .pricing-value-txt {
-  font-family: "Hurme - HurmeGeometricSans2 SemiBold", sans-serif;
+  @extend %semi-bold;
   @include fontSize(24px);
 }
 
@@ -312,4 +313,8 @@ body, p {
 .add-community-text {
   @include fontSize(16px);
   @extend %semi-bold;
+}
+
+.find-community-intro-text {
+  @include fontSize(18px);
 }

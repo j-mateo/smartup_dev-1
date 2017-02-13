@@ -51,6 +51,7 @@ p {
 
 .header {
   border-bottom: 1px solid $separator_color;
+  // box-shadow: 0 0 0 1px $separator_color;
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -186,6 +187,9 @@ p {
     @media screen and (max-width: $screen-md) {
       margin-left: 0;
     }
+  }
+  a:hover {
+    text-decoration: none;
   }
   .fa {
     color: $footer_bg;
@@ -633,6 +637,11 @@ body {
   }
 }
 
+.marketing-option-info.marketing-option-info-home {
+  border: 1px solid $separator_color;
+  border-top: none;
+}
+
 .col-flex-4 {
   display: flex;
   flex-wrap: wrap;
@@ -641,6 +650,21 @@ body {
   padding-left: 0;
   .col-flex {
     flex: 2 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .marketing-option-info.marketing-option-info-home,
+  .carousel-img-container {
+    flex: 1 0 100%;
+    background: $white;
+    border: 1px solid $separator_color;
+  }
+  .marketing-option-info.marketing-option-info-home {
+    border-top: none;
+  }
+  .carousel-img-container {
+    border-bottom: 0;
   }
 }
 
@@ -667,7 +691,7 @@ body {
   }
   .marketing-option-info-home-wrap {
     padding: 10px 20px;
-    border: 1px solid $separator_color;
+    // border: 1px solid $separator_color;
     h4 {
       color: $dark_text;
       a {
@@ -711,22 +735,24 @@ body {
 }
 
 .jumbotron {
-  padding: 110px 0;
+  padding: 200px 0;
   text-align: center;
   background-image: url(../images/hero_bg/hero-home-small.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-color: transparent;
   color: $white;
   background-size: cover;
   position: relative;
   margin-bottom: 0;
   text-align: left;
-  padding-top: 150px;
-  padding-bottom: 150px;
   &.jumbotron-learning {
     background-image: url(../images/hero_bg/hero-learning.png);
   }
   &.jumbotron-recuiting {
     background-image: url(../images/hero_bg/hero-recruiting.png);
+    background-position: 0 0;
   }
   &.jumbotron-innovation {
     background-image: url(../images/hero_bg/hero-innovation.png);
@@ -767,6 +793,7 @@ body {
   }
   .row-flex {
     align-items: center;
+    justify-content: center;
   }
   p {
     font-size: 14px;
@@ -862,6 +889,9 @@ body {
   border-top: 1px solid $separator_color;
   border-bottom: 1px solid $separator_color;
   padding: 90px 0 100px 0;
+  @media screen and (max-width: $screen-sm) {
+    padding: 40px 0 50px;
+  }
 }
 
 .white-tier-title {
@@ -950,8 +980,11 @@ body {
   .fa {
     // position: absolute;
     top: 50%;
-    margin-top: -20px;
+    margin-top: -19px;
     width: 100%;
+    // position: relative;
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -984,6 +1017,9 @@ section.pricing-section {
 
 .pricing-row {
   padding-bottom: 100px;
+  @media screen and (max-width: $screen-sm) {
+    padding-bottom: 0;
+  }
 }
 
 .pricing-main-title {
@@ -1005,6 +1041,9 @@ section.pricing-section {
 
 .pricing-header {
   min-height: 322px;
+  @media screen and (max-width: $screen-md) {
+    min-height: auto;
+  }
 }
 
 .pricing-title {
@@ -1021,11 +1060,20 @@ section.pricing-section {
 .pricing-top-txt {
   color: #302C2C;
   min-height: 70px;
+  @media screen and (max-width: $screen-md) {
+    min-height: 30px;
+  }
 }
 
 .pricing-value {
   min-height: 100px;
   margin-bottom: 20px;
+  @media screen and (max-width: $screen-md) {
+    min-height: auto;
+    a {
+      padding-top: 20px;
+    }
+  }
 }
 
 .pricing-value-sign {
@@ -1122,6 +1170,9 @@ section.pricing-section {
 
 .contact-team {
   padding-bottom: 120px;
+  @media screen and (max-width: $screen-sm) {
+    padding-bottom: 50px;
+  }
 }
 
 .contact-team-mail {
@@ -1153,6 +1204,9 @@ section.pricing-section {
 .contact-form-row {
   padding-top: 80px;
   padding-bottom: 80px;
+  @media screen and (max-width: $screen-sm) {
+    padding: 40px 0;
+  }
 }
 
 .contact .cbtn {
@@ -1206,12 +1260,8 @@ section.pricing-section {
 
 // Press
 // Feedback stuff
-.feedback-intro {
-  padding-bottom: 100px;
-}
-
 .feedback-row {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .feedback-from {
@@ -1242,6 +1292,9 @@ section.pricing-section {
 
 .get-in-touch-partners {
   padding: 80px 0;
+  @media screen and (max-width: $screen-sm) {
+    padding: 20px 0 0 0;
+  }
 }
 
 .get-in-touch .row-flex {
@@ -1383,11 +1436,17 @@ section.pricing-section {
     min-height: auto;
     align-items: center;
     margin-bottom: 70px;
+    @media screen and (max-width: $screen-sm) {
+      margin-bottom: 0;
+    }
   }
 }
 
 .media-assets {
   padding-bottom: 120px;
+  @media screen and (max-width: $screen-sm) {
+    padding-bottom: 50px;
+  }
 }
 
 .find-community .col-flex-4 {
@@ -1915,6 +1974,28 @@ section.pricing-section {
   .contact-footer-btns-wrap {
     width: 100%;
   }
+  .white-tier .cbtn.btn-bright {
+    width: 100%;
+  }
+  .contact-team {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .contact-team .cbtn.btn-bright {
+    width: 100%;
+  }
+  .row.feedback-row {
+    margin-bottom: 20px;
+  }
+  .contact-form-heading.text-center {
+    margin-bottom: 0;
+  }
+  .text-center.feedback-title {
+    padding-top: 50px;
+  }
+  .team-col:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .blue-tier-line-right {
@@ -2087,6 +2168,9 @@ p.blue-tier-step-text {
 
 .contact-form .cbtn.btn-dark {
   width: 30%;
+  @media screen and (max-width: $screen-sm) {
+    width: 60%;
+  }
 }
 
 // Carousel fade animation
@@ -2183,7 +2267,7 @@ p.blue-tier-step-text {
 }
 
 .row.row-flex.community-row {
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 }
 
 .community-list {
@@ -2199,6 +2283,7 @@ p.blue-tier-step-text {
   // margin: 0 15px;
   margin-bottom: 30px;
   flex: 1 0 25%;
+  width: 25%;
   padding: 0 15px;
   display: flex;
   position: relative;
@@ -2271,6 +2356,7 @@ p.blue-tier-step-text {
   position: absolute;
   bottom: -30px;
   left: 20px;
+  line-height: 0;
 }
 
 .community-item-circle {
@@ -2375,6 +2461,94 @@ p.blue-tier-step-text {
   -webkit-transform: translateZ(0px);
 }
 
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .invisible-line {
   color: $white;
+  @extend .unselectable;
+}
+
+.confirm-col {
+  background: $white;
+  padding: 0;
+  width: 49%;
+  margin: 0 1%;
+  border: 1px solid $separator_color;
+}
+
+.marketing-option-info.confirm {
+  position: absolute;
+  background: $white;
+  right: 15px;
+  left: 15px;
+  bottom: 0;
+  color: $black;
+  position: static;
+  padding: 10px 20px;
+}
+
+.marketing-options.text-left.marketing-options-confirm {
+  background: $white;
+}
+
+.confrim-col-title {
+  color: $dark_text;
+  a {
+      &,
+      &:focus,
+      &:hover {
+        color: $dark_text;
+      }
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+  }
+}
+
+.confirm .white-tier {
+  padding-bottom: 0;
+}
+
+.contact-italic {
+  color: $footer_bg;
+  @include fontSize(18px);
+  margin-bottom: 50px;
+}
+
+.find-community-intro-text {
+  padding-top: 50px;
+}
+
+.cc-window {
+  // box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 0 40px 0 rgba(0,0,0,.1);
+  border-top: 1px solid $separator_color;
+  .smartup-cookie-note {
+    @extend %regular;
+    width: 100%;
+    .cc-header {
+      @extend %semi-bold;
+    }
+    .row-flex {
+      min-height: auto;
+      align-items: center;
+    }
+    .cc-compliance  {
+      float: right;
+      a {
+        display: inline-block;
+        width: 250px;
+        border-radius: 30px;
+        @extend .cbtn;
+        @extend .btn-bright;
+      }
+    }
+  }
 }

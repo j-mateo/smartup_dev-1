@@ -22,13 +22,15 @@ head
     // endbower
     // endbuild
     // build:css /styles/main.css
+    link(rel='stylesheet', href='/bower_components/cookieconsent/build/cookieconsent.min.css')
     link(rel='stylesheet', href='/styles/main.css')
     // endbuild
     link(rel='stylesheet', href='https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css')
     // build:js /scripts/vendor/modernizr.js
     script(src='/bower_components/modernizr/modernizr.js')
     // endbuild
-  body
+    // include cookie.html
+  body.content
     include browserHappy.html
     header.header
       .container-fluid
@@ -50,7 +52,7 @@ head
               nav.main-nav
                 ul.nav.pull-right
                   li.active
-                    a(href='/features/') Features
+                    a(href='/business/') For Business 
                   li
                     a(href='/pricing/') Pricing
                   li
@@ -135,6 +137,7 @@ head
     // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
     // script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    script(src='/bower_components/cookieconsent/build/cookieconsent.min.js')
     // endbuild
 
     // build:js /scripts/main.js

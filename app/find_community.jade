@@ -1,5 +1,5 @@
 mixin communityItem(img, url, available, ...status)
-  .col-flex.community-col(class="#{addCommunity}")
+  .col-flex.community-col
     .community-item-img-wrap
       .community-itme-img-inner
         a(href="#{url}")
@@ -11,9 +11,9 @@ mixin communityItem(img, url, available, ...status)
                 a(href="#{url}")= img
             if img != 'circle'
               if available == 'private'
-                a(href="#0", class="cbtn btn-bright community-btn community-btn-private") Private
+                span(class="cbtn btn-bright community-btn community-btn-private") Private
               else
-                a(href="#0", class="cbtn btn-bright community-btn community-btn-pbulic") Public
+                span(class="cbtn btn-bright community-btn community-btn-pbulic") Public
             if img != 'circle'
               .community-info-status
                 each circle in status
@@ -40,119 +40,47 @@ block content
         .container
             .row
                 .col-xs-12
-                    h3.white-tier-title.find-community-title Join one of our featured public communities for free, forever.
+                    h3.white-tier-title.find-community-title Join your company's private community.
+                    p.find-community-intro-text or browse one of our featured, public communites.
         
         
     section.community-list
       .container
         .community-list-wrap
         .row.row-flex.community-row
-          +communityItem('Launch', 'url', 'public', 'blue', 'dark', 'orange')
+          +communityItem('Launch', 'https://launch.smartup.io/discover', 'public', 'blue', 'dark', 'orange')
             p The startup community for entrepreneurs and innovators everywhere.
-          +communityItem('Elevate', 'url', 'public', 'blue', 'dark', 'green')
+          +communityItem('Elevate', 'https://elevate.smartup.io/community', 'public', 'blue', 'dark', 'green')
             p The innovation community for visionaries and mavericks in mature businesses.
-          +communityItem('AkzoNobel', 'url', 'private', 'blue', 'dark')
+          +communityItem('AkzoNobel', 'https://akzonobel.smartup.io', 'private', 'blue', 'dark')
             p The SmartUp community for Akzobobel team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('Asian Insights', 'url', 'private', 'blue', 'dark', 'green', 'orange')
+          +communityItem('Asian Insights', 'http://asianinsights.smartup.io', 'private', 'blue', 'dark', 'green', 'orange')
             p Welcome to DBS Research Asian Insights. Connect and learn today with DBS Research.
-          +communityItem('Aviva', 'url', 'private', 'blue', 'dark', 'orange')
+        .row.row-flex.community-row
+          +communityItem('Aviva', 'https://aviva.smartup.io', 'private', 'blue', 'dark', 'orange')
             p Welcome to the Aviva community on SmartUp!
-          +communityItem('DBS Joiners', 'url', 'private', 'blue', 'dark', 'green')
+          +communityItem('DBS Joiners', 'https://dbs-joiners.smartup.io', 'private', 'blue', 'dark', 'green')
             p Welcome to DBS Joiners. Connect and learn today with DBS.
-          +communityItem('DBS SEED', 'url', 'private', 'blue', 'dark')
+          +communityItem('DBS SEED', 'http://dbs-seed.smartup.io', 'private', 'blue', 'dark')
             p Welcome to DBS Joiners. Connect and learn today with DBS SEED.
-          +communityItem('IESE', 'url', 'private', 'blue', 'dark', 'green', 'orange')
+          +communityItem('IESE', 'https://iese.smartup.io', 'private', 'blue', 'dark', 'green', 'orange')
             p Welcome to IESE. Connect and learn today with IESE.
-          +communityItem('JLL', 'url', 'private', 'blue', 'dark', 'orange')
+        .row.row-flex.community-row
+          +communityItem('JLL', 'https://jll.smartup.io', 'private', 'blue', 'dark', 'orange')
             p The SmartUp community for JLL team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('Linde', 'url', 'private', 'blue', 'dark', 'green')
+          +communityItem('Linde', 'https://linde.smartup.io', 'private', 'blue', 'dark', 'green')
             p The SmartUp community for JLL team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('Mahsing', 'url', 'private', 'blue', 'dark')
+          +communityItem('Mahsing', 'https://mahsing.smartup.io', 'private', 'blue', 'dark')
             p Welcome to Mahsing community on SmartUp.
-          +communityItem('Manulife', 'url', 'private', 'blue', 'dark', 'green', 'orange')
+          +communityItem('Manulife', 'https://manulife.smartup.io', 'private', 'blue', 'dark', 'green', 'orange')
             p The SmartUp community for Manulife team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('Maxis', 'url', 'private', 'blue', 'dark', 'green')
+        .row.row-flex.community-row
+          +communityItem('Maxis', 'https://maxis.smartup.io', 'private', 'blue', 'dark', 'green')
             p The SmartUp community for Maxis team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('R3', 'url', 'private', 'blue', 'dark', 'green')
+          +communityItem('R3', 'https://r3.smartup.io', 'private', 'blue', 'dark', 'green')
             p The SmartUp community for R3 team members.
-          +communityItem('SMU Singapore', 'url', 'private', 'green', 'transparent')
+          +communityItem('SMU Singapore', 'https://smu.smartup.io', 'private', 'green', 'transparent')
             p Welcome to Singapore management community on SmartUp.
           +communityItem('circle', '/create_community/')
             p.add-community-text
               a(href="/create_community/") Create Community
-          // .col-flex.community-col.col-add-community
-          //   a(href="#")
-          //     .community-item-img-wrap
-          //       img.img-responsive(src="/images/find_community/community_circle.png", alt="Create community")
-          //     .community-item-desc
-          //       p.add-community-text Create Community
-          
-        
-        
-        // +launchElevate
-                        
-    // section.white-tier.text-center.white-tier-press.no-bottom-border.no-bottom-padding.find-community
-    //     .container
-    //         .row
-    //             .col-xs-12
-    //                 h3.white-tier-title Browse our invitation only private communities. Join if you've received your invite.
-  
-    //     section.marketing-options.text-left.marketing-options-white
-    //       .container.find-community-options
-    //         .row
-    //           .col-xs-12
-    //               .row.row-flex
-    //                 .col-flex
-    //                   a(href="https://maxis.smartup.io/")
-    //                     img.img-responsive(src='/images/tower.png')
-    //                   .marketing-option-info.marketing-option-info-home
-    //                     .marketing-option-info-home-wrap
-    //                         h4 <a href="https://maxis.smartup.io/">Maxis</a>
-    //                         p
-    //                           | Maxis is an invitation only community for employees of Maxis 
-    //                           | Berhad. Connect and Learn with Malaysia's best data network. 
-    //                 .col-flex.col-flex-4
-    //                   .col-flex.margin-bottom
-    //                     a(href="https://dbs-learn.smartup.io/")
-    //                       img.img-responsive(src='/images/dbs_open.png')
-    //                     .marketing-option-info.marketing-option-info-home
-    //                       .marketing-option-info-home-wrap
-    //                         h4 <a href="https://dbs-learn.smartup.io/">DBS Open</a>
-    //                         p
-    //                             | We're an invitation only community 
-    //                             | where people can connect with one 
-    //                             | of the top ﬁnancial institutions 
-    //                             | in Asia.
-    //                   .col-flex.margin-bottom
-    //                     a(href="http://great.smartup.io/")
-    //                       img.img-responsive(src='/images/great.png')
-    //                     .marketing-option-info.marketing-option-info-home
-    //                       .marketing-option-info-home-wrap
-    //                         h4 <a href="http://great.smartup.io/">Great</a>
-    //                         p
-    //                             | We’re Powered by SmartUp. 
-    //                             | Connect with those who can help 
-    //                             | you with your exporting 
-    //                             | challenges.
-    //                   .col-flex.no-bottom-margin
-    //                     a(href="#0")
-    //                       img.img-responsive(src='/images/jil_thumb.png')
-    //                     .marketing-option-info.marketing-option-info-home
-    //                       .marketing-option-info-home-wrap
-    //                         h4 <a href="https://jll.smartup.io/identity/sign-in">JLL</a>
-    //                         p
-    //                             | JLL is an invitation only community 
-    //                             | for employees of Jones Lang 
-    //                             | LaSalle. Connect, share and learn 
-    //                             | with us.
-    //                   .col-flex.no-bottom-margin
-    //                     a(href="https://ibf.smartup.io/")
-    //                       img.img-responsive(src='/images/ibf.png')
-    //                     .marketing-option-info.marketing-option-info-home
-    //                       .marketing-option-info-home-wrap
-    //                         h4 <a href="https://ibf.smartup.io/">IBF</a>
-    //                         p
-    //                             | Welcome to the invitation only, 
-    //                             | IBF community. We're creating a 
-    //                             | ﬁntech center of excellence in 
-    //                             | ﬁntech center of excellence in 

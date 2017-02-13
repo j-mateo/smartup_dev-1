@@ -3,6 +3,42 @@
 //=======================================================
 // Video Section
 //=======================================================
+// Cookie policy popup
+// http://cookieconsent.wpengine.com/documentation/javascript-api/
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#fff",
+      "text": "#000"
+    },
+    "button": {
+      "background": "#fff"
+    }
+  },
+  "layout": 'smartup-cookie-note',
+  "layouts": {
+    'smartup-cookie-note': '<div class="smartup-cookie-note">\
+      <div class="row-flex"><div class="col-flex">{{header}}<br>{{message}}<br>{{messageFooter}}{{messageFooterLink}}</div>\
+      <div class="col-flex">{{compliance}}</div></div></div>',
+  },
+  "elements": {
+    "messageFooter": "To learn more please visit our <a href='/privacy/'>Privacy Policy</a>.",
+  },
+  "content": {
+    "header": "We use cookies on this site to better your user expereince",
+    "message": "By clicking any link on this site, you agree to our use of cookies on SmartUp.io",
+    "dismiss": "YES, I AGREE"
+  },
+  "onPopupOpen": cookieTrigger
+})});
+
+function cookieTrigger() {
+  // $('html').on('click', function(e) {
+  //   $('.cc-dismiss')[0].click();
+  // }); 
+}
+
 $(document).ready(function() {
   
   // Carousel swipe, relies on touchswipe lib
@@ -18,7 +54,7 @@ $(document).ready(function() {
     threshold: 0
   });
 
-  // Animation druing scroll
+  // Animation during scroll
   new WOW().init();
 
   var vid1 = document.getElementById("myVideo1");

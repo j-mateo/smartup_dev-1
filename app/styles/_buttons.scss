@@ -82,12 +82,20 @@
     top: -3px;
 }
 
-a.cbtn.community-btn-pbulic {
+.cbtn.community-btn-pbulic {
     color: #87BC3F;
     border: none;
+    &:hover {
+        color: #87BC3F;
+        border: none;
+    }
 }
 
-a.cbtn.community-btn-private {
+.cbtn.community-btn-private {
     color: #F3702D;
     border: none;
+    &:hover {
+        color: #F3702D;
+        border: none;
+    }
 }
