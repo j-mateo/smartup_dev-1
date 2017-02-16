@@ -1348,6 +1348,13 @@ section.pricing-section {
 // }
 .coming-soon {
   color: #BCBCBC;
+  a {
+    color: #BCBCBC;
+  }
+  a:focus, a:hover {
+    text-decoration: none;
+    color: $bright_blue;
+  }
 }
 
 .media-asset-wrap {
@@ -2551,4 +2558,13 @@ p.blue-tier-step-text {
       }
     }
   }
+}
+
+.team-col.you-col {
+  float: none;
+  margin: auto;
+}
+
+.white-tier-info.coming-soon {
+  padding-bottom: 30px;
 }

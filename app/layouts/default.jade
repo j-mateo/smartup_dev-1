@@ -29,7 +29,7 @@ head
     // build:js /scripts/vendor/modernizr.js
     script(src='/bower_components/modernizr/modernizr.js')
     // endbuild
-    // include cookie.html
+    include facebookPixel.html
   body.content
     include browserHappy.html
     header.header
@@ -56,7 +56,7 @@ head
                   li
                     a(href='/pricing/') Pricing
                   li
-                    a(href='https://medium.com/smartup-io-the-ultimate-founder-guide') Blog
+                    a(href='https://medium.com/smartup-io-the-ultimate-founder-guide', target="_blank") Blog
 
     .main-wrap
       block content

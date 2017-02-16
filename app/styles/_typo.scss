@@ -318,3 +318,12 @@ body, p {
 .find-community-intro-text {
   @include fontSize(18px);
 }
+
+.latest-press-date {
+  @include fontSize(30px);
+  @extend %semi-bold;
+}
+
+.coming-soon a {
+  @include fontSize(26px);
+}
