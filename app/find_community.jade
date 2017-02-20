@@ -1,14 +1,19 @@
-mixin communityItem(img, url, available, ...status)
+mixin communityItem(img, url, available, cat, label, ...status)
+  - var imgSrc = img.split(' ').join('_')
   .col-flex.community-col
     .community-item-img-wrap
       .community-itme-img-inner
-        a(href="#{url}")
-          img.img-responsive(src="/images/find_community/community_#{img}.png", alt="#{img}")
+        if(img != 'circle')
+          a(href="#{url}", target="_blank", onclick='trackOutboundLink(\'#{url}\', \'#{cat}\', \'#{label}\', true); return false;')
+            img.img-responsive(src="/images/find_community/community_#{imgSrc}.png", alt="#{img}")
+        else
+          a(href="#{url}", onclick="ga('send', 'event', \'#{cat}\', 'click', \'#{label}\', '1', {'transport': 'beacon'});")
+            img.img-responsive(src="/images/find_community/community_#{imgSrc}.png", alt="#{img}")
         .community-item-info
           .community-item-info-inner
             if img != 'circle'
               h3.community-item-title
-                a(href="#{url}")= img
+                a(href="#{url}", target="_blank", onclick='trackOutboundLink(\'#{url}\', \'#{cat}\', \'#{label}\', true); return false;')= img
             if img != 'circle'
               if available == 'private'
                 span(class="cbtn btn-bright community-btn community-btn-private") Private
@@ -47,39 +52,39 @@ block content
       .container
         .community-list-wrap
         .row.row-flex.community-row
-          +communityItem('Launch', 'https://launch.smartup.io/discover', 'public', 'blue', 'dark', 'orange')
+          +communityItem('Launch', 'https://launch.smartup.io/discover', 'public', 'Sign In/Find Community', 'Launch', 'blue', 'dark', 'orange')
             p The startup community for entrepreneurs and innovators everywhere.
-          +communityItem('Elevate', 'https://elevate.smartup.io/community', 'public', 'blue', 'dark', 'green')
+          +communityItem('Elevate', 'https://elevate.smartup.io/community', 'public', 'Sign In/Find Community', 'Elevate', 'blue', 'dark', 'green')
             p The innovation community for visionaries and mavericks in mature businesses.
-          +communityItem('AkzoNobel', 'https://akzonobel.smartup.io', 'private', 'blue', 'dark')
+          +communityItem('AkzoNobel', 'https://akzonobel.smartup.io', 'private', 'Sign In/Find Community', 'AkzoNobel', 'blue', 'dark')
             p The SmartUp community for Akzobobel team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('Asian Insights', 'http://asianinsights.smartup.io', 'private', 'blue', 'dark', 'green', 'orange')
+          +communityItem('Asian Insights', 'http://asianinsights.smartup.io', 'private', 'Sign In/Find Community', 'AsianInsights', 'blue', 'dark', 'green', 'orange')
             p Welcome to DBS Research Asian Insights. Connect and learn today with DBS Research.
         .row.row-flex.community-row
-          +communityItem('Aviva', 'https://aviva.smartup.io', 'private', 'blue', 'dark', 'orange')
+          +communityItem('Aviva', 'https://aviva.smartup.io', 'private', 'Sign In/Find Community', 'Aviva', 'blue', 'dark', 'orange')
             p Welcome to the Aviva community on SmartUp!
-          +communityItem('DBS Joiners', 'https://dbs-joiners.smartup.io', 'private', 'blue', 'dark', 'green')
+          +communityItem('DBS Joiners', 'https://dbs-joiners.smartup.io', 'private', 'Sign In/Find Community', 'DBSJoiners', 'blue', 'dark', 'green')
             p Welcome to DBS Joiners. Connect and learn today with DBS.
-          +communityItem('DBS SEED', 'http://dbs-seed.smartup.io', 'private', 'blue', 'dark')
+          +communityItem('DBS SEED', 'http://dbs-seed.smartup.io', 'private', 'Sign In/Find Community', 'DBSSeed', 'blue', 'dark')
             p Welcome to DBS Joiners. Connect and learn today with DBS SEED.
-          +communityItem('IESE', 'https://iese.smartup.io', 'private', 'blue', 'dark', 'green', 'orange')
+          +communityItem('IESE', 'https://iese.smartup.io', 'private', 'Sign In/Find Community', 'IESE', 'blue', 'dark', 'green', 'orange')
             p Welcome to IESE. Connect and learn today with IESE.
         .row.row-flex.community-row
-          +communityItem('JLL', 'https://jll.smartup.io', 'private', 'blue', 'dark', 'orange')
+          +communityItem('JLL', 'https://jll.smartup.io', 'private', 'Sign In/Find Community', 'JLL', 'blue', 'dark', 'orange')
             p The SmartUp community for JLL team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('Linde', 'https://linde.smartup.io', 'private', 'blue', 'dark', 'green')
+          +communityItem('Linde', 'https://linde.smartup.io', 'private', 'Sign In/Find Community', 'Linde', 'blue', 'dark', 'green')
             p The SmartUp community for JLL team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('Mahsing', 'https://mahsing.smartup.io', 'private', 'blue', 'dark')
+          +communityItem('Mahsing', 'https://mahsing.smartup.io', 'private', 'Sign In/Find Community', 'Mahsing', 'blue', 'dark')
             p Welcome to Mahsing community on SmartUp.
-          +communityItem('Manulife', 'https://manulife.smartup.io', 'private', 'blue', 'dark', 'green', 'orange')
+          +communityItem('Manulife', 'https://manulife.smartup.io', 'private', 'Sign In/Find Community', 'Manulife', 'blue', 'dark', 'green', 'orange')
             p The SmartUp community for Manulife team members. Connect, Learn, Compete. #showwhatyouknow
         .row.row-flex.community-row
-          +communityItem('Maxis', 'https://maxis.smartup.io', 'private', 'blue', 'dark', 'green')
+          +communityItem('Maxis', 'https://maxis.smartup.io', 'private',  'Sign In/Find Community', 'Maxis', 'blue', 'dark', 'green')
             p The SmartUp community for Maxis team members. Connect, Learn, Compete. #showwhatyouknow
-          +communityItem('R3', 'https://r3.smartup.io', 'private', 'blue', 'dark', 'green')
+          +communityItem('R3', 'https://r3.smartup.io', 'private', 'Sign In/Find Community', 'R3', 'blue', 'dark', 'green')
             p The SmartUp community for R3 team members.
-          +communityItem('SMU Singapore', 'https://smu.smartup.io', 'private', 'green', 'transparent')
+          +communityItem('SMU Singapore', 'https://smu.smartup.io', 'private', 'Sign In/Find Community', 'SMUSingapore', 'green', 'transparent')
             p Welcome to Singapore management community on SmartUp.
-          +communityItem('circle', '/create_community/')
+          +communityItem('circle', '/create_community/', '', 'Sign In/Find Community', 'CommunityCreate')
             p.add-community-text
-              a(href="/create_community/") Create Community
+              a(href="/create_community/", onclick="ga('send', 'event', 'Sign In/Find Community', 'click', 'CommunityCreate', '1', {'transport': 'beacon'});") Create Community

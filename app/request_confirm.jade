@@ -1,17 +1,18 @@
 extends layouts/default
 block content
-    .confirm
-        section.white-tier.text-center.white-tier-press
-            .container
-                .row
-                    .col-xs-12
-                        h3.white-tier-title Thanks for requesting a community!
-                        p.white-tier-info.text-center
-                            | Watch your inbox for an email conﬁrming our progress. We will be in touch with you within the next few hours. 
-                        p.white-tier-info.text-center
-                            | In the meantime, why not join one of our two featured communities and experience SmartUp for yourself? 
-    
-                +launchElevate
-                .col-xs-12
-                    p.text-center.confirm-bottom-info
-                        | You're also welcome to join both of them, in fact we'd love you to!  
+  .confirm
+    section.white-tier.text-center.white-tier-press
+      .container
+        .row
+          .col-xs-12
+            h3.white-tier-title Thanks for requesting a community!
+            p.white-tier-info.text-center
+              | Watch your inbox for an email conﬁrming our progress. We will be in touch with you within the next few hours. 
+            p.white-tier-info.text-center
+              | In the meantime, why not join one of our two featured communities and experience SmartUp for yourself? 
+
+        +launchElevate('Submission Forms', 'RequestLaunch', 'Submission Forms', 'RequestElevate')
+        
+        .col-xs-12
+          p.text-center.confirm-bottom-info
+            | You're also welcome to join both of them, in fact we'd love you to!  

@@ -5,18 +5,18 @@ block content
         .container
           .row-flex
             .col-flex
-              h1.jumbotron-title show what you know
+              h2.jumbotron-title show what you know
               p.lead
                 | Create or join a community and let SmartUp help boost your know-how with fun, 
                 | engaging content on the topics that matter the most to you. Connect with peers and influential
                 | founders to learn new skills, share insight, gain advice and much more.
-              a.cbtn.btn-blue(href='/create_community/') create a community
+              a.CreateCommunity.cbtn.btn-blue(href='/create_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'CreateCommunity', '1', {'transport': 'beacon'});") create a community
               footer
                 small
                   | Have you been invited to a SmartUp community already? If so, 
-                  a.community-find-link(href='/find_community/') find your community
+                  a.FindCommunity.community-find-link(href='/find_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'FindCommunity', '1', {'transport': 'beacon'});") find your community
     
-    section.dark-tier
+    .dark-tier
       .container
         .row
           .col-xs-12
@@ -45,9 +45,9 @@ block content
         h3.text-center.features-home-title
           | Unlock your knowledge.
           | Unleash your potential.
-          p.text-center.features-intro
-            | Create, share and exchange interactive content for a learning experience that&rsquo;s fun
-            | and collaborative. Unlock your own real knowledge and see where it takes you.
+        p.text-center.features-intro
+          | Create, share and exchange interactive content for a learning experience that&rsquo;s fun
+          | and collaborative. Unlock your own real knowledge and see where it takes you.
       .features-cols.clearfix
         .col-md-4.col-xs-12
           .col-sm-12.col-md-3
@@ -68,7 +68,7 @@ block content
             p.feature-desc.feature-desc-last
               | SmartUp was created for the mobile generation&mdash;entrepreneurs, millennials and innovators. Inspired by microlearning, we&rsquo;ve evolved for the enterprise.
 
-    section.blue-tier
+    .blue-tier
       .container
         p How can SmartUp inspire success in your life and business?
-        a.cbtn.btn-dark(href='/business/') find out
+        a.cbtn.btn-dark(href='/business/', onclick="ga('send', 'event', 'Home Page', 'click', 'BottomFindOut', '1', {'transport': 'beacon'});") find out

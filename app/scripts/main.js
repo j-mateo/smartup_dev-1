@@ -29,14 +29,57 @@ window.cookieconsent.initialise({
     "header": "We use cookies on this site to better your user expereince",
     "message": "By clicking any link on this site, you agree to our use of cookies on SmartUp.io",
     "dismiss": "YES, I AGREE"
-  },
-  "onPopupOpen": cookieTrigger
+  }
 })});
 
-function cookieTrigger() {
-  // $('html').on('click', function(e) {
-  //   $('.cc-dismiss')[0].click();
-  // }); 
+// GA
+// Google analytics outbound links click
+var trackOutboundLink = function(url, cat, label, newTab) {
+  if(newTab) {
+      ga('send', 'event', cat, 'click', label, {'transport': 'beacon'});
+      window.open( url, '_blank' );
+  } else {
+      ga('send', 'event', cat, 'click', label, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+      });
+  }
+}
+
+// Google analytics form submission
+// Gets a reference to the form element, assuming
+// it contains the id attribute "signup-form".
+function gaSubmit(elem, cat, label) {
+  var form = elem;
+  
+  // Adds a listener for the "submit" event.
+  form.addEventListener('submit', function(event) {
+  
+    // Prevents the browser from submitting the form
+    // and thus unloading the current page.
+    event.preventDefault();
+  
+    // Sends the event to Google Analytics and
+    // resubmits the form once the hit is done.
+    ga('send', 'event', cat, 'submit', label, {
+      hitCallback: function() {
+        form.submit();
+      }
+    });
+  });
+}
+
+var contactForm = document.getElementById('ContactForm'),
+    createCommunityForm = document.getElementById('CreateForm');
+
+if(contactForm) {
+  console.log('contact form attempt to send');
+  gaSubmit(contactForm, 'Contact', 'ContactForm');
+}
+
+if(createCommunityForm) {
+  console.log('create form attempt to send');
+  gaSubmit(createCommunityForm, 'Create Community', 'CreateForm');
 }
 
 $(document).ready(function() {

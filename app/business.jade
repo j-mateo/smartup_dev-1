@@ -10,13 +10,13 @@ block content
     .video-wrap
       video#myVideo1(loop='', muted='')
         source(type='video/mp4', src='/images/video_bg.mp4')
-    section.dark-tier
+    .dark-tier
       .container.reveal
         .row
           .col-xs-12.col-sm-8.col-sm-offset-2
             p
               | The new peer-to-peer knowledge creation and sharing platform.
-    section.blue-tier
+    .blue-tier
       .container.reveal
         .row
           .col-xs-12
@@ -34,9 +34,9 @@ block content
                 | SmartUp helps scale your organization&rsquo;s innovation and transformation strategy by making it super easy to create, share and learn what your teams really need to know. Kick-off with inspiration from global innovators and dive into our human-centered design and lean startup learning streams.
               .row
                 .col-sm-6.col-xs-12
-                  a.cbtn.btn-dark(href='/innovation/') learn more
+                  a.cbtn.btn-dark(href='/innovation/', onclick="ga('send', 'event', 'For Business', 'click', 'InnovateLearn', '1', {'transport': 'beacon'});") learn more
                 .col-sm-6.col-xs-12
-                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
+                  a.cbtn.btn-bright(href='/get_in_touch/', onclick="ga('send', 'event', 'For Business', 'click', 'InnovateTouch', '1', {'transport': 'beacon'});") get in touch
     section.business-item
       .container
         .row-flex
@@ -47,9 +47,9 @@ block content
                 | We&rsquo;re leading a revolution in learning, literally.  We&apos;re flipping training on its head. Discover how our peer to peer knowledge sharing and micro-learning platform is democratizing knowledge sharing and learning.
               .row
                 .col-sm-6.col-xs-12
-                  a.cbtn.btn-dark(href='/learning/') learn more
+                  a.cbtn.btn-dark(href='/learning/', onclick="ga('send', 'event', 'For Business', 'click', 'TrainingLearn', '1', {'transport': 'beacon'});") learn more
                 .col-sm-6.col-xs-12
-                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
+                  a.cbtn.btn-bright(href='/get_in_touch/', onclick="ga('send', 'event', 'For Business', 'click', 'TrainingTouch', '1', {'transport': 'beacon'});") get in touch
           .col-flex.no-left-15
             .business-item-img-wrap.wow.slideInRight(data-wow-duration="1s")
               img.img-responsive(src='/images/features_training_small.png', alt='training')
@@ -66,9 +66,9 @@ block content
                 | Proactively create a private community of passionate, potential hires around a specific topic and fill it with custom content that enables the sharing of smarts. Use the leaderboard and create quizzes to identify future hires and reveal their real knowledge.
               .row
                 .col-sm-6.col-xs-12
-                  a.cbtn.btn-dark(href='/recruitment/') learn more
+                  a.cbtn.btn-dark(href='/recruitment/', onclick="ga('send', 'event', 'For Business', 'click', 'RecruitmentLearn', '1', {'transport': 'beacon'});") learn more
                 .col-sm-6.col-xs-12
-                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
+                  a.cbtn.btn-bright(href='/get_in_touch/', onclick="ga('send', 'event', 'For Business', 'click', 'RecruitmentTouch', '1', {'transport': 'beacon'});") get in touch
     
     
     section.business-item.last
@@ -81,7 +81,7 @@ block content
                 | Make the best first impression with an onboarding experience unlike any other. Tailor  content related to your teams and allow new hires to access that knowledge and test their skills through quizzes and polls to build excitement and engagement from day one.
               .row
                 .col-sm-6.col-sm-offset-3.col-xs-12
-                  a.cbtn.btn-bright(href='/get_in_touch/') get in touch
+                  a.cbtn.btn-bright(href='/get_in_touch/', onclick="ga('send', 'event', 'For Business', 'click', 'OnboardingTouch', '1', {'transport': 'beacon'});") get in touch
           .col-flex.no-left-15
             .business-item-img-wrap.wow.slideInRight(data-wow-duration="1s")
               img.img-responsive(src='/images/features_employees_small.png', alt='employees')
@@ -96,7 +96,7 @@ block content
               | With fully native apps for iOS and Android, you can keep engaged
               | with your community wherever you are, whenever you want.
             footer.app-btns
-              a.abtn.abtn-apple-store(href="#{appleStore}")
+              a.abtn.abtn-apple-store(href="#{appleStore}", onclick="trackOutboundLink('https://itunes.apple.com/app/id938860815', 'For Business', 'BottomAppleStore', true); return false;", target="_blank")
                 img.img-reponsive(src='/images/apple.png', alt='apple store')
-              a.abtn.abtn-google-play(href="#{googlePlay}")
+              a.abtn.abtn-google-play(href="#{googlePlay}", onclick="trackOutboundLink('https://play.google.com/store/apps/details?id=io.smartup.challenge', 'For Business', 'BottomPlayStore', true); return false;", target="_blank")
                 img.img-reponsive(src='/images/android.png', alt='google play')

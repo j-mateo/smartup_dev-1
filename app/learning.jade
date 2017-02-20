@@ -12,11 +12,11 @@ block content
         .container
           .row
             .col-xs-12
-              h1.jumbotron-title.text-center
+              h2.jumbotron-title.text-center
                 | SmartUp is <strong>literally</strong> a revolution in learning.
                 | We&rsquo;re flipping training on its head.
 
-    section.dark-tier
+    .dark-tier
       .container
         .row
           .col-xs-12
@@ -29,7 +29,7 @@ block content
               | We put you in control of who you want to create, share and consume knowledge - from totally open
               | to tightly controlled.
     .separator-bottom 
-      section.features.feature-page.container
+      .features.feature-page.container
         .features-cols.clearfix
           .col-md-4.col-xs-12
             .col-sm-12.col-md-3
@@ -112,7 +112,7 @@ block content
             .business-item-img-wrap.right.wow.slideInRight(data-wow-duration="1s", data-wow-dealy="3s")
               img.img-responsive(src='/images/learning_guide.png', alt='Revealing insights')
 
-    section.blue-tier
+    .blue-tier
       .container
         .row
           .col-md-10.col-md-offset-1
@@ -123,14 +123,13 @@ block content
               | explore new career opportunities. SmartUp helps you to identify their dreams by helping
               | see what they&rsquo;re sharing - their knowledge, passions, interests, skills and talents.
  
-    section.get-in-touch
+    .get-in-touch
       .container
         .row
           .col-xs-12
             p.text-center
               | Join the learning revolution, get in touch and learn how other businesses are helping people
               |  in their organizations to show what they know, why they&rsquo;re doing it and the results they&rsquo;re seeing.
-      |       
       .container
         .get-in-touch-partners.row-flex
           .col-flex
@@ -147,8 +146,7 @@ block content
           |             
           .col-flex
             img.img-responsive(src='/images/dbs.png', alt='dbs bank')
-      |       
       .container
         .row
           .col-xs-12
-            a.cbtn.btn-dark(href='/get_in_touch/') get in touch
+            a.cbtn.btn-dark(href='/get_in_touch/', onclick="ga('send', 'event', 'Business/Learning', 'click', 'LearningGetInTouch', '1', {'transport': 'beacon'});") get in touch

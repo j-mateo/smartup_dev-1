@@ -8,7 +8,7 @@ block metaContent
   title SmartUp + Innovation
 
 block content
-    section.jumbotron.jumbotron-innovation
+    .jumbotron.jumbotron-innovation
       .jumbotron-inner
         .container
           .row-flex
@@ -16,43 +16,42 @@ block content
               p.lead
                 | Scale your company's innovation capability
                 | and digital transformation strategy.
-    section.dark-tier
+    .dark-tier
       .container
         .row
           .col-xs-12
             p
               | We make it super easy to create, share and learn what your teams really need to know. 
               | Start here with our human-centered design and lean startup learning streams.
-    section.marketing-options.marketing-options-innovation
+    .marketing-options.marketing-options-innovation
       .container
         .row
           .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
-            a(href="https://elevate.smartup.io/channel/238")
-              img.img-responsive(src='/images/quick_intro.png')
+            a(href="https://elevate.smartup.io/channel/238", onclick="trackOutboundLink('https://elevate.smartup.io/channel/238', 'Business/Innovate', 'InnovateBlock1', true); return false;", target="_blank")
+              img.img-responsive(src='/images/quick_intro.png', alt='I need a quick introduction to innovation methods')
               .marketing-option-info.marketing-option-info-innovation
                 p I need a quick introduction to innovation methods
           .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
-            a(href="https://elevate.smartup.io/channel/282")
-              img.img-responsive(src='/images/ask_more_questions.png')
+            a(href="https://elevate.smartup.io/channel/282", onclick="trackOutboundLink('https://elevate.smartup.io/channel/282', 'Business/Innovate', 'InnovateBlock2', true); return false;", target="_blank")
+              img.img-responsive(src='/images/ask_more_questions.png', alt='I need to generate new ideas')
               .marketing-option-info.marketing-option-info-innovation
                 p I need to generate new ideas
         .row
           .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
-            a(href="https://elevate.smartup.io/stream/483")
-              img.img-responsive(src='/images/existing_idea.png')
+            a(href="https://elevate.smartup.io/stream/483", onclick="trackOutboundLink('https://elevate.smartup.io/stream/483', 'Business/Innovate', 'InnovateBlock3', true); return false;", target="_blank")
+              img.img-responsive(src='/images/existing_idea.png', alt='I need to test an existing idea')
               .marketing-option-info.marketing-option-info-innovation
                 p I need to test an existing idea
           .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2.innovation-option
-            a(href="https://elevate.smartup.io/stream/484")
-              img.img-responsive(src='/images/innovation_process.png')
+            a(href="https://elevate.smartup.io/stream/484", onclick="trackOutboundLink('https://elevate.smartup.io/stream/484', 'Business/Innovate', 'InnovateBlock4', true); return false;", target="_blank")
+              img.img-responsive(src='/images/innovation_process.png', alt='I need an end to end innovation process')
               .marketing-option-info.marketing-option-info-innovation
                 p I need an end to end innovation process
  
       .container
         .row
           .col-xs-12
-            quote.innovation-quote “The best vision is insight.”
-            |             
+            blockquote.innovation-quote “The best vision is insight.”
             p.innovation-quote-author -Malcolm Forbes
             
     section.business-item
@@ -111,7 +110,7 @@ block content
             .business-item-img-wrap.right.wow.slideInRight(data-wow-duration="1s", data-wow-dealy="3s")
               img.img-responsive(src='/images/innovation_engage.png', alt='engage')
     
-    section.blue-tier
+    .blue-tier
       .container
         p Getting started is simple
         .row
@@ -123,8 +122,8 @@ block content
                   .blue-tier-line-inner
               p.blue-tier-step-text
                 | Get in touch. Secure your community, complete with our entire library of SmartUp&apos;s innovation content
-                .blue-tier-line-bottom
-                  .blue-tier-line-inner
+              .blue-tier-line-bottom
+                .blue-tier-line-inner
           .col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
             .blue-tier-step
               .blue-tier-number 
@@ -133,15 +132,15 @@ block content
                   .blue-tier-line-inner
               p.blue-tier-step-text
                 | Invite your teams
-                .blue-tier-line-bottom
-                  .blue-tier-line-inner
+              .blue-tier-line-bottom
+                .blue-tier-line-inner
           .col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
             .blue-tier-step
               .blue-tier-number 03
               p.blue-tier-step-text.last
                 | Once you&apos;ve started. Then create custom content from our templates or with our content team.
 
-    section.get-in-touch
+    .get-in-touch
       .container
         .row
           .col-sm-10.col-sm-offset-1
@@ -162,4 +161,4 @@ block content
       .container
         .row
           .col-xs-12
-            a.cbtn.btn-dark(href='/get_in_touch/') get in touch
+            a.cbtn.btn-dark(href='/get_in_touch/', onclick="ga('send', 'event', 'Business/Innovate', 'click', 'InnovateGetInTouch', '1', {'transport': 'beacon'});") get in touch

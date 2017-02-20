@@ -41,6 +41,12 @@
   margin-bottom: 30px; 
 }
 
+.no-bottom-margin {
+  &.feedback-row, & {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: $screen-sm) {
 
   .order-1.col-flex {

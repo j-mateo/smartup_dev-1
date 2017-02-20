@@ -15,7 +15,7 @@ block content
               p.pricing-desc
                 Joining a public open community is easy and free, forever
             .text-center
-              a.cbtn.btn-dark.pricing-btn(href="/find_community/") BROWSE COMMUNITIES
+              a.cbtn.btn-dark.pricing-btn(href="/find_community/", onclick="ga('send', 'event', 'Pricing', 'click', 'IndividualBrowse', '1', {'transport': 'beacon'});") BROWSE COMMUNITIES
               p.pricing-info
                 | Joining a community as an <strong>Individual</strong> gives 
                 | you access to all these awesome features
@@ -36,7 +36,7 @@ block content
                 | Great for teams and small to medium-sized businesses and enterprises 
                 | looking to pilot smartup.<br><br><span class="pricing-pale">$5, per user, per month, billed annually.</span>
             .text-center
-              a.cbtn.btn-dark.pricing-btn(href="/request/") REQUEST COMMUNITY
+              a.cbtn.btn-dark.pricing-btn(href="/request/", onclick="ga('send', 'event', 'Pricing', 'click', 'BusinessRequest', '1', {'transport': 'beacon'});") REQUEST COMMUNITY
               p.pricing-info
                 | <strong>Private</strong> includes the same experience
                 | as <strong>Individual</strong> for all your members, and:
@@ -60,7 +60,7 @@ block content
                 | A customizable, affordable and scaleable knowledge 
                 | platform that's simple for large companies to implement
             .text-center
-              a.cbtn.btn-dark.pricing-btn(href="/get_in_touch/") GET IN TOUCH
+              a.cbtn.btn-dark.pricing-btn(href="/get_in_touch/", onclick="ga('send', 'event', 'Pricing', 'click', 'EnterpriseTouch', '1', {'transport': 'beacon'});") GET IN TOUCH
               p.pricing-info
                 | <strong>Enterprise</strong> includes everything in <strong>Private</strong>, and:
             ul.pricing-features
@@ -88,7 +88,7 @@ block content
                 | a unique, engaging and scaleable 
                 | knowledge sharing experience.
             .text-center
-              a.cbtn.btn-dark.pricing-btn(href="/get_in_touch/") GET IN TOUCH
+              a.cbtn.btn-dark.pricing-btn(href="/get_in_touch/", onclick="ga('send', 'event', 'Pricing', 'click', 'EnterpriseExternal', '1', {'transport': 'beacon'});") GET IN TOUCH
               p.pircing-info <strong>External</strong> includes everything in <strong>Enterprise</strong>
             footer.text-center
               p.pricing-footer-desc

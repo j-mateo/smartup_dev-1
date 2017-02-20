@@ -1,0 +1,25 @@
+header.header
+  .container-fluid
+    .row
+      h1.text-muted
+        a(href='/')
+          img.img-responsive(src='/images/SmartUp_Brand.svg', alt='smartup')
+          span.sr-only smartup
+      .nav-wrap.navbar
+        button.navbar-toggle.collapsed.navbar-trigger(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+          span.sr-only Toggle navigation
+          i.fa.fa-bars
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          .login-box
+            p YOUR COMMUNITY
+            .login-btns
+              a.cbtn.btn-dark(href='/create_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'HeaderCreate', '1', {'transport': 'beacon'});") create
+              a.cbtn.btn-bright.borderless(href='/find_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'HeaderFindCommunity', '1', {'transport': 'beacon'});") sign in / find
+          nav.main-nav
+            ul.nav.pull-right
+              li.active
+                a(href='/business/', onclick="ga('send', 'event', 'Home Page', 'click', 'HeaderForBusiness', '1', {'transport': 'beacon'});") For Business 
+              li
+                a(href='/pricing/', onclick="ga('send', 'event', 'Home Page', 'click', 'HeaderPricing', '1', {'transport': 'beacon'});") Pricing
+              li
+                a(href='https://medium.com/smartup-io-the-ultimate-founder-guide', onclick="trackOutboundLink('https://medium.com/smartup-io-the-ultimate-founder-guide', 'Home Page', 'HeaderBlog', true); return false;", target="_blank") Blog
