@@ -10,11 +10,11 @@ block content
                 | Create or join a community and let SmartUp help boost your know-how with fun, 
                 | engaging content on the topics that matter the most to you. Connect with peers and influential
                 | founders to learn new skills, share insight, gain advice and much more.
-              a.CreateCommunity.cbtn.btn-blue(href='/create_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'CreateCommunity', '1', {'transport': 'beacon'});") create a community
+              a.CreateCommunity.cbtn.btn-blue(href='/create_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'CreateCommunity', '1', {'transport': 'beacon'}); fbq('trackCustom', 'CreateCommunity', {'content_category' : 'Home Page'});") create a community
               footer
                 small
                   | Have you been invited to a SmartUp community already? If so, 
-                  a.FindCommunity.community-find-link(href='/find_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'FindCommunity', '1', {'transport': 'beacon'});") find your community
+                  a.FindCommunity.community-find-link(href='/find_community/', onclick="ga('send', 'event', 'Home Page', 'click', 'FindCommunity', '1', {'transport': 'beacon'}); fbq('trackCustom', 'FindCommunity', {'content_category' : 'Home Page'});") find your community
     
     .dark-tier
       .container

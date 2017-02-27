@@ -1,14 +1,13 @@
 $icon-font-path: '../fonts/';
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/wow/css/libs/animate.scss";
 // endbower
 @import "vars";
 @import "typo";
 @import "helpers";
-// @import "ionicons";
 @import "buttons";
-@import "../../bower_components/wow/css/libs/animate.scss";
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -20,16 +19,6 @@ video {
   width: 100%;
   display: block;
 }
-
-// Grid test
-// .container {
-//   background: yellow;
-// }
-// .container-fluid {
-//   background: purple;
-// }
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
 
 p {
   margin: 0;
@@ -52,8 +41,6 @@ p {
 
 .header {
   border-bottom: 1px solid $separator_color;
-  // box-shadow: 0 0 0 1px $separator_color;
-  /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
@@ -61,7 +48,6 @@ p {
     padding-bottom: 19px;
   }
 }
-
 
 /* Custom page footer */
 
@@ -1312,9 +1298,6 @@ section.pricing-section {
   .row-flex {
     flex-wrap: wrap;
   }
-  // .row-flex :first-child, .row-flex :first-child + .col-flex {
-  //   margin-bottom: 15px;
-  // }
   .col-flex {
     flex: 2 0 50%;
     .marketing-option-info {
@@ -1341,13 +1324,6 @@ section.pricing-section {
   border-radius: 50%;
 }
 
-// Contact
-// .container {
-//   border: 1px solid red;
-// }
-// .container-fluid {
-//   border: 1px solid green;
-// }
 .coming-soon {
   color: #BCBCBC;
   a {
@@ -1697,65 +1673,6 @@ section.pricing-section {
   position: static;
 }
 
-// DL buttons
-// .dl-btn-wrapper {
-//     position: relative;
-//     display: inline-block;
-//     margin-top: 30px;
-// }
-// .dl-btn {
-//     padding: 9px 22px;
-//     text-transform: uppercase;
-//     font-size: 13px;
-//     font-weight: 600;
-//     min-width: 140px;
-//     display: inline-block;
-//     border: 2px solid #fff;
-//     text-align: center;
-//     position: relative;
-//     color: #fff;
-//     -webkit-transition: all 0.4s;
-//     -moz-transition: all 0.4s;
-//     -o-transition: all 0.4s;
-//     transition: all 0.4s;
-// }
-// .dl-btn.btn-1 {
-//     border-top-left-radius: 100px;
-//     border-bottom-left-radius: 100px;
-//     right: 1px;
-// }
-// .dl-btn.btn-2 {
-//     border-top-right-radius: 100px;
-//     border-bottom-right-radius: 100px;
-//     left: -6px;
-//     border-left: none;
-// }
-// .dl-btn i {
-//     font-size: 19px;
-//     vertical-align: -1px;
-//     margin-right: 6px;
-// }
-// .dl-btn:focus,
-// .dl-btn:active,
-// .dl-btn:hover {
-//     color: #48afcb;
-//     text-decoration: none;
-//     background-color: #fff;
-//     border-color: transparent;
-// }
-// .dl-btn i {
-//     font-size: 19px;
-//     vertical-align: -1px;
-//     margin-right: 6px;
-// }
-// .dl-btn:focus,
-// .dl-btn:active,
-// .dl-btn:hover {
-//     color: #48afcb;
-//     text-decoration: none;
-//     background-color: #fff;
-//     border-color: transparent;
-// }
 .pricing-min-height {
   min-height: 1085px;
   @media screen and (max-width: 1400px) {

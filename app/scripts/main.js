@@ -46,42 +46,6 @@ var trackOutboundLink = function(url, cat, label, newTab) {
   }
 }
 
-// Google analytics form submission
-// Gets a reference to the form element, assuming
-// it contains the id attribute "signup-form".
-function gaSubmit(elem, cat, label) {
-  var form = elem;
-  
-  // Adds a listener for the "submit" event.
-  form.addEventListener('submit', function(event) {
-  
-    // Prevents the browser from submitting the form
-    // and thus unloading the current page.
-    event.preventDefault();
-  
-    // Sends the event to Google Analytics and
-    // resubmits the form once the hit is done.
-    ga('send', 'event', cat, 'submit', label, {
-      hitCallback: function() {
-        form.submit();
-      }
-    });
-  });
-}
-
-var contactForm = document.getElementById('ContactForm'),
-    createCommunityForm = document.getElementById('CreateForm');
-
-if(contactForm) {
-  console.log('contact form attempt to send');
-  gaSubmit(contactForm, 'Contact', 'ContactForm');
-}
-
-if(createCommunityForm) {
-  console.log('create form attempt to send');
-  gaSubmit(createCommunityForm, 'Create Community', 'CreateForm');
-}
-
 $(document).ready(function() {
   
   // Carousel swipe, relies on touchswipe lib
@@ -182,6 +146,16 @@ $(document).ready(function() {
       var $inputs = $(this).find(':input');
       var values = {};
       var errors = false;
+
+      // Google analytics submit tracking
+      if(this.dataset.cat) {
+        ga('send', 'event', this.dataset.cat, 'submit', this.id, {
+          hitCallback: function() {
+            form.submit();
+          }
+        });
+      }
+      
       $inputs.each(function() {
         if ($(this).prop('required') && $(this).val() === '') {
           // required do something about it.

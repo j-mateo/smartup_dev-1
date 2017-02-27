@@ -5,7 +5,7 @@ block content
       .col-xs-12
         h2.text-center.feedback-title Hi, we're looking forward to getting your team up and running on SmartUp.
         p.text-center.feedback-info To create your community, please tell us a little more about you and your company.
-    form#CreateForm.contact-form(method='post', action='#', data-redirect='/create_confirm/')
+    form#CreateForm.contact-form(method='post', action='#', data-redirect='/create_confirm/', data-cat='Create Community')
       .row.feedback-row
         .col-xs-12
           p.contact-top-note ABOUT YOU
@@ -27,12 +27,12 @@ block content
         .col-md-4
           .form-group
             label(for='create-organization-name') Your organization's name
-            input#create-organization-name.form-control(type='text', name='company', placeholder='SmartUp', required)
+            input#create-organization-name.form-control(type='text', name='company', placeholder='Acme', required)
         .col-md-4
           .form-group
-            label(for='create-organization-size') Your organization's size?*
-            select#create-organization-size.form-control(name='organization-size', required)
-              option(value='') 1-25
+            label(for='create-organization-size') Your organization's size?
+            select#create-organization-size.form-control(name='organization-size')
+              option(value='1-25', selected='selected') 1-25
               option(value='26-50') 26-50
               option(value='51-200') 51-200
               option(value='201-500') 201-500

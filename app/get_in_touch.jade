@@ -35,12 +35,12 @@ block content
         .col-md-4
           .form-group
             label(for='get-in-touch-organization-name') Your organization’s name*
-            input#get-in-touch-organization-name.form-control(type='text', name='get-in-touch-organization-name', placeholder='SmartUp', required)
+            input#get-in-touch-organization-name.form-control(type='text', name='get-in-touch-organization-name', placeholder='Acme', required)
         .col-md-4
           .form-group
-            label(for='request-organization-size') Your organization's size?*
-            select#request-organization-size.form-control(name='request-organization-size', required)
-              option(value='') 1-25
+            label(for='request-organization-size') Your organization's size?
+            select#request-organization-size.form-control(name='request-organization-size')
+              option(value='1-25', selected='selected') 1-25
               option(value='26-50') 26-50
               option(value='51-200') 51-200
               option(value='201-500') 201-500

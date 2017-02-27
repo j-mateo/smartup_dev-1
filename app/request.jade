@@ -13,7 +13,7 @@ block content
           p.contact-top-note ABOUT YOU
         .col-md-4
           .form-group
-            label(for='reques-username') Your name*
+            label(for='request-username') Your name*
             input#request-username.form-control(type='text', name='name', placeholder='John Doe', required)
         .col-md-4
           .form-group
@@ -29,19 +29,19 @@ block content
         .col-md-4
           .form-group
             label(for='request-organization-name') Your organization's name
-            input#request-organization-name.form-control(type='text', name='company', placeholder='SmartUp', required)
+            input#request-organization-name.form-control(type='text', name='company', placeholder='Acme', required)
         .col-md-4
           .form-group
-            label(for='request-organization-size') Your organization's size?*
-            select#request-organization-size.form-control(name='request-organization-size', required)
-              option 1-25
-              option 26-50
-              option 51-200
-              option 201-500
-              option 501-1,000
-              option 1001-5,000
-              option 5001-10,000
-              option 10,000+
+            label(for='request-organization-size') Your organization's size?
+            select#request-organization-size.form-control(name='request-organization-size')
+              option(selected='selected', value='1-25') 1-25
+              option(value='26-50') 26-50
+              option(value='51-200') 51-200
+              option(value='201-500') 201-500
+              option(value='501-1,000') 501-1,000
+              option(value='1001-5,000') 1001-5,000
+              option(value='5001-10,000') 5001-10,000
+              option(value='10,000+') 10,000+
         
       .row.feedback-row
         .col-xs-12

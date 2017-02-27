@@ -1,8 +1,8 @@
-if(env = 'dev')
-  - var gaID = 'UA-92113020-1' //- ga development id
-  - var script = '_debug'
-else if(env = 'prod')
-  - var gaID = 'UA-59647801-1' //- ga production id
-  - var script = ''
+//- if(env = 'dev')
+//-   - var gaID = 'UA-92113020-1' //- ga development id
+//-   - var script = '_debug'
+//- else if(env = 'prod')
+//-   - var gaID = 'UA-59647801-1' //- ga production id
+//-   - var script = ''
 script.
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script',"https://www.google-analytics.com/analytics#{script}.js",'ga');ga('create',"#{gaID}",'auto');ga('send','pageview');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script',"https://www.google-analytics.com/analytics_debug.js",'ga');ga('create',"UA-59647801-1",'auto');ga('send','pageview');
