@@ -134,7 +134,31 @@ $(document).ready(function() {
         }
       });
     }
-
+    
+    // $('.get-in-touch-from-new button:submit').on('click', function(e) {
+    //   alert('hello');
+    //   var $inputs = $('form').find(':input');
+    //   var values = {};
+    //   var errors = false;
+      
+    //   $inputs.each(function() {
+    //     if ($(this).prop('required') && $(this).val() === '') {
+    //       // required do something about it.
+    //       errors = true;
+    //       $(this).parent().addClass('has-error')
+    //       alert('error');
+    //     }
+    //     else {
+    //       $(this).parent().removeClass('has-error')
+    //     }
+    //     if (this.name)
+    //       values[this.name] = $(this).val();
+    //   });
+    //   if (errors) {
+    //     return;
+    //   }
+    // });
+    
     $("form").submit(function(e) {
       var $form = $(this);
       var $submitButton = $form.find(':button');
@@ -149,6 +173,7 @@ $(document).ready(function() {
 
       // Google analytics submit tracking
       if(this.dataset.cat) {
+        alert(this.dataset.cat);
         ga('send', 'event', this.dataset.cat, 'submit', this.id, {
           hitCallback: function() {
             form.submit();

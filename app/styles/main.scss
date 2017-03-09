@@ -2492,3 +2492,24 @@ p.blue-tier-step-text {
 .cc-window {
   z-index: 10;
 }
+
+.get-in-touch-from-new.contact-form .form-group.form-inline {
+  display: flex;
+  border-bottom: 2px solid $bright_gray;
+}
+
+.get-in-touch-from-new.contact-form .form-group.form-inline {
+  label {
+    white-space: nowrap;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  input, select {
+    flex-basis: 100%;
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
