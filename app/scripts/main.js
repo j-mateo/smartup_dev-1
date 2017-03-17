@@ -47,7 +47,7 @@ var trackOutboundLink = function(url, cat, label, newTab) {
 }
 
 $(document).ready(function() {
-  
+
   // Carousel swipe, relies on touchswipe lib
   $(".carousel-inner").swipe({
     //Generic swipe handler for all directions
@@ -90,7 +90,7 @@ $(document).ready(function() {
     }
     vid1.play();
   }
-  
+
   $(document).ready(function() {
 
     var postToCrm = function(data, cb) {
@@ -134,13 +134,13 @@ $(document).ready(function() {
         }
       });
     }
-    
+
     // $('.get-in-touch-from-new button:submit').on('click', function(e) {
     //   alert('hello');
     //   var $inputs = $('form').find(':input');
     //   var values = {};
     //   var errors = false;
-      
+
     //   $inputs.each(function() {
     //     if ($(this).prop('required') && $(this).val() === '') {
     //       // required do something about it.
@@ -158,7 +158,7 @@ $(document).ready(function() {
     //     return;
     //   }
     // });
-    
+
     $("form").submit(function(e) {
       var $form = $(this);
       var $submitButton = $form.find(':button');
@@ -180,7 +180,7 @@ $(document).ready(function() {
           }
         });
       }
-      
+
       $inputs.each(function() {
         if ($(this).prop('required') && $(this).val() === '') {
           // required do something about it.
@@ -193,30 +193,44 @@ $(document).ready(function() {
         if (this.name)
           values[this.name] = $(this).val();
       });
+
       if (errors) {
         return;
       }
-      postToCrm(values, {
-        success: function(data) {
-          postToFormSpree(values, {
-            success: function() {
-              $submitButton.html(buttonLabel)
-              $submitButton.removeAttr('disabled')
-              location.href = $form.data('redirect') || '/'
-            },
-            error: function() {
-              $submitButton.html(buttonLabel)
-              $submitButton.removeAttr('disabled')
-              location.href = $form.data('redirect') || '/'
-            }
-          });
+
+      postToFormSpree(values, {
+        success: function() {
+          $submitButton.html(buttonLabel)
+          $submitButton.removeAttr('disabled')
+          location.href = $form.data('redirect') || '/'
         },
-        error: function(data) {
+        error: function() {
           $submitButton.html(buttonLabel)
           $submitButton.removeAttr('disabled')
           alert("Error submitting form. Please try again")
         }
-      })
+      });
+        // postToCrm(values, {
+        //   success: function(data) {
+        //     postToFormSpree(values, {
+        //       success: function() {
+        //         $submitButton.html(buttonLabel)
+        //         $submitButton.removeAttr('disabled')
+        //         location.href = $form.data('redirect') || '/'
+        //       },
+        //       error: function() {
+        //         $submitButton.html(buttonLabel)
+        //         $submitButton.removeAttr('disabled')
+        //         location.href = $form.data('redirect') || '/'
+        //       }
+        //     });
+        //   },
+        //   error: function(data) {
+        //     $submitButton.html(buttonLabel)
+        //     $submitButton.removeAttr('disabled')
+        //     alert("Error submitting form. Please try again")
+        //   }
+        // })
 
     })
   });
