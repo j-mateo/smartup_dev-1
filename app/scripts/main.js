@@ -1,5 +1,5 @@
-var form_email = "m8r-btt9wg@mailinator.com";
-// var form_email = "david@smartup.io"; // replace this with email where forms should be sent
+// var form_email = "m8r-4nb0641@mailinator.com";
+var form_email = "david@smartup.io"; // replace this with email where forms should be sent
 //=======================================================
 // Video Section
 //=======================================================
@@ -46,14 +46,8 @@ var trackOutboundLink = function(url, cat, label, newTab) {
   }
 }
 
-function validateEmail(email) {
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  console.log('re test: ' + re.test(email));
-  return re.test(email);
-}
-
 $(document).ready(function() {
-  
+
   // Carousel swipe, relies on touchswipe lib
   $(".carousel-inner").swipe({
     //Generic swipe handler for all directions
@@ -96,7 +90,7 @@ $(document).ready(function() {
     }
     vid1.play();
   }
-  
+
   $(document).ready(function() {
 
     var postToCrm = function(data, cb) {
@@ -141,14 +135,52 @@ $(document).ready(function() {
       });
     }
 
+    // $('.get-in-touch-from-new button:submit').on('click', function(e) {
+    //   alert('hello');
+    //   var $inputs = $('form').find(':input');
+    //   var values = {};
+    //   var errors = false;
 
-    $('form button:submit').on('click', function(e) {
-      
-      var $inputs = $('form').find(':input');
-      var errors = false;
+    //   $inputs.each(function() {
+    //     if ($(this).prop('required') && $(this).val() === '') {
+    //       // required do something about it.
+    //       errors = true;
+    //       $(this).parent().addClass('has-error')
+    //       alert('error');
+    //     }
+    //     else {
+    //       $(this).parent().removeClass('has-error')
+    //     }
+    //     if (this.name)
+    //       values[this.name] = $(this).val();
+    //   });
+    //   if (errors) {
+    //     return;
+    //   }
+    // });
+
+    $("form").submit(function(e) {
+      var $form = $(this);
+      var $submitButton = $form.find(':button');
+      e.preventDefault();
+      var buttonLabel = $submitButton.html();
+      $submitButton.html('Sending...');
+      $submitButton.attr('disabled', 'disabled');
+
+      var $inputs = $(this).find(':input');
       var values = {};
-      var $email = $('input[type=email]')
-      
+      var errors = false;
+
+      // Google analytics submit tracking
+      if(this.dataset.cat) {
+        alert(this.dataset.cat);
+        ga('send', 'event', this.dataset.cat, 'submit', this.id, {
+          hitCallback: function() {
+            form.submit();
+          }
+        });
+      }
+
       $inputs.each(function() {
         if ($(this).prop('required') && $(this).val() === '') {
           // required do something about it.
@@ -157,64 +189,50 @@ $(document).ready(function() {
         }
         else {
           $(this).parent().removeClass('has-error')
-          $(this).parent().addClass('has-success')
-          if( validateEmail( $email.val() ) ) {
-            $email.parent().removeClass('has-error')
-            $email.parent().addClass('has-success')
-          } else {
-            $email.parent().removeClass('has-success')
-            $email.parent().addClass('has-error')
-          }
         }
         if (this.name)
           values[this.name] = $(this).val();
       });
+
       if (errors) {
         return;
       }
-      
-      $('form').submit(function(e) {
-        var $form = $(this);
-        var $submitButton = $form.find(':button');
-        e.preventDefault();
-        var buttonLabel = $submitButton.html();
-        $submitButton.html('Sending...');
-        $submitButton.attr('disabled', 'disabled');
-  
-        // Google analytics submit tracking
-        if(this.dataset.cat) {
-          ga('send', 'event', this.dataset.cat, 'submit', this.id, {
-            hitCallback: function() {
-              form.submit();
-            }
-          });
+
+      postToFormSpree(values, {
+        success: function() {
+          $submitButton.html(buttonLabel)
+          $submitButton.removeAttr('disabled')
+          location.href = $form.data('redirect') || '/'
+        },
+        error: function() {
+          $submitButton.html(buttonLabel)
+          $submitButton.removeAttr('disabled')
+          alert("Error submitting form. Please try again")
         }
-        
-        postToCrm(values, {
-          success: function(data) {
-            postToFormSpree(values, {
-              success: function() {
-                $submitButton.html(buttonLabel)
-                $submitButton.removeAttr('disabled')
-                location.href = $form.data('redirect') || '/'
-              },
-              error: function() {
-                $submitButton.html(buttonLabel)
-                $submitButton.removeAttr('disabled')
-                location.href = $form.data('redirect') || '/'
-              }
-            });
-          },
-          error: function(data) {
-            $submitButton.html(buttonLabel)
-            $submitButton.removeAttr('disabled')
-            alert("Error submitting form. Please try again")
-          }
-        });
-        
       });
-      
-    });
+        // postToCrm(values, {
+        //   success: function(data) {
+        //     postToFormSpree(values, {
+        //       success: function() {
+        //         $submitButton.html(buttonLabel)
+        //         $submitButton.removeAttr('disabled')
+        //         location.href = $form.data('redirect') || '/'
+        //       },
+        //       error: function() {
+        //         $submitButton.html(buttonLabel)
+        //         $submitButton.removeAttr('disabled')
+        //         location.href = $form.data('redirect') || '/'
+        //       }
+        //     });
+        //   },
+        //   error: function(data) {
+        //     $submitButton.html(buttonLabel)
+        //     $submitButton.removeAttr('disabled')
+        //     alert("Error submitting form. Please try again")
+        //   }
+        // })
+
+    })
   });
 
 });
