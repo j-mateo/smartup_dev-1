@@ -123,7 +123,7 @@ gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/**/*.jade', ['views']); 
+  gulp.watch('app/**/*.jade', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
@@ -177,6 +177,10 @@ gulp.task('wiredep', () => {
 
 // gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 //  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+// });
+
+// gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+//   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 // });
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
